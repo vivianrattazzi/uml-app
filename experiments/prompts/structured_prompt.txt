@@ -1,0 +1,94 @@
+############################################################
+CONTESTO
+############################################################
+
+Riceverai due soluzioni di un diagramma UML espresse in formato JSON.
+
+La prima rappresenta la soluzione ufficiale del docente.
+
+La seconda rappresenta la soluzione proposta dallo studente.
+
+Entrambe descrivono classi, attributi e relazioni.
+
+############################################################
+OBIETTIVO
+############################################################
+
+Confronta la soluzione dello studente con quella ufficiale ed esegui una valutazione completa del diagramma UML.
+
+############################################################
+DATI DISPONIBILI
+############################################################
+
+Ogni soluzione contiene:
+
+- classi
+- attributi
+- relazioni
+- eventuali sinonimi
+
+############################################################
+REGOLE DI VALUTAZIONE
+############################################################
+
+Durante il confronto:
+
+• considera due classi equivalenti se hanno lo stesso nome oppure se uno dei sinonimi della classe ufficiale coincide con il nome della classe dello studente;
+
+• considera due attributi equivalenti se hanno lo stesso nome oppure se il nome dell'attributo ufficiale coincide con uno dei sinonimi dell'attributo dello studente;
+
+• confronta le relazioni solo tra classi considerate equivalenti;
+
+• segnala elementi mancanti;
+
+• segnala elementi aggiuntivi;
+
+• segnala eventuali differenze nella modellazione.
+
+############################################################
+VINCOLI
+############################################################
+
+Utilizza esclusivamente le informazioni presenti nel JSON.
+
+Non introdurre conoscenze esterne.
+
+Non inventare sinonimi.
+
+Non effettuare inferenze non supportate dai dati.
+
+############################################################
+FORMATO DELL'OUTPUT
+############################################################
+
+Restituisci la valutazione utilizzando la seguente struttura:
+
+CLASSI
+
+- presenti
+- mancanti
+- aggiuntive
+
+ATTRIBUTI
+
+Per ogni classe:
+
+- presenti
+- mancanti
+- aggiuntivi
+
+RELAZIONI
+
+- corrette
+- mancanti
+- errate
+
+OSSERVAZIONI FINALI
+
+Breve commento conclusivo sulla correttezza della soluzione.
+
+############################################################
+INPUT
+############################################################
+
+{json_string}
