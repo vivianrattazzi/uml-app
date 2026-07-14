@@ -8,7 +8,7 @@ La prima rappresenta la soluzione ufficiale del docente.
 
 La seconda rappresenta la soluzione proposta dallo studente.
 
-Entrambe descrivono classi, attributi e relazioni.
+Entrambe descrivono classi, attributi, ereditarietà e molteplicità.
 
 ############################################################
 OBIETTIVO
@@ -20,12 +20,14 @@ Confronta la soluzione dello studente con quella ufficiale ed esegui una valutaz
 DATI DISPONIBILI
 ############################################################
 
-Ogni soluzione contiene:
+Ogni soluzione può contenere:
 
 - classi
 - attributi
 - relazioni
 - eventuali sinonimi
+- ereditarietà
+- molteplicità
 
 ############################################################
 REGOLE DI VALUTAZIONE
@@ -33,17 +35,34 @@ REGOLE DI VALUTAZIONE
 
 Durante il confronto:
 
-• considera due classi equivalenti se hanno lo stesso nome oppure se uno dei sinonimi della classe ufficiale coincide con il nome della classe dello studente;
+• considera due classi equivalenti se:
+  - hanno lo stesso nome;
+  - uno dei sinonimi della classe ufficiale coincide con il nome della classe dello studente;
+  - differiscono esclusivamente per aspetti formali (maiuscole/minuscole, spazi, underscore, camelCase, accenti o piccole differenze di punteggiatura);
+  - rappresentano chiaramente lo stesso concetto, anche se espresse con una diversa forma linguistica, una traduzione, una forma singolare/plurale, un'abbreviazione o una variante comunemente utilizzata nel contesto UML.
 
-• considera due attributi equivalenti se hanno lo stesso nome oppure se il nome dell'attributo ufficiale coincide con uno dei sinonimi dell'attributo dello studente;
+• considera due attributi equivalenti se:
+  - hanno lo stesso nome;
+  - uno dei sinonimi definiti nella soluzione ufficiale coincide con il nome dell'attributo dello studente;
+  - differiscono esclusivamente per aspetti formali (maiuscole/minuscole, spazi, underscore, camelCase, accenti o piccole differenze di punteggiatura);
+  - rappresentano chiaramente lo stesso attributo utilizzando una traduzione, un'abbreviazione o una variante terminologica comunemente accettata.
 
-• confronta le relazioni solo tra classi considerate equivalenti;
+• confronta le relazioni esclusivamente tra classi considerate equivalenti;
 
-• segnala elementi mancanti;
+• confronta gli attributi esclusivamente tra classi considerate equivalenti;
 
-• segnala elementi aggiuntivi;
+• considera corretta una relazione anche se l'ordine sorgente-destinazione è invertito, purché il significato della relazione rimanga invariato;
+ 
+• considera equivalenti le molteplicità "n" e "*", in quanto entrambe rappresentano una cardinalità multipla;
+
+• confronta le molteplicità esclusivamente per le relazioni considerate equivalenti;
+
+• segnala gli elementi mancanti;
+
+• segnala gli elementi aggiuntivi;
 
 • segnala eventuali differenze nella modellazione.
+
 
 ############################################################
 VINCOLI
@@ -51,11 +70,13 @@ VINCOLI
 
 Utilizza esclusivamente le informazioni presenti nel JSON.
 
-Non introdurre conoscenze esterne.
+Quando possibile, sfrutta i sinonimi presenti nella soluzione ufficiale.
 
-Non inventare sinonimi.
+In assenza di sinonimi espliciti, riconosci equivalenze lessicali o semantiche solo se rappresentano chiaramente lo stesso concetto e non introducono ambiguità.
 
-Non effettuare inferenze non supportate dai dati.
+Non effettuare associazioni arbitrarie tra concetti diversi.
+
+Motiva implicitamente ogni corrispondenza attraverso la valutazione restituita.
 
 ############################################################
 FORMATO DELL'OUTPUT
@@ -66,29 +87,50 @@ Restituisci la valutazione utilizzando la seguente struttura:
 CLASSI
 
 - presenti
-- mancanti
-- aggiuntive
+- assenti
+- extra
+
+Riporta esclusivamente i nomi delle classi.
 
 ATTRIBUTI
 
-Per ogni classe:
+Per ogni classe considerata equivalente:
 
 - presenti
-- mancanti
-- aggiuntivi
+- assenti
+- extra
+
+Riporta gli attributi raggruppati per classe.
 
 RELAZIONI
 
-- corrette
-- mancanti
-- errate
+- presenti
+- assenti
+- extra
+
+EREDITARIETÀ
+
+- presenti
+- assenti
+- extra
+
+MOLTEPLICITÀ
+
+- presenti
+- assenti
+- extra
 
 OSSERVAZIONI FINALI
 
-Breve commento conclusivo sulla correttezza della soluzione.
+Fornisci un commento conclusivo che riassuma gli elementi corretti e le principali criticità della soluzione dello studente, evidenziando gli errori più significativi emersi durante il confronto. 
+Il commento deve essere sintetico ma completo e non deve ripetere l'elenco dettagliato degli errori già riportato nelle sezioni precedenti.
 
 ############################################################
-INPUT
+SOLUZIONE UFFICIALE
 ############################################################
+{solution_json}
 
-{json_string}
+############################################################
+ELABORATO STUDENTE
+############################################################
+{student_json}
