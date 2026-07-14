@@ -1,0 +1,632 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "data",
+          "visibility": "",
+          "type": "Date"
+        },
+        {
+          "name": "luogo",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "budget",
+          "visibility": "",
+          "type": "float"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "nomeAzienda",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "partitaIVA",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "metodiPagamento",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "iban",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invito",
+      "attributes": [
+        {
+          "name": "codice",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codiceFiscale",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "residenza",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "prezzo",
+          "visibility": "",
+          "type": "float"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "include",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fornisce",
+      "source": "Fornitore",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Invitato",
+      "target": "Invito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "appartiene a",
+      "source": "Invito",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "Utente"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "Utente"
+    }
+  ],
+  "reference": {
+    "classes": [
+      {
+        "name": "Utente",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "username",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "password",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "cognome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "email",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Organizzatore",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "codiceFiscale",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "residenza",
+            "synonyms": [
+              "indirizzo",
+              "indirizzoResidenza"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Fornitore",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "nomeAzienda",
+            "synonyms": [
+              "nomeSocietà"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "partitaIVA",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "indirizzo",
+            "synonyms": [
+              "indirizzoAzienda"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "metodiPagamento",
+            "synonyms": [
+              "modalitaPagamento"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "iban",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Evento",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "tipo",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "data",
+            "synonyms": [],
+            "types": [
+              "Date",
+              "DateTime"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "luogo",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "budget",
+            "synonyms": [],
+            "types": [
+              "float",
+              "double"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Servizio",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "categoria",
+            "synonyms": [
+              "tipo"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "prezzo",
+            "synonyms": [],
+            "types": [
+              "float",
+              "double"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Invito",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "codice",
+            "synonyms": [
+              "id",
+              "idInvito",
+              "codiceInvito"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Invitato",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "cognome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "email",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "categoria",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      }
+    ],
+    "associations": [
+      {
+        "type": "Inheritance",
+        "name": "",
+        "source": "Organizzatore",
+        "target": "Utente",
+        "sourceMultiplicity": [
+          "1"
+        ],
+        "targetMultiplicity": [
+          "1"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Organizzatore",
+        "target": "Evento",
+        "sourceMultiplicity": [
+          "1"
+        ],
+        "targetMultiplicity": [
+          "*"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Evento",
+        "target": "Servizio",
+        "sourceMultiplicity": [
+          "*"
+        ],
+        "targetMultiplicity": [
+          "*"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Fornitore",
+        "target": "Servizio",
+        "sourceMultiplicity": [
+          "1"
+        ],
+        "targetMultiplicity": [
+          "*"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Invito",
+        "target": "Evento",
+        "sourceMultiplicity": [
+          "*"
+        ],
+        "targetMultiplicity": [
+          "1"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Invitato",
+        "target": "Invito",
+        "sourceMultiplicity": [
+          "1"
+        ],
+        "targetMultiplicity": [
+          "*"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Inheritance",
+        "name": "",
+        "source": "Fornitore",
+        "target": "Utente",
+        "sourceMultiplicity": [
+          "1"
+        ],
+        "targetMultiplicity": [
+          "1"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      }
+    ],
+    "forbiddenClasses": [],
+    "forbiddenAssociations": []
+  }
+}
