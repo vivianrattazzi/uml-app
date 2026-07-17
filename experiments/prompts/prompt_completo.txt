@@ -47,9 +47,18 @@ Durante il confronto:
 
 • considera due attributi equivalenti se:
   - hanno lo stesso nome;
-  - uno dei sinonimi definiti nella soluzione ufficiale coincide con il nome dell'attributo dello studente;
+  - uno dei sinonimi definiti nella soluzione ufficiale coincide con il nome dell’attributo dello studente;
   - differiscono esclusivamente per aspetti formali (maiuscole/minuscole, spazi, underscore, camelCase, accenti o piccole differenze di punteggiatura);
-  - rappresentano chiaramente lo stesso attributo utilizzando una traduzione, un'abbreviazione o una variante terminologica comunemente accettata.
+  - rappresentano chiaramente lo stesso attributo mediante una traduzione, un’abbreviazione o una variante terminologica comunemente accettata.
+
+• per ogni attributo della soluzione ufficiale, verifica prima l’equivalenza del nome e successivamente la correttezza del tipo:
+  - Il confronto del tipo deve essere effettuato esclusivamente dopo aver stabilito l'equivalenza del nome dell'attributo.
+  - se il nome è equivalente e il tipo dichiarato dallo studente appartiene all’insieme dei tipi ammessi definiti nella soluzione ufficiale, classifica l’attributo come presente;
+  - se il nome è equivalente ma il tipo è diverso da quelli ammessi oppure non è specificato, classifica l’attributo come presente con errore di tipo;
+  - considera equivalenti i tipi che differiscono esclusivamente per maiuscole/minuscole o per varianti sintattiche prive di significato semantico;
+  - un attributo presente con errore di tipo non deve essere classificato anche come assente;
+  - se non viene trovato alcun attributo equivalente per nome, classifica l’attributo ufficiale come assente;
+  - gli attributi dello studente che non corrispondono ad alcun attributo ufficiale sono classificati come extra.
 
 • confronta le relazioni esclusivamente tra classi considerate equivalenti;
 
@@ -101,6 +110,7 @@ ATTRIBUTI
 Per ogni classe considerata equivalente:
 
 - presenti
+- presenti con errori di tipo
 - assenti
 - extra
 
@@ -129,9 +139,6 @@ OSSERVAZIONI FINALI
 Fornisci un commento conclusivo che riassuma gli elementi corretti e le principali criticità della soluzione dello studente, evidenziando gli errori più significativi emersi durante il confronto. 
 Il commento deve essere sintetico ma completo e non deve ripetere l'elenco dettagliato degli errori già riportato nelle sezioni precedenti.
 
-
-
-Valuta il seguente diagramma UML confrontando la soluzione dello studente con la soluzione ufficiale.
 
 ========================================================================
 ESEMPIO 1
@@ -704,6 +711,8 @@ Assenti:
 Extra:
 Nessuna
 
+Nota:
+Le molteplicità vengono confrontate esclusivamente per le relazioni considerate equivalenti.
 
 ========================================================================
 ESEMPIO 2
@@ -2012,3 +2021,19 @@ Assenti:
 
 Extra:
 Nessuna
+
+========================================================================
+FINE DEGLI ESEMPI
+========================================================================
+
+
+
+############################################################
+SOLUZIONE UFFICIALE
+############################################################
+{solution_json}
+
+############################################################
+ELABORATO STUDENTE
+############################################################
+{student_json}
