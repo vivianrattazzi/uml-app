@@ -1,0 +1,112 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "E-Book",
+      "attributes": [
+        {
+          "name": "testoDaVisualizzareOnline",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "Titolo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Descrizione",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "DataPrestito",
+          "visibility": "+",
+          "type": "Data"
+        },
+        {
+          "name": "DataRestituzione",
+          "visibility": "+",
+          "type": "Data"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "E-Book",
+      "target": "Libro",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Libro",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

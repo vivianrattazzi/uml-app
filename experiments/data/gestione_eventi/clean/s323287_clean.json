@@ -1,0 +1,73 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

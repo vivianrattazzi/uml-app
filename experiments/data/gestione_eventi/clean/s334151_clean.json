@@ -1,0 +1,297 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "luogo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitori",
+      "attributes": [
+        {
+          "name": "IVA",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "indirizzoAzienda",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "modalitaPagamento",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitati",
+      "attributes": [
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "InvitatiEvento",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Codice",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codiceFiscale",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "residenza",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "OrganizzazioneEventi",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "nomeServizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "IBAN/accoutDigitale",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "servizio",
+      "attributes": [
+        {
+          "name": "tipoServizio",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "TipoEvento",
+      "attributes": [
+        {
+          "name": "Type",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "DataNascita",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "usr",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "psw",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "eventoHaServizo",
+      "source": "Evento",
+      "target": "servizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "TipoEvento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitori",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitori",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitati",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "InvitatiEvento",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "InvitatiEvento",
+      "target": "Invitati",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Invitati",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "OrganizzazioneEventi",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "servizio",
+      "target": "OrganizzazioneEventi",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

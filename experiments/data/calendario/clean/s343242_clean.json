@@ -1,0 +1,207 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "OraInizio",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "OraFine",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "AppuntamentoRicorrente",
+      "attributes": [
+        {
+          "name": "giornoSettimana",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "AvvisoAppuntamento",
+      "attributes": [
+        {
+          "name": "NomeAppuntamento",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "OraInizio",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "OraFine",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "VistaCalendario",
+      "attributes": [
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "PrimaData",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "UltimaData",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "genera",
+      "source": "Appuntamento",
+      "target": "AvvisoAppuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Contiene",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Annulla",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Fissa",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Modifica",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Utente",
+      "target": "AvvisoAppuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Visualizza",
+      "source": "Utente",
+      "target": "VistaCalendario",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "AppuntamentoRicorrente",
+      "parent": "Appuntamento"
+    },
+    {
+      "child": "VistaCalendario",
+      "parent": "Calendario"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "Titolo",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "NPagine",
+          "visibility": "",
+          "type": "Number"
+        },
+        {
+          "name": "Autore",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Data di pubblicazione . String",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Tipo",
+          "visibility": "",
+          "type": "Enum {CARTACEO,DIGITALE}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "Timestamp",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Descrizione",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "Data Prestito",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Data Restituzione",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Email",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Password",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Prestito",
+          "visibility": "",
+          "type": "Bool"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "viene preso in",
+      "source": "Libro",
+      "target": "Prestito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Utente",
+      "target": "Notifica",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "effettua",
+      "source": "Utente",
+      "target": "Prestito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

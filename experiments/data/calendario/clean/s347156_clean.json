@@ -1,0 +1,106 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "ora_inizio",
+          "visibility": "+",
+          "type": "LocalTime"
+        },
+        {
+          "name": "ora_fine",
+          "visibility": "+",
+          "type": "LocalTime"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "attivo",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "orario",
+          "visibility": "+",
+          "type": "LocalTime"
+        },
+        {
+          "name": "giorno",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "settimana",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "mese",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "Persona",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

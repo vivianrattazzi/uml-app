@@ -1,0 +1,122 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome_appuntamento",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "data_ora_inizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "data_ora_fine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "ricorrenza",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "descrizione",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "data_ora_invio",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Ricorrenza",
+      "attributes": [
+        {
+          "name": "data_ora_ricorrenza",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "id_utente",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "email_utente",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Avviso",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "1...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Ricorrenza",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce >",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve >",
+      "source": "Utente",
+      "target": "Avviso",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

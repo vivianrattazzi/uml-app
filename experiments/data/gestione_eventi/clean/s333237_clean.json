@@ -1,0 +1,254 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "id_fornitore",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "address",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "p.iva",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "payment services",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "type",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "date",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "location",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "name",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "name",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "surname",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "names",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "category ( parente, amico collega )",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "email_organizzatore",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "name_evento",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "codice_invito",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codice_fiscale",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "name",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "surname",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "residenza",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizi",
+      "attributes": [
+        {
+          "name": "category ( parrucchiere, fioraio )",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "price",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "iban_for_payment",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "id_fornitore",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "id_azienda",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "has",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offer",
+      "source": "Fornitore",
+      "target": "Servizi",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "create",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "add",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizi",
+      "target": "Azienda",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizi",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

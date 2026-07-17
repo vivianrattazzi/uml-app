@@ -1,0 +1,362 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Account Digitale",
+      "attributes": [
+        {
+          "name": "Link",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "partita IVA",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Coordinate di Pagamento",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "luogo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "codice fiscale",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "data di nascita",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "IBAN",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "data di nascita",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invito",
+      "attributes": [
+        {
+          "name": "codice invito",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Modalità di Pagamento",
+      "attributes": [
+        {
+          "name": "descrizione",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "codice fiscale",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "data di nascita",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "luogo di residenza",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "costo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "destinazione pagamento",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Account Digitale",
+      "target": "Coordinate di Pagamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offre",
+      "source": "Azienda",
+      "target": "Servizio",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "inserisce",
+      "source": "Coordinate di Pagamento",
+      "target": "Fornitore",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Coordinate di Pagamento",
+      "target": "Servizio",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "IBAN",
+      "target": "Coordinate di Pagamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Invito",
+      "target": "Invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "spedisce",
+      "source": "Invito",
+      "target": "Organizzatore",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "accetta",
+      "source": "Modalità di Pagamento",
+      "target": "Azienda",
+      "sourceMultiplicity": "1...*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invita",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "sceglie",
+      "source": "Organizzatore",
+      "target": "Servizio",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offre",
+      "source": "Servizio",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

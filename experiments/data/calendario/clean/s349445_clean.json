@@ -1,0 +1,200 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Azione",
+      "attributes": [
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "Enum"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "GestioneConflitto",
+      "attributes": [
+        {
+          "name": "azione",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "testo",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "codFiscale",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "PiuGiorno",
+      "attributes": [
+        {
+          "name": "numGiorni",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Ricorrente",
+      "attributes": [
+        {
+          "name": "giorno",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "TipologiaVisita",
+      "attributes": [
+        {
+          "name": "tipoVisualizzazione",
+          "visibility": "+",
+          "type": "Enum"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Notifica",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Calendario",
+      "target": "GestioneConflitto",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "Persona",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Persona",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Persona",
+      "target": "Calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "PiuGiorno",
+      "parent": "Appuntamento"
+    },
+    {
+      "child": "Ricorrente",
+      "parent": "Appuntamento"
+    }
+  ]
+}

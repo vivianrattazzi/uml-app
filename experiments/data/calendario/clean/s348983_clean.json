@@ -1,0 +1,136 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "OraInizio",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "OraFine",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "ricorrenza",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "DataAvviso",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "messaggio",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "FormatoVisualizzazione",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "ID",
+          "visibility": "",
+          "type": "int"
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "invia",
+      "source": "Avviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Avviso",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "include",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea/annulla/modifica",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

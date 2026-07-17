@@ -1,0 +1,168 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ricorrente",
+          "visibility": "",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "avviso",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "calendario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Giorno",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Intervallo ora",
+      "attributes": [
+        {
+          "name": "orainizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "orafine",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Mese",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Settimana",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Intervallo ora",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "associato a",
+      "source": "avviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "N",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "calendario",
+      "target": "Giorno",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Giorno",
+      "target": "Mese",
+      "sourceMultiplicity": "N",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Intervallo ora",
+      "target": "Giorno",
+      "sourceMultiplicity": "N",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Mese",
+      "target": "calendario",
+      "sourceMultiplicity": "N",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Settimana",
+      "target": "calendario",
+      "sourceMultiplicity": "N",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Settimana",
+      "target": "Giorno",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

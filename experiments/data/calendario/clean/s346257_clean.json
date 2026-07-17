@@ -1,0 +1,180 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "giorno",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "ricorrente [T/F]",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "nomeAppuntamento",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "nomeAvviso",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "giorno",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "mese",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "anno",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Vista Giornaliera",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Vista Mensile",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Vista Settimanale",
+      "attributes": [],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Aggiorna",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Elimina",
+      "source": "Appuntamento",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Genera",
+      "source": "Calendario",
+      "target": "Avviso",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Schedula",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Modifica",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Avviso",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Vista Giornaliera",
+      "parent": "Calendario"
+    },
+    {
+      "child": "Vista Mensile",
+      "parent": "Calendario"
+    },
+    {
+      "child": "Vista Settimanale",
+      "parent": "Calendario"
+    }
+  ]
+}

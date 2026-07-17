@@ -1,0 +1,148 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Cartaceo",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Digitale",
+      "attributes": [
+        {
+          "name": "contenuto",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "testo",
+          "visibility": "+",
+          "type": "stringa"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "dataInizio",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "dataFine",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Cartaceo",
+      "target": "Libro",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Digitale",
+      "target": "Libro",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "viene preso",
+      "source": "Libro",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "Prestito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "effettua",
+      "source": "Utente",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

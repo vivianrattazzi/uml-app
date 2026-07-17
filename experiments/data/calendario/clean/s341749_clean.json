@@ -1,0 +1,168 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "idAppuntamento",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ricorrente",
+          "visibility": "",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "idCalendario",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "vista",
+          "visibility": "",
+          "type": "TIPOVISTA"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "mail",
+      "attributes": [
+        {
+          "name": "idMail",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "testoMail",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "dataInvio",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "codiceFiscale",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "username",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "RicorrenzaAppuntamento",
+      "attributes": [
+        {
+          "name": "Data",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "oraFine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "giornoSettimana",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "avviene",
+      "source": "Appuntamento",
+      "target": "RicorrenzaAppuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "comprende",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "inerente",
+      "source": "mail",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Persona",
+      "target": "mail",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

@@ -1,0 +1,192 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "Tipo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Data",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Luogo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Budget",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitori",
+      "attributes": [
+        {
+          "name": "dati anagrafici",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "P.IVA",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "Indirizzo Azienda",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "Modalità pagamento",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitati",
+      "attributes": [
+        {
+          "name": "mail",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Categoria",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Cod. invito",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "Codice Fiscale",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "Nome",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "Cognome",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "Residenza",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "credenziali",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizi offerti",
+      "attributes": [
+        {
+          "name": "Cateogria",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Prezzo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "IBAN Azienda",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Organizzatore",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitori",
+      "target": "Servizi offerti",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitati",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizi offerti",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitori",
+      "parent": "Persona"
+    },
+    {
+      "child": "Invitati",
+      "parent": "Persona"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "Persona"
+    }
+  ]
+}

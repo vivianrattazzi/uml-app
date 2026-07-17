@@ -134,6 +134,7 @@ OSSERVAZIONI FINALI
 
 Fornisci un commento conclusivo che riassuma gli elementi corretti e le principali criticità della soluzione dello studente, evidenziando gli errori più significativi emersi durante il confronto. 
 Il commento deve essere sintetico ma completo e non deve ripetere l'elenco dettagliato degli errori già riportato nelle sezioni precedenti.
+Il commento deve consentire al docente di comprendere rapidamente il livello qualitativo della prova (ad esempio insufficiente, sufficiente, discreta, buona o ottima), motivando sinteticamente tale giudizio sulla base degli elementi corretti e delle principali criticità emerse durante il confronto.
 
 ############################################################
 SOLUZIONE UFFICIALE

@@ -1,0 +1,112 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "descrizione",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "vista",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Tempo",
+      "attributes": [
+        {
+          "name": "giorno",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "nel",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Tempo",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "inizio",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Tempo",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "fine",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fissa",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

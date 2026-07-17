@@ -1,0 +1,75 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "inizio",
+          "visibility": "+",
+          "type": "dateTime"
+        },
+        {
+          "name": "fine",
+          "visibility": "+",
+          "type": "dateTime"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ricorrenza",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "mandaAvviso",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "n",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

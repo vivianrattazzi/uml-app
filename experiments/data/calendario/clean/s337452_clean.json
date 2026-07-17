@@ -1,0 +1,209 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento Fisso",
+      "attributes": [
+        {
+          "name": "",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento Ricorrente",
+      "attributes": [
+        {
+          "name": "",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "descrizione",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "calendarId",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Data",
+      "attributes": [
+        {
+          "name": "anno",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "mese",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "giorno",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "ora",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "minuto",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "secondo",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "composto da",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento Fisso",
+      "target": "Data",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "+endAt",
+      "targetRole": "1"
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento Ricorrente",
+      "target": "Data",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "+AtEvery",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fa parte di",
+      "source": "Avviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "è ricevuto da",
+      "source": "Avviso",
+      "target": "Utente",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Data",
+      "target": "Appuntamento Fisso",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": "+startFrom"
+    },
+    {
+      "type": "Association",
+      "name": "si avvale di",
+      "source": "Utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Appuntamento Fisso",
+      "parent": "Appuntamento"
+    },
+    {
+      "child": "Appuntamento Ricorrente",
+      "parent": "Appuntamento"
+    }
+  ]
+}

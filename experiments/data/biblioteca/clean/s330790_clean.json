@@ -1,0 +1,218 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "libro",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "titolo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "autore",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "libro cartaceo",
+      "attributes": [
+        {
+          "name": "disponibile",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "libro digitale",
+      "attributes": [
+        {
+          "name": "dimensone del file",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "notifica",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tempo rimanente alla scadenza",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Prestito attivo",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data fine",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "prestito storico",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data fine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data della riconsegna",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "utente",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data di nascita",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "notifica",
+      "target": "utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito attivo",
+      "target": "libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "<-genera",
+      "source": "Prestito attivo",
+      "target": "notifica",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "effettua",
+      "source": "utente",
+      "target": "Prestito attivo",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ha effettuato",
+      "source": "utente",
+      "target": "prestito storico",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "libro cartaceo",
+      "parent": "libro"
+    },
+    {
+      "child": "libro digitale",
+      "parent": "libro"
+    },
+    {
+      "child": "prestito storico",
+      "parent": "Prestito attivo"
+    }
+  ]
+}

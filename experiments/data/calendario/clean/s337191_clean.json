@@ -1,0 +1,142 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora fine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ricorrente",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "mail",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data avviso",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "orario avviso",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Conflitto",
+      "attributes": [
+        {
+          "name": "datetime inizio conflitto",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "datetime fine conflitto",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Giorno",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Conflitto",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Conflitto",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "genera",
+      "source": "Avviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "si estende su",
+      "source": "Giorno",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

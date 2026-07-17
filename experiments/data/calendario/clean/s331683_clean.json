@@ -1,0 +1,139 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "oraFine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ricorrenza",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "giornoInizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Giornofine",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "avviso",
+      "attributes": [
+        {
+          "name": "DescrizioneNotifica",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "calendario",
+      "attributes": [
+        {
+          "name": "tipoDiVista",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "utente",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "mail",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "ricorda",
+      "source": "avviso",
+      "target": "appuntamento",
+      "sourceMultiplicity": "1,*",
+      "targetMultiplicity": "1,*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "avviso",
+      "target": "utente",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "1,*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "raccoglie",
+      "source": "calendario",
+      "target": "appuntamento",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "1,*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "utente",
+      "target": "appuntamento",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "1,*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "visualizza",
+      "source": "utente",
+      "target": "calendario",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "1,1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

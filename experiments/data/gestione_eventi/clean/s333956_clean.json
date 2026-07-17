@@ -1,0 +1,260 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Data",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "Budget",
+          "visibility": "+",
+          "type": "Number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "Nome azienda",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "IVA Azienda",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Pagamenti",
+          "visibility": "+",
+          "type": "Enum(String)"
+        }
+      ],
+      "methods": [
+        "+ Inserire servizi",
+        "+ Invita"
+      ]
+    },
+    {
+      "name": "Invitato",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Luogo",
+      "attributes": [
+        {
+          "name": "Via",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Numero civico",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Piazza",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "Codice fiscale",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ Organizzare eventi",
+        "+ Scegliere servizi"
+      ]
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Prezzo",
+          "visibility": "+",
+          "type": "Number"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "String or Null"
+        },
+        {
+          "name": "Account",
+          "visibility": "+",
+          "type": "Boolean"
+        },
+        {
+          "name": "Username",
+          "visibility": "+",
+          "type": "String or Null"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Mail",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ Invita",
+        "+ Organizza",
+        "+ Sceglie servizi",
+        "+ Registrazione"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Si svolge in",
+      "source": "Evento",
+      "target": "Luogo",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Inserisce",
+      "source": "Fornitore",
+      "target": "Servizio",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitore",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Abita in ->",
+      "source": "Luogo",
+      "target": "Utente",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Organizza",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Sceglie servizi",
+      "source": "Organizzatore",
+      "target": "Servizio",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Prevede ->",
+      "source": "Servizio",
+      "target": "Evento",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Invita",
+      "source": "Utente",
+      "target": "Utente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

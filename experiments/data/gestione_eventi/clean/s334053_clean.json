@@ -1,0 +1,173 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "evento",
+      "attributes": [
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "luogo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "fornitori",
+      "attributes": [
+        {
+          "name": "credenziali",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "dati anagrafici",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "partita IVA",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo azienda",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "modalità pagamento",
+          "visibility": "+",
+          "type": "{ contanti, carta, bonifico}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "invitati",
+      "attributes": [
+        {
+          "name": "credenziali",
+          "visibility": "+",
+          "type": "email"
+        },
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "tipologia invito",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "organizzatore",
+      "attributes": [
+        {
+          "name": "codice fiscale",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "credenziali",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "dati anagrafici",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "servizio",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "prezzi",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "presenta >",
+      "source": "evento",
+      "target": "servizio",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offre >",
+      "source": "fornitori",
+      "target": "servizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "aggiunge >",
+      "source": "invitati",
+      "target": "organizzatore",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "organizza >",
+      "source": "organizzatore",
+      "target": "evento",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

@@ -1,0 +1,198 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Catalogo",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "autore",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "casa editrice",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro cartaceo",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Libro digitale",
+      "attributes": [
+        {
+          "name": "formato",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "testo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data restituzione",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "data inizio",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data fine",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "codice",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "System",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "numero di telefono",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Catalogo",
+      "target": "Libro",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Notifica",
+      "target": "Utente",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito",
+      "target": "Libro",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ottiene",
+      "source": "Prestito",
+      "target": "Utente",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "System",
+      "target": "Catalogo",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "System",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Libro cartaceo",
+      "parent": "Libro"
+    },
+    {
+      "child": "Libro digitale",
+      "parent": "Libro"
+    }
+  ]
+}

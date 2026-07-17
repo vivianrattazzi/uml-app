@@ -1,0 +1,302 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "pIVA",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "modalitàDiPagamento",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "CategoriaDiServizio",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "DatiAnagrafici",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "dataDiNascita",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "luogoDiNascita",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Indirizzo",
+      "attributes": [
+        {
+          "name": "città",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "provincia",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "stato",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "ZIPcode",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "via",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "numero",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "codiceDiInvito",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "CF",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Offre",
+      "source": "Azienda",
+      "target": "Servizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Richiede",
+      "source": "Evento",
+      "target": "CategoriaDiServizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Indirizzo",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": "luogo"
+    },
+    {
+      "type": "Association",
+      "name": "Gestisce",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitore",
+      "target": "DatiAnagrafici",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Indirizzo",
+      "target": "Azienda",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "DatiAnagrafici",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "DatiAnagrafici",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Indirizzo",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": "residenza"
+    },
+    {
+      "type": "Association",
+      "name": "Inserisce",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizio",
+      "target": "CategoriaDiServizio",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

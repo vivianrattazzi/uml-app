@@ -1,0 +1,245 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "partita IVA",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "modalita pagamento",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "luogo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "iban",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "dati anagrafici",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "codice invitato",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "residenza",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "codice fiscale",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio fornito",
+      "attributes": [
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Sistema gestione eventi",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "dati anagrafici",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "richiede servizio",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizio fornito",
+      "target": "Azienda",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizio fornito",
+      "target": "Servizio",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Sistema gestione eventi",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Sistema gestione eventi",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "Utente"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "Utente"
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "Tipologia",
+          "visibility": "+",
+          "type": "enum"
+        },
+        {
+          "name": "Data",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Luogo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "IVA",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Indirizzo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "MetodiDiPagamento",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "NatoA",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "DataDiNascita",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Mail",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invito",
+      "attributes": [
+        {
+          "name": "CodiceInvito",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "CategoriaInvitato",
+          "visibility": "+",
+          "type": "enum"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "CF",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "NatoA",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "DataDiNascita",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Residenza",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "NomeServizio",
+          "visibility": "+",
+          "type": "enum"
+        },
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "MetodoPagamento",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "DescMetodoPagamento",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Collabora",
+      "source": "Evento",
+      "target": "Fornitore",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Partecipa",
+      "source": "Evento",
+      "target": "Invitato",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Organizza",
+      "source": "Evento",
+      "target": "Organizzatore",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Entra Con",
+      "source": "Invitato",
+      "target": "Invito",
+      "sourceMultiplicity": "1..1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Invita",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Eroga",
+      "source": "Servizio",
+      "target": "Fornitore",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

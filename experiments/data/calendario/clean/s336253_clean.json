@@ -1,0 +1,131 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "ora inizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "ora fine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "appuntamento ricorrente",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Avviso mail",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Conflitto",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "vista",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Vista giornaliera",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Vista mensile",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "vista settimanale",
+      "attributes": [],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Avviso mail",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "genera",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Conflitto",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "2...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "vista",
+      "target": "Calendario",
+      "sourceMultiplicity": "3",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "appuntamento ricorrente",
+      "parent": "Appuntamento"
+    },
+    {
+      "child": "Vista giornaliera",
+      "parent": "vista"
+    },
+    {
+      "child": "Vista mensile",
+      "parent": "vista"
+    },
+    {
+      "child": "vista settimanale",
+      "parent": "vista"
+    }
+  ]
+}

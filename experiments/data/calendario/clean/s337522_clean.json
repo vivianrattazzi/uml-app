@@ -1,0 +1,215 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Ora d'inizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Ora di fine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Ricorrente",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Giorno",
+      "attributes": [
+        {
+          "name": "Data",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Mese",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Numero mese anno",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Reminder",
+      "attributes": [
+        {
+          "name": "TestoNotifica",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Conflitto",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Settimana",
+      "attributes": [
+        {
+          "name": "Numero settimana anno",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "User",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Psw",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Mail",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "< Èfissato",
+      "source": "Appuntamento",
+      "target": "Giorno",
+      "sourceMultiplicity": "0...N",
+      "targetMultiplicity": "0...N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "compone >",
+      "source": "Giorno",
+      "target": "Settimana",
+      "sourceMultiplicity": "7",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Riferito >",
+      "source": "Reminder",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Notifica >",
+      "source": "Reminder",
+      "target": "Utente",
+      "sourceMultiplicity": "0...N",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "< include",
+      "source": "Settimana",
+      "target": "Mese",
+      "sourceMultiplicity": "4",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Inserisce",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0...N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Giorno",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Visualizza",
+      "source": "Utente",
+      "target": "Mese",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Settimana",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

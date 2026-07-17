@@ -1,0 +1,234 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora_inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora_fine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento_giorno",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "calendario settimanale",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "calendario_giornaliero",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "calendario_mensile",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "ngiorni",
+      "attributes": [
+        {
+          "name": "data_inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data_fine",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "avviso",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora_invio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "appuntamento",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "mail",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ricorrenti",
+      "attributes": [
+        {
+          "name": "giorno",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ricorrenza",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "aggiorno",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Notifica",
+      "target": "Persona",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "Persona",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "cancella",
+      "source": "Persona",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Persona",
+      "target": "Calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Appuntamento_giorno",
+      "parent": "Appuntamento"
+    },
+    {
+      "child": "calendario settimanale",
+      "parent": "calendario_giornaliero"
+    },
+    {
+      "child": "calendario_giornaliero",
+      "parent": "Calendario"
+    },
+    {
+      "child": "calendario_mensile",
+      "parent": "calendario settimanale"
+    },
+    {
+      "child": "ngiorni",
+      "parent": "Appuntamento"
+    },
+    {
+      "child": "ricorrenti",
+      "parent": "Appuntamento"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ora inizio",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ora fine",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "giorno inzio",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "giorno fine",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ricorrente",
+          "visibility": "+",
+          "type": "bool"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "avviso",
+      "attributes": [
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data_appuntamento",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "azione_eseguita",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "calendario",
+      "attributes": [
+        {
+          "name": "vista",
+          "visibility": "+",
+          "type": "enum"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "persona",
+      "attributes": [
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "calendario",
+      "target": "appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0,N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "persona",
+      "target": "appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0,N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "persona",
+      "target": "avviso",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0,N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "possiede",
+      "source": "persona",
+      "target": "calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

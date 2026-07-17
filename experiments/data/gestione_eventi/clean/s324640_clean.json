@@ -1,0 +1,280 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "partitaIVA",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "contanti",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "cartaCredito",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "bonifico",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "appPagamento",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "luogo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Indirizzo",
+      "attributes": [
+        {
+          "name": "via",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "civico",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "comune",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "codiceInvito",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ListaServizi",
+      "attributes": [
+        {
+          "name": "taxi",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "fioraio",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "catering",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "parrucchiere",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codFiscale",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "situata",
+      "source": "Azienda",
+      "target": "Indirizzo",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "organizzatoreSceglie",
+      "source": "Evento",
+      "target": "ListaServizi",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "lavoraPer",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "partecipa",
+      "source": "Invitato",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "inserisce",
+      "source": "ListaServizi",
+      "target": "Fornitore",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "risiede",
+      "source": "Organizzatore",
+      "target": "Indirizzo",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "aggiunge",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "Utente"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "Utente"
+    }
+  ]
+}

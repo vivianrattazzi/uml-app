@@ -1,0 +1,281 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Account",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avento",
+      "attributes": [
+        {
+          "name": "tipoEvento",
+          "visibility": "+",
+          "type": "ENUM{Matrimonio,Laurea,Concerto}"
+        },
+        {
+          "name": "dataEvento",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "indirizzoLuogo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "double"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "partita IVA",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "indirizzo Azienda",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "dataDiNascita",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data nascita",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "tipoInvitato",
+          "visibility": "+",
+          "type": "ENUM{parente,amico, collega}"
+        },
+        {
+          "name": "codiceInvitato",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ListaServizio",
+      "attributes": [
+        {
+          "name": "TipoServizio",
+          "visibility": "+",
+          "type": "ENUM{catering,fiori,serviziotax}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Modalità di pagamento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "Enum{AccountDigitale,IBAN}"
+        },
+        {
+          "name": "identificativo",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "OrganizzatoreEvento",
+      "attributes": [
+        {
+          "name": "codiceFiscale",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "IndirizzoResidenza",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "ENUM{Categoria, parrucchiere, fioraio}"
+        },
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "int"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Avento",
+      "target": "OrganizzatoreEvento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "accetta",
+      "source": "Azienda",
+      "target": "Modalità di pagamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fornisce",
+      "source": "Fornitore",
+      "target": "Servizio",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "ListaServizio",
+      "target": "Avento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "ListaServizio",
+      "target": "Servizio",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "aggiunge >",
+      "source": "OrganizzatoreEvento",
+      "target": "Invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizio",
+      "target": "Modalità di pagamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "Account"
+    },
+    {
+      "child": "OrganizzatoreEvento",
+      "parent": "Account"
+    }
+  ]
+}

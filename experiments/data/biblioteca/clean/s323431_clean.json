@@ -1,0 +1,101 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "autore",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "enum {\"CARTACEO\", \"DIGITALE\"}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "dataPrestito",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "dataRestituzione",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "usename",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "< presoIn",
+      "source": "Prestito",
+      "target": "Libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "< appartiene",
+      "source": "Utente",
+      "target": "Prestito",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

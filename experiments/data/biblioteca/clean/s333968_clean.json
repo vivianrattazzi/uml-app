@@ -1,0 +1,127 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Catalogo",
+      "attributes": [
+        {
+          "name": "numeroLibri",
+          "visibility": "+",
+          "type": "int"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "autore",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "ISBN",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "enum:{CARTACEO, DIGITALE}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "dataInizio",
+          "visibility": "+",
+          "type": "DateTime"
+        },
+        {
+          "name": "dataFine",
+          "visibility": "+",
+          "type": "DateTime"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "compostoDa",
+      "source": "Catalogo",
+      "target": "Libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "presoInPrestitoDa",
+      "source": "Libro",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "associatoA",
+      "source": "Prestito",
+      "target": "Libro",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "notificatoA",
+      "source": "Prestito",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

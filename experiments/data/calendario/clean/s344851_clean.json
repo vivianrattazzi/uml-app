@@ -1,0 +1,60 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "Stringa"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": "timestamp"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": "timestamp"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "TipologiaAppuntamento"
+        },
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": "number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [],
+      "methods": [
+        "+ impostaAppuntamento(nome, oraInizio, oraFine, tipologia)",
+        "+ annullaAppuntamento(ID)",
+        "+ modificaAppuntamento(ID, nuovoNome, nuovaOraInizio, nuovaOraFine, nuovaTipologia)",
+        "- estConflitto(...)",
+        "+ visualizzaCalendario(tipoVista)"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

@@ -1,0 +1,125 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora-inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora-fine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data (anche + gg)",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento ricorrente",
+      "attributes": [
+        {
+          "name": "frequenza",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "calendario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "calendario",
+      "sourceMultiplicity": "0, *",
+      "targetMultiplicity": "1",
+      "sourceRole": "contiene",
+      "targetRole": "salvato su"
+    },
+    {
+      "type": "Association",
+      "name": "crea nuovo",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0, *",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "annulla",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0, *",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "............... modifica",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "Utente",
+      "target": "Appuntamento ricorrente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0, *",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "visualizza",
+      "source": "Utente",
+      "target": "calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Appuntamento ricorrente",
+      "parent": "Appuntamento"
+    }
+  ]
+}

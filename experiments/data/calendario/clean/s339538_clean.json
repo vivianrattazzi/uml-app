@@ -1,0 +1,116 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "giorno",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "ricorrente",
+          "visibility": "+",
+          "type": "Boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "modalitàVista",
+          "visibility": "+",
+          "type": "TipoVista"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "è ricorrente",
+      "source": "Appuntamento",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "appartiene",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "0...*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "utilizza",
+      "source": "Utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

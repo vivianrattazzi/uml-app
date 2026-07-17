@@ -1,0 +1,270 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Account digitali",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "partita_iva",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "address",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "String || null"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Codice",
+      "attributes": [
+        {
+          "name": "code",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "type",
+          "visibility": "+",
+          "type": "enum{matrimonio, laurea, concerto...}"
+        },
+        {
+          "name": "date",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "location",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "float"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "name",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "surname",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "category",
+          "visibility": "+",
+          "type": "enum{parente, collega, amico...}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Modalità di pagamento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "address",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "name",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "visibility": "+",
+          "type": "enum{fioraio, parrucchiere...}"
+        },
+        {
+          "name": "price",
+          "visibility": "+",
+          "type": "float"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "User",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "SSN",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "surname",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "possiede >",
+      "source": "Azienda",
+      "target": "Account digitali",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "accetta >",
+      "source": "Azienda",
+      "target": "Modalità di pagamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Codice",
+      "target": "Invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "possiede >",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "Organizzatore",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offre >",
+      "source": "Servizio",
+      "target": "Azienda",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "prenota >",
+      "source": "Servizio",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "User"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "User"
+    }
+  ]
+}

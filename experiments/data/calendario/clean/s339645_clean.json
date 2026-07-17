@@ -1,0 +1,136 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "dataInizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "dataFine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento normale",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento ricorrente",
+      "attributes": [
+        {
+          "name": "tipo ricorrenza",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "minutesBefore",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "hoursBefore",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "daysBefore",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendar system",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Calendar system",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Avviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Appuntamento normale",
+      "parent": "Appuntamento"
+    },
+    {
+      "child": "Appuntamento ricorrente",
+      "parent": "Appuntamento"
+    }
+  ]
+}

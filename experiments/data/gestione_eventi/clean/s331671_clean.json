@@ -1,0 +1,285 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": "int"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": "enum"
+        },
+        {
+          "name": "data",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "budget",
+          "visibility": "",
+          "type": "float"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": "int"
+        },
+        {
+          "name": "username",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "dataNascita",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "partitaIVA",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "indirizzoAzienda",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "modalitaPagam",
+          "visibility": "",
+          "type": "enum"
+        },
+        {
+          "name": "iban",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": "int"
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "dataNascita",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": "enum"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invito",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": "int"
+        },
+        {
+          "name": "codice",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "OffertaServizio",
+      "attributes": [
+        {
+          "name": "prezzo",
+          "visibility": "",
+          "type": "double"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codFiscale",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "dataNascita",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "indirizzoResidenza",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizi",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": "enum"
+        },
+        {
+          "name": "id",
+          "visibility": "",
+          "type": "int"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Servizi",
+      "sourceMultiplicity": "(0, *)",
+      "targetMultiplicity": "(0, *)",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitore",
+      "target": "OffertaServizio",
+      "sourceMultiplicity": "(0,*)",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "Evento",
+      "sourceMultiplicity": "(0, *)",
+      "targetMultiplicity": "(1, *)",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invito",
+      "target": "Invitato",
+      "sourceMultiplicity": "(0,1)",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "(0, *)",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "(0, *)",
+      "targetMultiplicity": "(0, *)",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizi",
+      "target": "OffertaServizio",
+      "sourceMultiplicity": "(0, *)",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

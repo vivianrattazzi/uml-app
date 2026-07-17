@@ -1,0 +1,192 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Catalogo",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "ISBN",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "descrizione",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "enum {CARTACEO, DIGITALE}"
+        },
+        {
+          "name": "disponibile",
+          "visibility": "+",
+          "type": "bool"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "descrizione",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "timestamp",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "dataPrestito",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "dataRestituzione",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "riconsegnato",
+          "visibility": "+",
+          "type": "bool"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "StoricoPrestiti",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "dataNascita",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "Catalogo",
+      "target": "Libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "consegnato",
+      "source": "Libro",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "relativa",
+      "source": "Notifica",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Notifica",
+      "target": "Utente",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "StoricoPrestiti",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "visualizza",
+      "source": "StoricoPrestiti",
+      "target": "Utente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "visualizza",
+      "source": "Utente",
+      "target": "Catalogo",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "richiede",
+      "source": "Utente",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

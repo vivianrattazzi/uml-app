@@ -1,0 +1,158 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Account",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "ha libro",
+          "visibility": "+",
+          "type": "Boolean"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Catalogo",
+      "attributes": [
+        {
+          "name": "id_catalago",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "casa_editrice",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "enum( Cartaceo, digitale)"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "data inizio",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "data_fine",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "id_prestito",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Account",
+      "target": "Prestito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "Catalogo",
+      "target": "Libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Libro",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Account",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

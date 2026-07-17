@@ -1,0 +1,153 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Anno",
+      "attributes": [
+        {
+          "name": "numero",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "isBisestile",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "nome"
+        },
+        {
+          "name": "ora inizio",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "ora fine",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "ora"
+        },
+        {
+          "name": "messaggio",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Giorno",
+      "attributes": [
+        {
+          "name": "numero",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Mese",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "numeroGiorni",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "nome"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "username / email",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Giorno",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Avviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "+ crea",
+      "source": "Persona",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Giorno",
+      "parent": "Mese"
+    },
+    {
+      "child": "Mese",
+      "parent": "Anno"
+    }
+  ]
+}

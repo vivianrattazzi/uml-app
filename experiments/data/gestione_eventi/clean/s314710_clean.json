@@ -1,0 +1,288 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Account Digitali",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Bonifico",
+      "attributes": [
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "luogo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "Number"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Fornitori",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "partitaIVA",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "indirizzoAzienda",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Invitati",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "ListaServizi",
+      "attributes": [],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Metodo di pagamento",
+      "attributes": [],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "codiceFiscale",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "indirizzoResidenza",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Servizi",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "Number"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Account Digitali",
+      "target": "Metodo di pagamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Bonifico",
+      "target": "Metodo di pagamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invita",
+      "source": "Evento",
+      "target": "Invitati",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "sceglie",
+      "source": "Evento",
+      "target": "ListaServizi",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "organizza",
+      "source": "Evento",
+      "target": "Organizzatore",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "accetta pagamenti con",
+      "source": "Fornitori",
+      "target": "Metodo di pagamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..2",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offre",
+      "source": "Fornitori",
+      "target": "Servizi",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "ListaServizi",
+      "target": "Servizi",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "pagabile tramite",
+      "source": "Servizi",
+      "target": "Metodo di pagamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..2",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

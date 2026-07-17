@@ -1,0 +1,148 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Catalogo",
+      "attributes": [
+        {
+          "name": "anno",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "autore",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "enum: {online, cartaceo}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "test",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "presente in",
+      "source": "Libro",
+      "target": "Catalogo",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "preso in",
+      "source": "Libro",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "restituito dal",
+      "source": "Libro",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "relativa a",
+      "source": "Notifica",
+      "target": "Prestito",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Notifica",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "associato a",
+      "source": "Prestito",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

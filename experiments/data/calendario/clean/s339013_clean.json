@@ -1,0 +1,173 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora_inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora_fine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento_ricorrente",
+      "attributes": [
+        {
+          "name": "giorno_ricorrente",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "frequenza_ricorrenza",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento_su_più_giorni",
+      "attributes": [
+        {
+          "name": "giorno_inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "giorno_fine",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "codice",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "calendario",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "calendario",
+      "sourceMultiplicity": "0..n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riguardante",
+      "source": "Avviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea / annulla / modifica (gestisce in generale)",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Utente",
+      "target": "Avviso",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "visualizza",
+      "source": "Utente",
+      "target": "calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Appuntamento_ricorrente",
+      "parent": "Appuntamento"
+    },
+    {
+      "child": "Appuntamento_su_più_giorni",
+      "parent": "Appuntamento"
+    }
+  ]
+}

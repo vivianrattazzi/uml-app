@@ -1,0 +1,168 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Biblioteca",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "città",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Biblioteca Management System",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "enum{digitale, cartaceo}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "messaggio",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "dataPrestito",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "dataRestituzione",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "dataDiNascita",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "dispone >",
+      "source": "Biblioteca",
+      "target": "Libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Biblioteca Management System",
+      "target": "Biblioteca",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "< riceve",
+      "source": "Notifica",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riguarda >",
+      "source": "Prestito",
+      "target": "Libro",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Biblioteca Management System",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fa >",
+      "source": "Utente",
+      "target": "Prestito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

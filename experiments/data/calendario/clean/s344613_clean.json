@@ -1,0 +1,145 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": "timestamp"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": "timestamp"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "attivo",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Mail",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "oggetto",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "testo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Sistema Calendario",
+      "attributes": [
+        {
+          "name": "nomeApplicazione",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ gestisciConflitti()",
+        "+gestisciRicorrenze()"
+      ]
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "gestito da",
+      "source": "Appuntamento",
+      "target": "Sistema Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fissato da",
+      "source": "Appuntamento",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "in riferimento a",
+      "source": "Mail",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "inviata a",
+      "source": "Mail",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestito da",
+      "source": "Utente",
+      "target": "Sistema Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

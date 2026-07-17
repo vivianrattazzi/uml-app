@@ -1,0 +1,117 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Inizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "FIne",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "frequenza",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "Avvertenza",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "<= Genera",
+      "source": "Appuntamento",
+      "target": "Avviso",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Gestisce =>",
+      "source": "Appuntamento",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "^notifica",
+      "source": "Avviso",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

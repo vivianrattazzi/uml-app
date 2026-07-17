@@ -1,0 +1,152 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Annullato",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Inizia",
+      "attributes": [
+        {
+          "name": "OraInizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "DataInizio",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Termina",
+      "attributes": [
+        {
+          "name": "OraFine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "DataFine",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Password",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Avviso",
+      "target": "Utente",
+      "sourceMultiplicity": "0...*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Inizia",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Inizia",
+      "target": "Utente",
+      "sourceMultiplicity": "0...*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Termina",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Termina",
+      "target": "Utente",
+      "sourceMultiplicity": "0...*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

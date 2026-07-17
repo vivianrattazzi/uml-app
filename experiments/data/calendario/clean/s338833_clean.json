@@ -1,0 +1,127 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ modifica()",
+        "+ annulla()"
+      ]
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ invia()"
+      ]
+    },
+    {
+      "name": "Tempo",
+      "attributes": [
+        {
+          "name": "giorno",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "mese",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "anno",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "orario",
+          "visibility": "+",
+          "type": "Time"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "età",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Inizia",
+      "source": "Evento",
+      "target": "Tempo",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Termina",
+      "source": "Evento",
+      "target": "Tempo",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "creato da",
+      "targetRole": "crea"
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "inviata a",
+      "targetRole": "riceve"
+    }
+  ],
+  "inheritance": []
+}

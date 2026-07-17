@@ -1,0 +1,274 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "Titolo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Data",
+          "visibility": "+",
+          "type": "DateTime"
+        },
+        {
+          "name": "Luogo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Budget",
+          "visibility": "+",
+          "type": "Double"
+        },
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "Enum {Matrimonio,Laurea,Concerto}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DataDiNascita",
+          "visibility": "+",
+          "type": "DateTime"
+        },
+        {
+          "name": "LuogoDiNascita",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "IndirizzoResidenza",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "NomeUtente",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Pass",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Salt",
+          "visibility": "+",
+          "type": "Double"
+        },
+        {
+          "name": "P.IVA",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "IndirizzoAzienda",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "ModalitàDiPagamento",
+          "visibility": "+",
+          "type": "enum{Carta,Bonifico,Contante}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DataDiNascita",
+          "visibility": "+",
+          "type": "DateTime"
+        },
+        {
+          "name": "LuogoDiNascita",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Email",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Categoria",
+          "visibility": "+",
+          "type": "Enum{Parente,Amico,Collega,...}"
+        },
+        {
+          "name": "IndirizzoDiResidenza",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "CodiceInvito",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "CodiceFiscale",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Pass",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Salt",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DataDiNascita",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "LuogoDiNascita",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "IndirizzoResidenza",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ServizioNecessario",
+      "attributes": [
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "{Catering,Fiori,ServizioTaxi,...}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ServizioOfferto",
+      "attributes": [
+        {
+          "name": "Categoria",
+          "visibility": "+",
+          "type": "Enum{catering,parrucchiere,fioraio...}"
+        },
+        {
+          "name": "Prezzo",
+          "visibility": "+",
+          "type": "double"
+        },
+        {
+          "name": "Iban",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Necessità Di",
+      "source": "Evento",
+      "target": "ServizioNecessario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Offre",
+      "source": "Fornitore",
+      "target": "ServizioOfferto",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Crea",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Invita",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "OffertoDa",
+      "source": "ServizioNecessario",
+      "target": "ServizioOfferto",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "0,1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

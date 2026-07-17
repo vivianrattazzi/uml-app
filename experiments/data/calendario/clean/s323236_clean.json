@@ -1,0 +1,122 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": "Double"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": "Double"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "TipologiaVista",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "messaggio",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "associata",
+      "source": "Notifica",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "0,*",
+      "targetMultiplicity": "1,1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "assegna",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "0,*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Utente",
+      "target": "Notifica",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "0,*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

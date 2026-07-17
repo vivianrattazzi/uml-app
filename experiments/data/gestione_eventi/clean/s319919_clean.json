@@ -1,0 +1,240 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "P. IVA",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "modalità pagamento",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "budget",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "luogo",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "età",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "età",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "codice d'invito",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "età",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "CF",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "prezzo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "IBAN",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "Azienda",
+      "target": "Fornitore",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "inserisce",
+      "source": "Fornitore",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "partecipa",
+      "source": "Invitato",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Invitato",
+      "target": "Notifica",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "aggiunge",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "Servizio",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

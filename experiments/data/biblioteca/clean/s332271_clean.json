@@ -1,0 +1,173 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Catalogo",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": "Integer"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": "Integer"
+        },
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "anno",
+          "visibility": "+",
+          "type": "DateTime"
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "enum {cartaceo, digitale}"
+        },
+        {
+          "name": "disponibile",
+          "visibility": "+",
+          "type": "Boolean"
+        },
+        {
+          "name": "linkDownload",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "PrestitoCartaceo",
+      "attributes": [
+        {
+          "name": "dataInizioPrestito",
+          "visibility": "+",
+          "type": "dateTime"
+        },
+        {
+          "name": "dataFinePrestito",
+          "visibility": "+",
+          "type": "dateTime"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "PrestitoDigitale",
+      "attributes": [
+        {
+          "name": "dataInizioPrestito",
+          "visibility": "+",
+          "type": "dateTime"
+        },
+        {
+          "name": "dataFinePeriodoPrestito",
+          "visibility": "+",
+          "type": "dateTime"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "composto da",
+      "source": "Catalogo",
+      "target": "Libro",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "è preso in",
+      "source": "Libro",
+      "target": "PrestitoCartaceo",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "è preso in",
+      "source": "Libro",
+      "target": "PrestitoDigitale",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "effettua",
+      "source": "Utente",
+      "target": "PrestitoCartaceo",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "effettua",
+      "source": "Utente",
+      "target": "PrestitoDigitale",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

@@ -1,0 +1,265 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "Partita IVA",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "tipo pagamento",
+          "visibility": "+",
+          "type": "enum {PayPal, Satispay, Contrassegno, Carta}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "CodiceInvito",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "dataInvito",
+          "visibility": "+",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipoEvento",
+          "visibility": "+",
+          "type": "enum {matrimonio, laurea, concerto}"
+        },
+        {
+          "name": "dataEvento",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "luogoEvento",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "servizio",
+          "visibility": "+",
+          "type": "enum {catering, parruccheire, fiorario}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data nascita",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "dataNascita",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "enum {parente, amico, collega}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codiceFiscale",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "dataNascita",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "residenza",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "categoriaServizio",
+          "visibility": "+",
+          "type": "enum {catering, parrucchiere, fiorario}"
+        },
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "CodiceInvito",
+      "target": "Invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fornisce",
+      "source": "Fornitore",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "CodiceInvito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invita",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fornisce",
+      "source": "Servizio",
+      "target": "Azienda",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

@@ -1,0 +1,254 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "modalitàPagamento",
+          "visibility": "+",
+          "type": "text"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipoEvento",
+          "visibility": "+",
+          "type": "enum{laurea, matrimonio, concerto}"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "luogo",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "budgetPrevisto",
+          "visibility": "+",
+          "type": "number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "partitaIVA",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "dataNascita",
+          "visibility": "+",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "dataNascita",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "enum{parente, amico, collega}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codiceFiscale",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "dataNascita",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "indirizzoResidenza",
+          "visibility": "+",
+          "type": "text"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "enum{catering, parrucchiere, fioraio, taxi}"
+        },
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "text"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "text"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "offre >",
+      "source": "Azienda",
+      "target": "Servizio",
+      "sourceMultiplicity": "1 .. n",
+      "targetMultiplicity": "0 .. n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invita",
+      "source": "Evento",
+      "target": "Invitato",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ha v",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "0 .. n",
+      "targetMultiplicity": "1 .. n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "possiede v",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1 .. n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea >",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "0 .. n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invita",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "1 .. n",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "Utente"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "Utente"
+    }
+  ]
+}

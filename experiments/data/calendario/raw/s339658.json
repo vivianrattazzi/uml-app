@@ -1,0 +1,281 @@
+{
+  "version": "3.0.0",
+  "type": "ClassDiagram",
+  "size": {
+    "width": 1480,
+    "height": 560
+  },
+  "interactive": {
+    "elements": {},
+    "relationships": {}
+  },
+  "elements": {
+    "dd953024-8722-45bf-9e50-9de95fe611c8": {
+      "id": "dd953024-8722-45bf-9e50-9de95fe611c8",
+      "name": "Utente",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": -590,
+        "y": -240,
+        "width": 160,
+        "height": 40
+      },
+      "attributes": [],
+      "methods": []
+    },
+    "9e686c7f-6d51-436b-aaef-357941c7dace": {
+      "id": "9e686c7f-6d51-436b-aaef-357941c7dace",
+      "name": "Calendar System",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": -230,
+        "y": -240,
+        "width": 160,
+        "height": 40
+      },
+      "attributes": [],
+      "methods": []
+    },
+    "17ccc230-71f1-4768-b09d-e1a73f3c0c15": {
+      "id": "17ccc230-71f1-4768-b09d-e1a73f3c0c15",
+      "name": "Appuntamento",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": -220,
+        "y": 50,
+        "width": 160,
+        "height": 160
+      },
+      "attributes": [
+        "f05f9821-09be-4142-89cd-0277f5c70fc5",
+        "0e9387a3-3b8e-4e1d-bf69-cb61d0c73af1",
+        "5a8cf3cc-7968-4a76-a8c3-85104341e27c",
+        "75268ad9-3e82-48ff-a8df-4f36c94c5202"
+      ],
+      "methods": []
+    },
+    "f05f9821-09be-4142-89cd-0277f5c70fc5": {
+      "id": "f05f9821-09be-4142-89cd-0277f5c70fc5",
+      "name": "nome",
+      "type": "ClassAttribute",
+      "owner": "17ccc230-71f1-4768-b09d-e1a73f3c0c15",
+      "bounds": {
+        "x": -219.5,
+        "y": 90.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "0e9387a3-3b8e-4e1d-bf69-cb61d0c73af1": {
+      "id": "0e9387a3-3b8e-4e1d-bf69-cb61d0c73af1",
+      "name": "ora_inizio",
+      "type": "ClassAttribute",
+      "owner": "17ccc230-71f1-4768-b09d-e1a73f3c0c15",
+      "bounds": {
+        "x": -219.5,
+        "y": 120.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "5a8cf3cc-7968-4a76-a8c3-85104341e27c": {
+      "id": "5a8cf3cc-7968-4a76-a8c3-85104341e27c",
+      "name": "ora_fine",
+      "type": "ClassAttribute",
+      "owner": "17ccc230-71f1-4768-b09d-e1a73f3c0c15",
+      "bounds": {
+        "x": -219.5,
+        "y": 150.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "75268ad9-3e82-48ff-a8df-4f36c94c5202": {
+      "id": "75268ad9-3e82-48ff-a8df-4f36c94c5202",
+      "name": "tipologia",
+      "type": "ClassAttribute",
+      "owner": "17ccc230-71f1-4768-b09d-e1a73f3c0c15",
+      "bounds": {
+        "x": -219.5,
+        "y": 180.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "6e782abc-8c33-4c37-a421-41e3877eba91": {
+      "id": "6e782abc-8c33-4c37-a421-41e3877eba91",
+      "name": "Nell'attributo \"tipologia\" è compresa l'informazione sulla ricorrenza",
+      "type": "ColorLegend",
+      "owner": null,
+      "bounds": {
+        "x": -40,
+        "y": 170,
+        "width": 540,
+        "height": 40
+      }
+    },
+    "f57acbda-7987-4f0e-8001-5252d54fdee6": {
+      "id": "f57acbda-7987-4f0e-8001-5252d54fdee6",
+      "name": "Calendario",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 210,
+        "y": -260,
+        "width": 160,
+        "height": 70
+      },
+      "attributes": [
+        "572af546-7c84-483d-86d1-b828f3472ce9"
+      ],
+      "methods": []
+    },
+    "572af546-7c84-483d-86d1-b828f3472ce9": {
+      "id": "572af546-7c84-483d-86d1-b828f3472ce9",
+      "name": "vista",
+      "type": "ClassAttribute",
+      "owner": "f57acbda-7987-4f0e-8001-5252d54fdee6",
+      "bounds": {
+        "x": 210.5,
+        "y": -219.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "e35cf9d2-ff62-4bdb-98e5-a82a9891ecc9": {
+      "id": "e35cf9d2-ff62-4bdb-98e5-a82a9891ecc9",
+      "name": "Con l'attributo \"vista\" si specifica il tipo di visualizzazione sul calendario",
+      "type": "ColorLegend",
+      "owner": null,
+      "bounds": {
+        "x": 30,
+        "y": -180,
+        "width": 570,
+        "height": 40
+      }
+    },
+    "0ccf15d9-d7e4-4201-9d6f-82c74f43c085": {
+      "id": "0ccf15d9-d7e4-4201-9d6f-82c74f43c085",
+      "name": "L'associazione \"gestisce\" include le azioni di CRUD di un appuntamento",
+      "type": "ColorLegend",
+      "owner": null,
+      "bounds": {
+        "x": -720,
+        "y": -60,
+        "width": 570,
+        "height": 40
+      }
+    }
+  },
+  "relationships": {
+    "ea0af58a-79b1-479d-9d9d-1fb9345ef8f2": {
+      "id": "ea0af58a-79b1-479d-9d9d-1fb9345ef8f2",
+      "name": "interagisce",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": -430,
+        "y": -230,
+        "width": 200,
+        "height": 31
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 10
+        },
+        {
+          "x": 200,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "dd953024-8722-45bf-9e50-9de95fe611c8",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Left",
+        "element": "9e686c7f-6d51-436b-aaef-357941c7dace",
+        "multiplicity": "",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    "ab547faa-1218-4e23-b19b-51ee98a6bb81": {
+      "id": "ab547faa-1218-4e23-b19b-51ee98a6bb81",
+      "name": "gestisce",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": -150,
+        "y": -200,
+        "width": 10,
+        "height": 250
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 0
+        },
+        {
+          "x": 5,
+          "y": 250
+        }
+      ],
+      "source": {
+        "direction": "Down",
+        "element": "9e686c7f-6d51-436b-aaef-357941c7dace",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Up",
+        "element": "17ccc230-71f1-4768-b09d-e1a73f3c0c15",
+        "multiplicity": "",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    "6972de8d-14a3-449d-b37f-8083d2960785": {
+      "id": "6972de8d-14a3-449d-b37f-8083d2960785",
+      "name": "visualizza",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": -70,
+        "y": -230,
+        "width": 280,
+        "height": 31
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 10
+        },
+        {
+          "x": 280,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "9e686c7f-6d51-436b-aaef-357941c7dace",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Left",
+        "element": "f57acbda-7987-4f0e-8001-5252d54fdee6",
+        "multiplicity": "",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    }
+  },
+  "assessments": {}
+}

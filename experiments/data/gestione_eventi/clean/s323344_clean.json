@@ -1,0 +1,163 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "luogo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "budgetPrevisto",
+          "visibility": "+",
+          "type": "Float"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitori",
+      "attributes": [
+        {
+          "name": "partitaIVA",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "modalitàPagamento",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitati",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "e-mail",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "codiceInvito",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatori",
+      "attributes": [
+        {
+          "name": "CodiceFiscale",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "residenza",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizi",
+      "attributes": [
+        {
+          "name": "Categoria",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "Float"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "accountDigitali",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "necessita",
+      "source": "Evento",
+      "target": "Servizi",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offre",
+      "source": "Fornitori",
+      "target": "Servizi",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "viene invitato",
+      "source": "Invitati",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "organizza",
+      "source": "Organizzatori",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

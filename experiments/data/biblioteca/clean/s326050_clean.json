@@ -1,0 +1,261 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "BibliotecaSystem",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Cartaceo",
+      "attributes": [
+        {
+          "name": "scaffale",
+          "visibility": "+",
+          "type": "integer"
+        },
+        {
+          "name": "fila",
+          "visibility": "+",
+          "type": "Integer"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Digitale",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "casaeditrice",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "annoPubblicazione",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "LibroOnline",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "descrizione",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "dataPrestito",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "dataRestituizione",
+          "visibility": "+",
+          "type": "date"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "User",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "surname",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "pw",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "BibliotecaSystem",
+      "target": "Libro",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "BibliotecaSystem",
+      "target": "Notifica",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Digitale",
+      "target": "LibroOnline",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Libro",
+      "target": "Prestito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "LibroOnline",
+      "target": "BibliotecaSystem",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "LibroOnline",
+      "target": "User",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "User",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito",
+      "target": "BibliotecaSystem",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "User",
+      "target": "Prestito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Libro",
+      "parent": "Cartaceo"
+    },
+    {
+      "child": "Libro",
+      "parent": "Digitale"
+    }
+  ]
+}

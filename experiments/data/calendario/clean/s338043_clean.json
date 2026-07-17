@@ -1,0 +1,163 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "OraInizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "OraFine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Annullato",
+          "visibility": "+",
+          "type": "bool"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "AppuntamentoRipetuto",
+      "attributes": [
+        {
+          "name": "GiorniSettimana",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "AppuntamentoSingolo",
+      "attributes": [
+        {
+          "name": "DataInizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "DataFine",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "CalendarioGiornaliero",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "CalendarioMensile",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "CalendarioSettimanale",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Mail",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "mostra",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ha registrato",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "AppuntamentoRipetuto",
+      "parent": "Appuntamento"
+    },
+    {
+      "child": "AppuntamentoSingolo",
+      "parent": "Appuntamento"
+    },
+    {
+      "child": "CalendarioGiornaliero",
+      "parent": "Calendario"
+    },
+    {
+      "child": "CalendarioMensile",
+      "parent": "Calendario"
+    },
+    {
+      "child": "CalendarioSettimanale",
+      "parent": "Calendario"
+    }
+  ]
+}

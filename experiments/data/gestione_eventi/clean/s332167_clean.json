@@ -1,0 +1,239 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "data",
+          "visibility": "",
+          "type": "data"
+        },
+        {
+          "name": "luogo",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "budget",
+          "visibility": "",
+          "type": "numeric"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "partitaIva",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "indirizzoAzienda",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "nomeAzienda",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "codiceInvito",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Metodo di Pagamento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codiceFiscale",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cittaDiResidenza",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "prezzo",
+          "visibility": "",
+          "type": "numeric"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "dataDiNascita",
+          "visibility": "",
+          "type": "data"
+        },
+        {
+          "name": "luogoDiNascita",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "garantisce v",
+      "source": "Fornitore",
+      "target": "Metodo di Pagamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "inserisce >",
+      "source": "Fornitore",
+      "target": "Servizio",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invitato <",
+      "source": "Invitato",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea >",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "aggiunge >",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "comprende ^",
+      "source": "Servizio",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Organizzatore",
+      "parent": "Fornitore"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "Utente"
+    }
+  ]
+}

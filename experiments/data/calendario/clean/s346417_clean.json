@@ -1,0 +1,142 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "appuntamento",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "titolo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data_inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data_fine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "trigger_date",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "messaggio",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "utente",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "appuntamento",
+      "sourceMultiplicity": "n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": "triggera"
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "utente",
+      "sourceMultiplicity": "n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": "può ricevere"
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "utente",
+      "target": "appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "n",
+      "sourceRole": "imposta",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

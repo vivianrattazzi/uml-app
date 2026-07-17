@@ -1,0 +1,153 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Database",
+      "attributes": [
+        {
+          "name": "indirizzo_web",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "quantità",
+          "visibility": "+",
+          "type": "integer"
+        },
+        {
+          "name": "cartaceo",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "messaggio",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "data_inizio",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data_fine",
+          "visibility": "+",
+          "type": "string (optional)"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "identificativo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "memorizza",
+      "source": "Database",
+      "target": "Prestito",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "memorizza",
+      "source": "Libro",
+      "target": "Database",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "memorizza",
+      "source": "Notifica",
+      "target": "Database",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "Utente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito",
+      "target": "Libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "memorizza",
+      "source": "Utente",
+      "target": "Database",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Ha preso in prestito",
+      "source": "Utente",
+      "target": "Prestito",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

@@ -1,0 +1,297 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Account digitale",
+      "attributes": [
+        {
+          "name": "nome account",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "partita IVA",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "luogo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cellulare",
+          "visibility": "+",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Iban",
+      "attributes": [
+        {
+          "name": "iban",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Invito",
+      "attributes": [
+        {
+          "name": "codice d'invito",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Modalità di pagamento",
+      "attributes": [
+        {
+          "name": "modalità",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Azienda",
+      "target": "Fornitore",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Fornitore",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "1...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "0...*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "Evento",
+      "sourceMultiplicity": "0....*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invito",
+      "target": "Evento",
+      "sourceMultiplicity": "0...*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invito",
+      "target": "Invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Modalità di pagamento",
+      "target": "Azienda",
+      "sourceMultiplicity": "1...*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "0...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizio",
+      "target": "Fornitore",
+      "sourceMultiplicity": "1...*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Account digitale",
+      "parent": "Modalità di pagamento"
+    },
+    {
+      "child": "Iban",
+      "parent": "Modalità di pagamento"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Ora d'inizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Ora di fine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "AppuntamentoRicorrente",
+      "attributes": [
+        {
+          "name": "Ricorrenza",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "Modalità visualizzazione",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Giorno",
+      "attributes": [
+        {
+          "name": "Data",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Mail",
+      "attributes": [
+        {
+          "name": "Oggetto",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Corpo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Destinatario",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Email",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": "In conflitto con >"
+    },
+    {
+      "type": "Association",
+      "name": "fissato per >",
+      "source": "Appuntamento",
+      "target": "Giorno",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "composto da >",
+      "source": "Calendario",
+      "target": "Giorno",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "< invia",
+      "source": "Mail",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "impostato da >",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "associato a >",
+      "source": "Utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "AppuntamentoRicorrente",
+      "parent": "Appuntamento"
+    }
+  ]
+}

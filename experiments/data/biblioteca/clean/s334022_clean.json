@@ -1,0 +1,192 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Biblioteca",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ID",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "codice biblitecario nazionale",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "e-book",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "Titolo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Autore",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "codice ISBN",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "numero pagine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Genere",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "anno pubblicazione",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro cartaceo",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "data inizio prestito",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "periodo del prestito",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data nascita",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data iscrizione sistema bibliotecario",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ID",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Biblioteca",
+      "target": "Prestito",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Biblioteca",
+      "target": "Utente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "e-book",
+      "target": "Libro",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "possiede",
+      "source": "Libro",
+      "target": "Biblioteca",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Libro",
+      "target": "Prestito",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Libro cartaceo",
+      "target": "Libro",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito",
+      "target": "Utente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

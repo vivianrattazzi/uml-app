@@ -1,0 +1,93 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "startTime",
+          "visibility": "+",
+          "type": "Time"
+        },
+        {
+          "name": "endTime",
+          "visibility": "+",
+          "type": "Time"
+        },
+        {
+          "name": "Type",
+          "visibility": "+",
+          "type": "List"
+        },
+        {
+          "name": "ricorrente",
+          "visibility": "+",
+          "type": "bool"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento Ricorrente",
+      "attributes": [
+        {
+          "name": "frequency",
+          "visibility": "+",
+          "type": "number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "Vista",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "User",
+      "attributes": [],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "notifica",
+      "source": "Calendario",
+      "target": "User",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "imposta",
+      "source": "User",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1..N",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Appuntamento Ricorrente",
+      "parent": "Appuntamento"
+    }
+  ]
+}

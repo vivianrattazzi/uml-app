@@ -1,0 +1,283 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Codice invito",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Dati Azienda",
+      "attributes": [
+        {
+          "name": "P.IVA",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Modalità di pagamento",
+          "visibility": "+",
+          "type": "ENUM{}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Data",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "Indirizzo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Budget",
+          "visibility": "+",
+          "type": "Float"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Indirizzo",
+      "attributes": [
+        {
+          "name": "Via",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Nome città",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Civico",
+          "visibility": "+",
+          "type": "Integer"
+        },
+        {
+          "name": "CAP",
+          "visibility": "+",
+          "type": "Integer"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitati",
+      "attributes": [
+        {
+          "name": "Mail",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Lista servizi",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Persone",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "birthdate",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "CF",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Prezzo",
+          "visibility": "+",
+          "type": "Number"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Codice invito",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Dati Azienda",
+      "target": "Fornitore",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Possiede",
+      "source": "Dati Azienda",
+      "target": "Indirizzo",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Proposta invito",
+      "source": "Evento",
+      "target": "Invitati",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Può scegliere",
+      "source": "Evento",
+      "target": "Lista servizi",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Offre",
+      "source": "Fornitore",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Indirizzo",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Indirizzo",
+      "target": "Organizzatore",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitati",
+      "target": "Codice invito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Organizza",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizio",
+      "target": "Lista servizi",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "Persone"
+    },
+    {
+      "child": "Invitati",
+      "parent": "Persone"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "Persone"
+    }
+  ]
+}

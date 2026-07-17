@@ -1,0 +1,111 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "h_inizio",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "h_fine",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "data_inizio",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "data_fine",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "valido",
+          "visibility": "+",
+          "type": "Boolean"
+        },
+        {
+          "name": "ripete",
+          "visibility": "+",
+          "type": "Ricorrenza"
+        },
+        {
+          "name": "notifica",
+          "visibility": "+",
+          "type": "Boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "vista",
+          "visibility": "+",
+          "type": "Visualizzazione"
+        }
+      ],
+      "methods": [
+        "+ createAppuntamento()",
+        "+ modifyAppuntamento()",
+        "+ deleteAppuntamento()",
+        "+ sendNotificaAvviso()"
+      ]
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

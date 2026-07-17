@@ -1,0 +1,96 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "data inizio",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "data fine",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "ricorrenza",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "anno solare",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "tipologia vista",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "messaggio",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email destinatario",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "contiene >",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "associata a >",
+      "source": "Notifica",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1...*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

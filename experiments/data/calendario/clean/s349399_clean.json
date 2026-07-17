@@ -1,0 +1,58 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "datainizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "datafine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "utente",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "nomeutente",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [],
+  "inheritance": []
+}

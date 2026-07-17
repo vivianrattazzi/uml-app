@@ -1,0 +1,1043 @@
+Valuta il seguente diagramma UML confrontando la soluzione dello studente con la soluzione ufficiale.
+
+========================================================================
+ESEMPIO 1 #gestione_eventi
+========================================================================
+
+SOLUZIONE UFFICIALE
+
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "data",
+          "visibility": "",
+          "type": "Date"
+        },
+        {
+          "name": "luogo",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "budget",
+          "visibility": "",
+          "type": "float"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "nomeAzienda",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "partitaIVA",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "metodiPagamento",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "iban",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invito",
+      "attributes": [
+        {
+          "name": "codice",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codiceFiscale",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "residenza",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "prezzo",
+          "visibility": "",
+          "type": "float"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "include",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fornisce",
+      "source": "Fornitore",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Invitato",
+      "target": "Invito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "appartiene a",
+      "source": "Invito",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "Utente"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "Utente"
+    }
+  ],
+  "reference": {
+    "classes": [
+      {
+        "name": "Utente",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "username",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "password",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "cognome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "email",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Organizzatore",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "codiceFiscale",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "residenza",
+            "synonyms": [
+              "indirizzo",
+              "indirizzoResidenza"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Fornitore",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "nomeAzienda",
+            "synonyms": [
+              "nomeSocietà"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "partitaIVA",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "indirizzo",
+            "synonyms": [
+              "indirizzoAzienda"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "metodiPagamento",
+            "synonyms": [
+              "modalitaPagamento"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "iban",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Evento",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "tipo",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "data",
+            "synonyms": [],
+            "types": [
+              "Date",
+              "DateTime"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "luogo",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "budget",
+            "synonyms": [],
+            "types": [
+              "float",
+              "double"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Servizio",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "categoria",
+            "synonyms": [
+              "tipo"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "prezzo",
+            "synonyms": [],
+            "types": [
+              "float",
+              "double"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Invito",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "codice",
+            "synonyms": [
+              "id",
+              "idInvito",
+              "codiceInvito"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Invitato",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "cognome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "email",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "categoria",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      }
+    ],
+    "associations": [
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Organizzatore",
+        "target": "Evento",
+        "sourceMultiplicity": [
+          "1"
+        ],
+        "targetMultiplicity": [
+          "*"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Evento",
+        "target": "Servizio",
+        "sourceMultiplicity": [
+          "*"
+        ],
+        "targetMultiplicity": [
+          "*"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Fornitore",
+        "target": "Servizio",
+        "sourceMultiplicity": [
+          "1"
+        ],
+        "targetMultiplicity": [
+          "*"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Invito",
+        "target": "Evento",
+        "sourceMultiplicity": [
+          "*"
+        ],
+        "targetMultiplicity": [
+          "1"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Invitato",
+        "target": "Invito",
+        "sourceMultiplicity": [
+          "1"
+        ],
+        "targetMultiplicity": [
+          "*"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      }
+    ],
+    "inheritance": [
+      {
+        "child": "Organizzatore",
+        "parent": "Utente",
+        "weight": "STRONG"
+      },
+      {
+        "child": "Fornitore",
+        "parent": "Utente",
+        "weight": "STRONG"
+      }
+    ],
+    "forbiddenClasses": [],
+    "forbiddenAssociations": []
+  }
+}
+------------------------------------------------------------------------
+
+SOLUZIONE DELLO STUDENTE
+
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "budget",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "p_IVA",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "nome_azienda",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data_nascita",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "luogo_nascita",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Indirizzo",
+      "attributes": [
+        {
+          "name": "via",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "città",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cap",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "regione",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "stato",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "codice invito",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Modalità pagamento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "circuito",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "cod_fisc",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data_nascita",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "luogo_nascita",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "prezzo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "IBAN",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Tipo servizio",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome_utente",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Indirizzo",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Organizzatore",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Tipo servizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Indirizzo",
+      "target": "Fornitore",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Modalità pagamento",
+      "target": "Fornitore",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Indirizzo",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizio",
+      "target": "Fornitore",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizio",
+      "target": "Tipo servizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "Utente"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "Utente"
+    }
+  ]
+}
+
+------------------------------------------------------------------------
+
+VALUTAZIONE
+
+CLASSI
+
+Presenti:
+- Utente
+- Organizzatore
+- Fornitore
+- Evento
+- Servizio
+- Invitato
+
+Assenti:
+- Invito
+
+Extra:
+- Indirizzo
+- Modalità pagamento
+- Tipo servizio
+
+--------------------------------------------------
+
+ATTRIBUTI DELLE CLASSI EQUIVALENTI
+
+Presenti:
+Nessuno
+
+Presenti con errori di tipo:
+- Evento: tipo, data, budget
+- Fornitore: partitaIVA, nomeAzienda
+- Invitato: nome, cognome, email, categoria
+- Organizzatore: codiceFiscale
+- Servizio: prezzo, iban
+- Utente: username, password, nome, cognome
+
+Assenti:
+- Evento: luogo
+- Fornitore: indirizzo, metodiPagamento
+- Organizzatore: residenza
+- Servizio: nome, categoria
+- Utente: email
+
+Extra:
+- Fornitore: data_nascita, luogo_nascita
+- Invitato: codice invito
+- Organizzatore: data_nascita, luogo_nascita
+
+
+--------------------------------------------------
+
+EREDITARIETÀ
+
+Presenti:
+- Organizzatore → Utente
+- Fornitore → Utente
+
+Assenti:
+Nessuna
+
+Extra:
+Nessuna
+
+--------------------------------------------------
+
+RELAZIONI
+
+Presenti:
+- Organizzatore — Evento
+- Fornitore — Servizio
+
+Assenti:
+- Evento — Servizio
+- Invito — Evento
+- Invitato — Invito
+
+Extra:
+- Evento — Indirizzo
+- Evento — Tipo servizio
+- Indirizzo — Fornitore
+- Modalità pagamento — Fornitore
+- Organizzatore — Indirizzo
+- Invitato — Evento
+- Servizio — Tipo servizio
+
+--------------------------------------------------
+
+MOLTEPLICITÀ
+
+Presenti:
+- Organizzatore (1) — Evento (*)
+- Fornitore (1) — Servizio (*)
+
+Assenti:
+- Evento (*) — Servizio (*)
+- Invito (*) — Evento (1)
+- Invitato (1) — Invito (*)
+
+Extra:
+Nessuna
+
+--------------------------------------------------
+
+OSSERVAZIONI FINALI
+
+La soluzione rappresenta correttamente buona parte delle classi principali del dominio e individua correttamente le relazioni di ereditarietà previste.
+Sono inoltre presenti numerosi attributi corretti, sebbene alcune classi risultino incomplete e manchi la classe Invito, fondamentale per la modellazione del sistema. 
+Le principali criticità riguardano le relazioni tra le classi, in quanto diverse associazioni essenziali sono assenti mentre ne vengono introdotte altre non previste dalla soluzione ufficiale. 
+Nel complesso la prova dimostra una discreta comprensione del dominio, ma presenta imprecisioni nella modellazione strutturale che ne riducono la qualità complessiva, rendendola complessivamente sufficiente ma non pienamente accurata.

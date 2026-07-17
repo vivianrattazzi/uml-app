@@ -1,0 +1,142 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "AppCalendario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "anno",
+          "visibility": "+",
+          "type": "int"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Tempo",
+      "attributes": [
+        {
+          "name": "dataInizio",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "dataFine",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "interagisceCon◄",
+      "source": "AppCalendario",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce◄",
+      "source": "Appuntamento",
+      "target": "AppCalendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invia▼",
+      "source": "Avviso",
+      "target": "AppCalendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve▼",
+      "source": "Avviso",
+      "target": "Utente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "segnatoSu▼",
+      "source": "Calendario",
+      "target": "Tempo",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "programmatoPer▼",
+      "source": "Tempo",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

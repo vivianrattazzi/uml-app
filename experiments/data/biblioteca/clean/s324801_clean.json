@@ -1,0 +1,106 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "tipoLibro"
+        },
+        {
+          "name": "genere",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "numeroPagine",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "dataInizio",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "dataFine",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "corrente",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito",
+      "target": "Libro",
+      "sourceMultiplicity": "0..n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "<-richiede",
+      "source": "Prestito",
+      "target": "Utente",
+      "sourceMultiplicity": "0...n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

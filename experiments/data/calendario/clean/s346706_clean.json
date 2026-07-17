@@ -1,0 +1,184 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento annuale",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento mensile",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento ricorrente",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento settimanale",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento standard",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "ricorrenza annuale",
+      "attributes": [
+        {
+          "name": "giorno",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "mese",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ricorrenza mensile",
+      "attributes": [
+        {
+          "name": "giorno del mese",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ricorrenza settimanale",
+      "attributes": [
+        {
+          "name": "giorno della settimana",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora fine",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Time Interval",
+      "attributes": [
+        {
+          "name": "giorno inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "giorno fine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora fine",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "has",
+      "source": "Appuntamento annuale",
+      "target": "ricorrenza annuale",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "has",
+      "source": "Appuntamento mensile",
+      "target": "ricorrenza mensile",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "has",
+      "source": "Appuntamento settimanale",
+      "target": "ricorrenza settimanale",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "has",
+      "source": "Appuntamento standard",
+      "target": "Time Interval",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Appuntamento annuale",
+      "parent": "Appuntamento ricorrente"
+    },
+    {
+      "child": "Appuntamento mensile",
+      "parent": "Appuntamento ricorrente"
+    },
+    {
+      "child": "Appuntamento ricorrente",
+      "parent": "Appuntamento"
+    },
+    {
+      "child": "Appuntamento settimanale",
+      "parent": "Appuntamento ricorrente"
+    },
+    {
+      "child": "Appuntamento standard",
+      "parent": "Appuntamento"
+    }
+  ]
+}

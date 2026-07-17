@@ -129,19 +129,33 @@ def container_to_list(container: Any) -> List[Dict[str, Any]]:
 
 def extract_reference_if_present(data: Dict[str, Any]) -> Optional[Dict[str, Any]]:
     """
-    Se il file contiene una sezione 'reference', la semplifica separatamente.
-    Utile per le soluzioni ufficiali già annotate con classi, sinonimi, pesi e associazioni.
+    Semplifica una soluzione ufficiale annotata.
+
+    Gestisce entrambi i formati:
+    1. {"reference": {"classes": [...], "associations": [...]}}
+    2. {"classes": [...], "associations": [...]}  # reference al livello principale
     """
     reference = data.get("reference")
+
+    # Supporta anche i file che contengono direttamente
+    # classes e associations al livello principale.
     if not isinstance(reference, dict):
-        return None
+        if (
+            isinstance(data.get("classes"), list)
+            and isinstance(data.get("associations"), list)
+        ):
+            reference = data
+        else:
+            return None
 
     classes = []
+
     for cls in reference.get("classes", []):
         if not isinstance(cls, dict):
             continue
 
         attributes = []
+
         for attr in cls.get("attributes", []):
             if not isinstance(attr, dict):
                 continue
@@ -151,7 +165,9 @@ def extract_reference_if_present(data: Dict[str, Any]) -> Optional[Dict[str, Any
                 "synonyms": attr.get("synonyms", []),
                 "types": attr.get("types", []),
                 "weight": normalize_text(attr.get("weight")),
-                "allowsForeignKeyName": bool(attr.get("allowsForeignKeyName", False))
+                "allowsForeignKeyName": bool(
+                    attr.get("allowsForeignKeyName", False)
+                )
             })
 
         classes.append({
@@ -163,9 +179,13 @@ def extract_reference_if_present(data: Dict[str, Any]) -> Optional[Dict[str, Any
         })
 
     associations = []
+    inheritance = []
+
     for assoc in reference.get("associations", []):
         if not isinstance(assoc, dict):
             continue
+
+        assoc_type = normalize_text(assoc.get("type"))
 
         source = assoc.get("source", {}) or {}
         target = assoc.get("target", {}) or {}
@@ -173,11 +193,23 @@ def extract_reference_if_present(data: Dict[str, Any]) -> Optional[Dict[str, Any
         source_class = source.get("referenceClass", {}) or {}
         target_class = target.get("referenceClass", {}) or {}
 
+        source_name = normalize_text(source_class.get("name"))
+        target_name = normalize_text(target_class.get("name"))
+
+        # Le ereditarietà vengono separate dalle associazioni.
+        if assoc_type in {"ClassInheritance", "Inheritance"}:
+            inheritance.append({
+                "child": source_name,
+                "parent": target_name,
+                "weight": normalize_text(assoc.get("weight"))
+            })
+            continue
+
         associations.append({
-            "type": normalize_text(assoc.get("type")),
+            "type": assoc_type,
             "name": normalize_text(assoc.get("name")),
-            "source": normalize_text(source_class.get("name")),
-            "target": normalize_text(target_class.get("name")),
+            "source": source_name,
+            "target": target_name,
             "sourceMultiplicity": source.get("multiplicities", []),
             "targetMultiplicity": target.get("multiplicities", []),
             "sourceRole": normalize_text(source.get("role")),
@@ -188,8 +220,11 @@ def extract_reference_if_present(data: Dict[str, Any]) -> Optional[Dict[str, Any
     return {
         "classes": classes,
         "associations": associations,
+        "inheritance": inheritance,
         "forbiddenClasses": reference.get("forbiddenClasses", []),
-        "forbiddenAssociations": reference.get("forbiddenAssociations", [])
+        "forbiddenAssociations": reference.get(
+            "forbiddenAssociations", []
+        )
     }
 
 
@@ -197,6 +232,9 @@ def simplify_model(data: Dict[str, Any]) -> Dict[str, Any]:
     """
     Semplifica un diagramma UML dal formato grafico.
     Risolve gli UUID delle relazioni sostituendoli con i nomi delle classi.
+
+    Gestisce anche i file che contengono esclusivamente una reference,
+    senza una sezione grafica model/elements.
     """
     elements = container_to_list(get_elements_container(data))
     relationships_raw = container_to_list(get_relationships_container(data))
@@ -226,36 +264,49 @@ def simplify_model(data: Dict[str, Any]) -> Dict[str, Any]:
         elif el_type in ATTRIBUTE_TYPES:
             owner = el.get("owner")
             name = normalize_text(el.get("name"))
+
             if owner and name:
-                attributes_by_owner.setdefault(owner, []).append(clean_attribute_name(name))
+                attributes_by_owner.setdefault(owner, []).append(
+                    clean_attribute_name(name)
+                )
 
         elif el_type in METHOD_TYPES:
             owner = el.get("owner")
             name = normalize_text(el.get("name"))
+
             if owner and name:
                 methods_by_owner.setdefault(owner, []).append(name)
 
     classes = []
+
     for class_id, cls in class_by_id.items():
         class_name = normalize_text(cls.get("name"))
-
         attributes = attributes_by_owner.get(class_id, [])
 
-        # fallback: se gli attributi sono referenziati nella classe ma non già raccolti
+        # Fallback: recupera gli attributi referenziati direttamente
+        # dalla classe se non sono già stati raccolti tramite owner.
         if not attributes:
             for attr_id in cls.get("attributes", []):
                 attr_el = element_by_id.get(attr_id)
+
                 if attr_el and attr_el.get("type") in ATTRIBUTE_TYPES:
                     attr_name = normalize_text(attr_el.get("name"))
+
                     if attr_name:
-                        attributes.append(clean_attribute_name(attr_name))
+                        attributes.append(
+                            clean_attribute_name(attr_name)
+                        )
 
         methods = methods_by_owner.get(class_id, [])
+
+        # Fallback analogo per i metodi.
         if not methods:
             for method_id in cls.get("methods", []):
                 method_el = element_by_id.get(method_id)
+
                 if method_el and method_el.get("type") in METHOD_TYPES:
                     method_name = normalize_text(method_el.get("name"))
+
                     if method_name:
                         methods.append(method_name)
 
@@ -278,20 +329,33 @@ def simplify_model(data: Dict[str, Any]) -> Dict[str, Any]:
         source_id = source.get("element")
         target_id = target.get("element")
 
-        source_name = normalize_text(class_by_id.get(source_id, {}).get("name"))
-        target_name = normalize_text(class_by_id.get(target_id, {}).get("name"))
+        source_name = normalize_text(
+            class_by_id.get(source_id, {}).get("name")
+        )
+        target_name = normalize_text(
+            class_by_id.get(target_id, {}).get("name")
+        )
 
-        # ignora relazioni verso elementi non classe, es. ColorLegend
+        # Ignora le relazioni dirette verso elementi non riconosciuti
+        # come classi, ad esempio ColorLegend.
         if not source_name or not target_name:
             continue
 
         item = {
-            "type": "Inheritance" if rel_type == "ClassInheritance" else "Association",
+            "type": (
+                "Inheritance"
+                if rel_type == "ClassInheritance"
+                else "Association"
+            ),
             "name": name,
             "source": source_name,
             "target": target_name,
-            "sourceMultiplicity": normalize_text(source.get("multiplicity")),
-            "targetMultiplicity": normalize_text(target.get("multiplicity")),
+            "sourceMultiplicity": normalize_text(
+                source.get("multiplicity")
+            ),
+            "targetMultiplicity": normalize_text(
+                target.get("multiplicity")
+            ),
             "sourceRole": normalize_text(source.get("role")),
             "targetRole": normalize_text(target.get("role"))
         }
@@ -305,15 +369,54 @@ def simplify_model(data: Dict[str, Any]) -> Dict[str, Any]:
             associations.append(item)
 
     simplified = {
-        "diagramType": normalize_text(data.get("type", "ClassDiagram")),
-        "classes": sorted(classes, key=lambda x: x["name"].lower()),
-        "associations": sorted(associations, key=lambda x: (x["source"].lower(), x["target"].lower())),
-        "inheritance": sorted(inheritance, key=lambda x: (x["child"].lower(), x["parent"].lower()))
+        "diagramType": normalize_text(
+            data.get("type", "ClassDiagram")
+        ),
+        "classes": sorted(
+            classes,
+            key=lambda x: x["name"].lower()
+        ),
+        "associations": sorted(
+            associations,
+            key=lambda x: (
+                x["source"].lower(),
+                x["target"].lower()
+            )
+        ),
+        "inheritance": sorted(
+            inheritance,
+            key=lambda x: (
+                x["child"].lower(),
+                x["parent"].lower()
+            )
+        )
     }
 
     reference = extract_reference_if_present(data)
+
     if reference is not None:
-        simplified["reference"] = reference
+        model_is_empty = (
+            not simplified["classes"]
+            and not simplified["associations"]
+            and not simplified["inheritance"]
+        )
+
+        if model_is_empty:
+            # Il file contiene esclusivamente una reference:
+            # la usa come contenuto principale senza duplicarla.
+            simplified["classes"] = reference.get("classes", [])
+            simplified["associations"] = reference.get(
+            "associations",
+            []
+            )
+            simplified["inheritance"] = reference.get(
+                "inheritance",
+                []
+            )
+        else:
+            # Il file contiene sia il modello grafico sia la reference:
+            # conserva entrambe le sezioni.
+            simplified["reference"] = reference
 
     return simplified
 

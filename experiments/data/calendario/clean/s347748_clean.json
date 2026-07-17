@@ -1,0 +1,240 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "annullamentoAppuntamento",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "Time"
+        },
+        {
+          "name": "annullaRicorrenza",
+          "visibility": "+",
+          "type": "Boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "AppCalendario",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": "Time"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": "Time"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "gestioneAppuntamento",
+      "attributes": [
+        {
+          "name": "estensioneGiorni",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "ricorrenza",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "gestioneAvviso",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "avviso",
+          "visibility": "+",
+          "type": "Boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "gestioneConflitto",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "visualizzazioneCalendario",
+      "attributes": [
+        {
+          "name": "vista",
+          "visibility": "+",
+          "type": "enum"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "annulla",
+      "source": "annullamentoAppuntamento",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "AppCalendario",
+      "target": "annullamentoAppuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "AppCalendario",
+      "target": "gestioneAppuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "AppCalendario",
+      "target": "gestioneAvviso",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "AppCalendario",
+      "target": "gestioneConflitto",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "AppCalendario",
+      "target": "visualizzazioneCalendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "gestioneAppuntamento",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "modifica",
+      "source": "gestioneAppuntamento",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "gestioneAppuntamento",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "impostaAvviso",
+      "source": "gestioneAvviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "gestioneConflitto",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "visualizza",
+      "source": "visualizzazioneCalendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

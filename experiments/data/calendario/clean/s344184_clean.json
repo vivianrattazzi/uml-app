@@ -1,0 +1,157 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "NomeAppuntamento",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "OraInizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "OraFine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "AppuntamentoRicorrente",
+      "attributes": [
+        {
+          "name": "DataTermineRicorrenza",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "FrequenzaRicorrenza",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "AppuntamentoSuPiùGiorni",
+      "attributes": [
+        {
+          "name": "DurataInGiorni",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "AziendaProduttrice",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "AnnoSviluppo",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "DataNascita",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "fissa_2 >",
+      "source": "AppuntamentoSuPiùGiorni",
+      "target": "Utente",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Contiene",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Modifica",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Fissa",
+      "source": "Utente",
+      "target": "AppuntamentoRicorrente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "AppuntamentoRicorrente",
+      "parent": "Appuntamento"
+    },
+    {
+      "child": "AppuntamentoSuPiùGiorni",
+      "parent": "Appuntamento"
+    }
+  ]
+}

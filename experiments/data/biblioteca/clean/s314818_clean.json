@@ -1,0 +1,142 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "CatalogoLibri",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "autore",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "isbn",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "disponibilità",
+          "visibility": "+",
+          "type": "Int"
+        },
+        {
+          "name": "digitale",
+          "visibility": "+",
+          "type": "Boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "testo",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "dataInizio",
+          "visibility": "+",
+          "type": "DateTime"
+        },
+        {
+          "name": "dataFine",
+          "visibility": "+",
+          "type": "DateTime"
+        },
+        {
+          "name": "restituito",
+          "visibility": "+",
+          "type": "Boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "indirizzoResidenza",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "contiene >",
+      "source": "CatalogoLibri",
+      "target": "Libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "< prendeInPrestito",
+      "source": "Libro",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "Prestito",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

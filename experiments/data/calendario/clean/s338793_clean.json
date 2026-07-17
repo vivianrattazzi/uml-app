@@ -1,0 +1,153 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento Giornaliero",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ricorrente",
+          "visibility": "+",
+          "type": "bool"
+        },
+        {
+          "name": "giornoSettimana",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento MultiGiorno",
+      "attributes": [
+        {
+          "name": "GiornoInizio",
+          "visibility": "",
+          "type": "date"
+        },
+        {
+          "name": "GiornoFine",
+          "visibility": "",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "AvvisoEmail",
+      "attributes": [
+        {
+          "name": "testo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "tipoVista",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "AvvisoEmail",
+      "target": "Appuntamento Giornaliero",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "Relativo a",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "AvvisoEmail",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": "Riceve"
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Calendario",
+      "target": "Appuntamento Giornaliero",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "",
+      "sourceRole": "Include",
+      "targetRole": "*"
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Appuntamento Giornaliero",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "",
+      "sourceRole": "Gestisce",
+      "targetRole": "*"
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "Visualizza",
+      "targetRole": "1"
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Appuntamento MultiGiorno",
+      "parent": "Appuntamento Giornaliero"
+    }
+  ]
+}

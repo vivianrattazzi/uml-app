@@ -1,0 +1,129 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "tipoVista",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Email",
+      "attributes": [
+        {
+          "name": "nomeEvento",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "dataEvento",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "ripetiOgni",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Calendario",
+      "target": "Email",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0...n",
+      "sourceRole": "Invia",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Riceve",
+      "source": "Email",
+      "target": "Utente",
+      "sourceMultiplicity": "0...n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Calendario",
+      "sourceMultiplicity": "0...n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": "Include"
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0...n",
+      "sourceRole": "Crea/Modifica/Elimina",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

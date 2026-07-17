@@ -1,0 +1,348 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Amico",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Categoria",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Catering",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Collega",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Concerto",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Concerto",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "luogo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fiorario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "codFisc",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invito",
+      "attributes": [
+        {
+          "name": "codiceInvito",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Laurea",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "ModalitàPagamento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "codFisc",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "residenza",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Parente",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Parrucchiere",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "float"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "TipoEvento",
+      "attributes": [],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Azienda",
+      "target": "ModalitàPagamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offre",
+      "source": "Azienda",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Categoria",
+      "target": "Invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "TipoEvento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "Invito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invito",
+      "target": "Organizzatore",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "organizza",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "sceglie",
+      "source": "Organizzatore",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Amico",
+      "parent": "Categoria"
+    },
+    {
+      "child": "Catering",
+      "parent": "Servizio"
+    },
+    {
+      "child": "Collega",
+      "parent": "Categoria"
+    },
+    {
+      "child": "Concerto",
+      "parent": "TipoEvento"
+    },
+    {
+      "child": "Concerto",
+      "parent": "TipoEvento"
+    },
+    {
+      "child": "Fiorario",
+      "parent": "Servizio"
+    },
+    {
+      "child": "Laurea",
+      "parent": "TipoEvento"
+    },
+    {
+      "child": "Parente",
+      "parent": "Categoria"
+    },
+    {
+      "child": "Parrucchiere",
+      "parent": "Servizio"
+    }
+  ]
+}

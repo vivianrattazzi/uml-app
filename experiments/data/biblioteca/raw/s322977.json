@@ -1,0 +1,568 @@
+{
+  "version": "2.0.0",
+  "type": "ClassDiagram",
+  "size": {
+    "width": 1180,
+    "height": 620
+  },
+  "interactive": {
+    "elements": [],
+    "relationships": []
+  },
+  "elements": [
+    {
+      "id": "9185b6a1-c385-468f-9a5c-fac0d14347dd",
+      "name": "Utente",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 0,
+        "y": 40,
+        "width": 170,
+        "height": 120
+      },
+      "stereotype": null,
+      "attributes": [
+        "df208866-d1f8-4240-91e4-bb6b018e9279",
+        "394d1641-9c5f-49bb-b07e-b79484c9b906",
+        "c0679b1c-16a6-46f7-9c1c-996e0cd53c01"
+      ],
+      "methods": []
+    },
+    {
+      "id": "df208866-d1f8-4240-91e4-bb6b018e9279",
+      "name": "+ Nome",
+      "type": "ClassAttribute",
+      "owner": "9185b6a1-c385-468f-9a5c-fac0d14347dd",
+      "bounds": {
+        "x": 0.5,
+        "y": 70.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    {
+      "id": "394d1641-9c5f-49bb-b07e-b79484c9b906",
+      "name": "+ Cognome",
+      "type": "ClassAttribute",
+      "owner": "9185b6a1-c385-468f-9a5c-fac0d14347dd",
+      "bounds": {
+        "x": 0.5,
+        "y": 100.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    {
+      "id": "c0679b1c-16a6-46f7-9c1c-996e0cd53c01",
+      "name": "+ Numero Carta di identità",
+      "type": "ClassAttribute",
+      "owner": "9185b6a1-c385-468f-9a5c-fac0d14347dd",
+      "bounds": {
+        "x": 0.5,
+        "y": 130.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    {
+      "id": "47c8214b-0f44-47b1-9ab8-8973361a0da3",
+      "name": "Libro",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 750,
+        "y": 60,
+        "width": 160,
+        "height": 120
+      },
+      "stereotype": null,
+      "attributes": [
+        "ae2979e5-c1aa-4be7-b8e9-4bf9cce834f4",
+        "3568c056-ea8e-43dc-bfb5-851b98f62b3d",
+        "5891f74e-ee30-4db7-9dd8-364a574fdd57"
+      ],
+      "methods": []
+    },
+    {
+      "id": "ae2979e5-c1aa-4be7-b8e9-4bf9cce834f4",
+      "name": "+ Titolo",
+      "type": "ClassAttribute",
+      "owner": "47c8214b-0f44-47b1-9ab8-8973361a0da3",
+      "bounds": {
+        "x": 750.5,
+        "y": 90.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "3568c056-ea8e-43dc-bfb5-851b98f62b3d",
+      "name": "+ disponibile",
+      "type": "ClassAttribute",
+      "owner": "47c8214b-0f44-47b1-9ab8-8973361a0da3",
+      "bounds": {
+        "x": 750.5,
+        "y": 120.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "5891f74e-ee30-4db7-9dd8-364a574fdd57",
+      "name": "+ ID",
+      "type": "ClassAttribute",
+      "owner": "47c8214b-0f44-47b1-9ab8-8973361a0da3",
+      "bounds": {
+        "x": 750.5,
+        "y": 150.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "7cd95465-792b-4d4d-822c-5b513ddcbd81",
+      "name": "Prestito",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 390,
+        "y": 80,
+        "width": 160,
+        "height": 90
+      },
+      "stereotype": null,
+      "attributes": [
+        "ed4b3802-6d3e-4ca0-a9c5-24b729330e44",
+        "4cbfa950-4987-4ea0-a896-6f62099eff1b"
+      ],
+      "methods": []
+    },
+    {
+      "id": "ed4b3802-6d3e-4ca0-a9c5-24b729330e44",
+      "name": "+ Data prestito",
+      "type": "ClassAttribute",
+      "owner": "7cd95465-792b-4d4d-822c-5b513ddcbd81",
+      "bounds": {
+        "x": 390.5,
+        "y": 110.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "4cbfa950-4987-4ea0-a896-6f62099eff1b",
+      "name": "+ Data restituzione",
+      "type": "ClassAttribute",
+      "owner": "7cd95465-792b-4d4d-822c-5b513ddcbd81",
+      "bounds": {
+        "x": 390.5,
+        "y": 140.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "38b9e90e-4f92-4282-8ae4-0b7de21ee140",
+      "name": "Libro cartaceo",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 630,
+        "y": 280,
+        "width": 160,
+        "height": 90
+      },
+      "stereotype": null,
+      "attributes": [
+        "f44f7eaa-bca9-466d-9d06-62af07432e50"
+      ],
+      "methods": [
+        "c8194005-2a5e-4f5b-8579-140f5d0a3cee"
+      ]
+    },
+    {
+      "id": "f44f7eaa-bca9-466d-9d06-62af07432e50",
+      "name": " ",
+      "type": "ClassAttribute",
+      "owner": "38b9e90e-4f92-4282-8ae4-0b7de21ee140",
+      "bounds": {
+        "x": 630.5,
+        "y": 310.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "c8194005-2a5e-4f5b-8579-140f5d0a3cee",
+      "name": "",
+      "type": "ClassMethod",
+      "owner": "38b9e90e-4f92-4282-8ae4-0b7de21ee140",
+      "bounds": {
+        "x": 630.5,
+        "y": 340.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "41069303-ed9e-49bb-bf6a-3ce57552918b",
+      "name": "Libro digitale",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 870,
+        "y": 270,
+        "width": 160,
+        "height": 90
+      },
+      "stereotype": null,
+      "attributes": [
+        "605cb8b2-fc10-4851-8f26-47fea5cc9bfd"
+      ],
+      "methods": [
+        "68ce53a8-20e1-45c9-98ae-31801f50b70d"
+      ]
+    },
+    {
+      "id": "605cb8b2-fc10-4851-8f26-47fea5cc9bfd",
+      "name": " ",
+      "type": "ClassAttribute",
+      "owner": "41069303-ed9e-49bb-bf6a-3ce57552918b",
+      "bounds": {
+        "x": 870.5,
+        "y": 300.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "68ce53a8-20e1-45c9-98ae-31801f50b70d",
+      "name": " ",
+      "type": "ClassMethod",
+      "owner": "41069303-ed9e-49bb-bf6a-3ce57552918b",
+      "bounds": {
+        "x": 870.5,
+        "y": 330.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "8f5911b3-bec3-49e0-a4c3-1105a3a00ecb",
+      "name": "Notifica",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 10,
+        "y": 300,
+        "width": 160,
+        "height": 120
+      },
+      "stereotype": null,
+      "attributes": [
+        "58ce656b-fdad-44a2-8413-69ffb00cb285",
+        "f3a363b6-8116-4754-a614-ca7cbf8bd71e"
+      ],
+      "methods": [
+        "90bc7b7d-faa0-48eb-b7bf-bda5421dc51c"
+      ]
+    },
+    {
+      "id": "58ce656b-fdad-44a2-8413-69ffb00cb285",
+      "name": "+ Messaggio",
+      "type": "ClassAttribute",
+      "owner": "8f5911b3-bec3-49e0-a4c3-1105a3a00ecb",
+      "bounds": {
+        "x": 10.5,
+        "y": 330.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "f3a363b6-8116-4754-a614-ca7cbf8bd71e",
+      "name": "+ Data",
+      "type": "ClassAttribute",
+      "owner": "8f5911b3-bec3-49e0-a4c3-1105a3a00ecb",
+      "bounds": {
+        "x": 10.5,
+        "y": 360.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "90bc7b7d-faa0-48eb-b7bf-bda5421dc51c",
+      "name": "",
+      "type": "ClassMethod",
+      "owner": "8f5911b3-bec3-49e0-a4c3-1105a3a00ecb",
+      "bounds": {
+        "x": 10.5,
+        "y": 390.5,
+        "width": 159,
+        "height": 30
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "9e76fa46-d759-4598-86aa-4b1d15e4b250",
+      "name": "",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 170,
+        "y": 110,
+        "width": 220,
+        "height": 45
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 10
+        },
+        {
+          "x": 220,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "9185b6a1-c385-468f-9a5c-fac0d14347dd",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "target": {
+        "direction": "Left",
+        "element": "7cd95465-792b-4d4d-822c-5b513ddcbd81",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "e4d1b36d-8999-43c4-a07c-b0ef72858477",
+      "name": "",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 550,
+        "y": 115,
+        "width": 200,
+        "height": 45
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 10
+        },
+        {
+          "x": 200,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "7cd95465-792b-4d4d-822c-5b513ddcbd81",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Left",
+        "element": "47c8214b-0f44-47b1-9ab8-8973361a0da3",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "5a049914-3188-4fa9-9b58-ce1e7e182cff",
+      "name": "",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 80,
+        "y": 0,
+        "width": 759.989583492279,
+        "height": 66
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 40
+        },
+        {
+          "x": 5,
+          "y": 0
+        },
+        {
+          "x": 750,
+          "y": 0
+        },
+        {
+          "x": 750,
+          "y": 60
+        }
+      ],
+      "source": {
+        "direction": "Up",
+        "element": "9185b6a1-c385-468f-9a5c-fac0d14347dd",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Up",
+        "element": "47c8214b-0f44-47b1-9ab8-8973361a0da3",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "7d1103b6-be97-43b5-9bff-9fa9cdb1db42",
+      "name": "",
+      "type": "ClassInheritance",
+      "owner": null,
+      "bounds": {
+        "x": 765,
+        "y": 180,
+        "width": 10,
+        "height": 100
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 100
+        },
+        {
+          "x": 5,
+          "y": 0
+        }
+      ],
+      "source": {
+        "direction": "Up",
+        "element": "38b9e90e-4f92-4282-8ae4-0b7de21ee140",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Down",
+        "element": "47c8214b-0f44-47b1-9ab8-8973361a0da3",
+        "multiplicity": "",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "316b3200-e057-4ea3-bf00-3f582213cc9d",
+      "name": "",
+      "type": "ClassInheritance",
+      "owner": null,
+      "bounds": {
+        "x": 885,
+        "y": 180,
+        "width": 10,
+        "height": 90
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 90
+        },
+        {
+          "x": 5,
+          "y": 0
+        }
+      ],
+      "source": {
+        "direction": "Up",
+        "element": "41069303-ed9e-49bb-bf6a-3ce57552918b",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Down",
+        "element": "47c8214b-0f44-47b1-9ab8-8973361a0da3",
+        "multiplicity": "",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "8c134504-ca06-489c-8ae1-3d5c93440b1e",
+      "name": "",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 85,
+        "y": 160,
+        "width": 17.125,
+        "height": 146
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 140
+        },
+        {
+          "x": 5,
+          "y": 0
+        }
+      ],
+      "source": {
+        "direction": "Up",
+        "element": "8f5911b3-bec3-49e0-a4c3-1105a3a00ecb",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Down",
+        "element": "9185b6a1-c385-468f-9a5c-fac0d14347dd",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "10aac28b-f8ba-4a97-8dc9-9b244f43edf9",
+      "name": "",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 170,
+        "y": 170,
+        "width": 312.125,
+        "height": 225
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 190
+        },
+        {
+          "x": 300,
+          "y": 190
+        },
+        {
+          "x": 300,
+          "y": 0
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "8f5911b3-bec3-49e0-a4c3-1105a3a00ecb",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Down",
+        "element": "7cd95465-792b-4d4d-822c-5b513ddcbd81",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    }
+  ],
+  "assessments": []
+}

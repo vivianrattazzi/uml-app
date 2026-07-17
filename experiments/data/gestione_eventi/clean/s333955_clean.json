@@ -1,0 +1,340 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "AccountDigitale",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "pIva",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "via",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "numeroCivico",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "città",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "contanti",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "cartaDiCredito",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "bonifico",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "CodiceInvito",
+      "attributes": [
+        {
+          "name": "codice",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "giorno",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "mese",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "anno",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "via",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "numeroCivico",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "città",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codiceFiscale",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "via",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "numeroCivico",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "città",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Prezzo",
+      "attributes": [
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "partecipa",
+      "source": "CodiceInvito",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "0...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "propone",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "0...*",
+      "targetMultiplicity": "0...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "1...*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "partecipa",
+      "source": "Invitato",
+      "target": "CodiceInvito",
+      "sourceMultiplicity": "0...*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "organizza",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offre",
+      "source": "Prezzo",
+      "target": "Azienda",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "0...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offre",
+      "source": "Prezzo",
+      "target": "Servizio",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "0...*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "AccountDigitale",
+      "parent": "Fornitore"
+    }
+  ]
+}

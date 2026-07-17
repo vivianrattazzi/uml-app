@@ -1,0 +1,186 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "anno",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "mese",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "giorno",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "mod_vista",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ invia_notifica()"
+      ]
+    },
+    {
+      "name": "Descrittore Evento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "ricorrente",
+          "visibility": "+",
+          "type": "Boolean"
+        },
+        {
+          "name": "ora inizio",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "ora fine",
+          "visibility": "+",
+          "type": "int"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "Oggetto",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Testo",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ aggiungi_evento()",
+        "+ rimuovi_evento()",
+        "+ modifica_evento()",
+        "+ aggiungi_evento_ricorrente()",
+        "+ mod_vista_cal()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "inizia",
+      "source": "Descrittore Evento",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Descrittore Evento",
+      "target": "Calendario",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "finisce",
+      "source": "Descrittore Evento",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Descrittore Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

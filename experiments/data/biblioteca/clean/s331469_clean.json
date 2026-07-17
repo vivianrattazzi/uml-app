@@ -1,0 +1,115 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Cartaceo",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Digitale",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "numero"
+        },
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "stringa"
+        },
+        {
+          "name": "autore",
+          "visibility": "+",
+          "type": "stringa"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "data inizio",
+          "visibility": "+",
+          "type": "Data"
+        },
+        {
+          "name": "data fine",
+          "visibility": "+",
+          "type": "Data"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "SSID",
+          "visibility": "+",
+          "type": "numero"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "stringa"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "stringa"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "Prestito",
+      "target": "Libro",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "0...1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "cerca",
+      "source": "Utente",
+      "target": "Libro",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "visualizza",
+      "source": "Utente",
+      "target": "Prestito",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Cartaceo",
+      "parent": "Libro"
+    },
+    {
+      "child": "Digitale",
+      "parent": "Libro"
+    }
+  ]
+}

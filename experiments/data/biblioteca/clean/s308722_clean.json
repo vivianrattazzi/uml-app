@@ -1,0 +1,146 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Catalogo",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "autore",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "disponibile",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "enum {Cartaceo, Digitale}"
+        },
+        {
+          "name": "ISBN",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "dataPrestito",
+          "visibility": "+",
+          "type": "DateTime"
+        },
+        {
+          "name": "dataRestituzione",
+          "visibility": "+",
+          "type": "DateTime"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "Catalogo",
+      "target": "Libro",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito",
+      "target": "Libro",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "prestitiEseguiti",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "consulta",
+      "source": "Utente",
+      "target": "Catalogo",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "prendeInPrestito",
+      "source": "Utente",
+      "target": "Libro",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "0..1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

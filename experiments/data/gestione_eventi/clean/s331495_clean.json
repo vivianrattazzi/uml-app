@@ -1,0 +1,322 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Applicazione Web",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "dataDiNascita",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "nomeAzienda",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "pIva",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "modalitàPagamento",
+          "visibility": "+",
+          "type": "Enum"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "Data",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "Budget",
+          "visibility": "+",
+          "type": "Number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "accountDigitale",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "IndirizzoAzienda",
+      "attributes": [
+        {
+          "name": "Strada",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Civico",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "CAP",
+          "visibility": "+",
+          "type": "Number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "IndirizzoEvento",
+      "attributes": [
+        {
+          "name": "Strada",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Civico",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "CAP",
+          "visibility": "+",
+          "type": "NUmber"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "IndirizzoOrganizzatore",
+      "attributes": [
+        {
+          "name": "Strada",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Civico",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "CAP",
+          "visibility": "+",
+          "type": "NUmber"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "dataDiNascita",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invito",
+      "attributes": [
+        {
+          "name": "mailDiPartenza",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "CF",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "dataDiNascita",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "Applicazione Web",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invia",
+      "source": "Applicazione Web",
+      "target": "Invito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "informa",
+      "source": "Azienda",
+      "target": "Applicazione Web",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "IndirizzoAzienda",
+      "target": "Azienda",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "IndirizzoEvento",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "IndirizzoOrganizzatore",
+      "target": "Organizzatore",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Invita",
+      "source": "Invito",
+      "target": "Invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "utilizza",
+      "source": "Organizzatore",
+      "target": "Applicazione Web",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

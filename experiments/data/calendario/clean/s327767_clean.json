@@ -1,0 +1,202 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "Name",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Start Time",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "End Time",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "Type",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ID new_a",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Appuntamento Esistente",
+      "attributes": [],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "Type Vista",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ID Calendar",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Email",
+      "attributes": [
+        {
+          "name": "Message",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Modifiche",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Nuovo Appuntamento",
+      "attributes": [],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Name",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Surname",
+          "visibility": "+",
+          "type": "strng"
+        },
+        {
+          "name": "ID user",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Email",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "1,1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Crea/Elimina",
+      "source": "Appuntamento",
+      "target": "Utente",
+      "sourceMultiplicity": "0,n",
+      "targetMultiplicity": "1,1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento Esistente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Email",
+      "target": "Utente",
+      "sourceMultiplicity": "0,n",
+      "targetMultiplicity": "1,1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "associata",
+      "source": "Modifiche",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "0,n",
+      "targetMultiplicity": "1,1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Apporta",
+      "source": "Modifiche",
+      "target": "Utente",
+      "sourceMultiplicity": "0,n",
+      "targetMultiplicity": "1,1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Nuovo Appuntamento",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Visualizza",
+      "source": "Utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "1,1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

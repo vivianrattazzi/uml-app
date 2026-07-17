@@ -1,0 +1,261 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "P.Iva",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Indirizzo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Modalita Pagamento",
+          "visibility": "+",
+          "type": "enum{..."
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Codice Evento",
+      "attributes": [
+        {
+          "name": "Codice",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "TipoEvento",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Data",
+          "visibility": "+",
+          "type": "dateTime"
+        },
+        {
+          "name": "Luogo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Budget",
+          "visibility": "+",
+          "type": "number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Categoria invito",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Lista Servizi",
+      "attributes": [
+        {
+          "name": "Servizi selezionati",
+          "visibility": "+",
+          "type": "array"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "Codice Fiscale",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Città residenza",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Via residenza",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizi Offerti",
+      "attributes": [
+        {
+          "name": "Categoria",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Prezzo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Azienda",
+      "target": "Servizi Offerti",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Codice Evento",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Codice Evento",
+      "target": "Invitato",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Lista Servizi",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Lista Servizi",
+      "target": "Servizi Offerti",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

@@ -1,0 +1,227 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Catalogo",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Class",
+      "attributes": [
+        {
+          "name": "array_notifiche",
+          "visibility": "+",
+          "type": "string[]"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "ISBN",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ISBN13",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "collana",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "editore",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "casaproduttrice",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "descrizione",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ID_libro_univoco",
+          "visibility": "+",
+          "type": "integer"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro_cartaceo",
+      "attributes": [
+        {
+          "name": "reparto_biblioteca",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro_digitale",
+      "attributes": [
+        {
+          "name": "URL",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "datainizio",
+          "visibility": "+",
+          "type": "Datetime"
+        },
+        {
+          "name": "datarestituzione",
+          "visibility": "+",
+          "type": "Datetime"
+        },
+        {
+          "name": "periodo_gg_prestito_reale",
+          "visibility": "+",
+          "type": "int"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Sistema_centrale",
+      "attributes": [
+        {
+          "name": "indirizzo_biblioteca",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Class",
+      "target": "Sistema_centrale",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Libro",
+      "target": "Catalogo",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Sistema_centrale",
+      "target": "Catalogo",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invia notifiche",
+      "source": "Sistema_centrale",
+      "target": "Utente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "prendeinprestito",
+      "source": "Utente",
+      "target": "Libro",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Sistema_centrale",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Libro_cartaceo",
+      "parent": "Libro"
+    },
+    {
+      "child": "Libro_digitale",
+      "parent": "Libro"
+    }
+  ]
+}

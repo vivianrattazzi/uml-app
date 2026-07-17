@@ -1,0 +1,266 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "-",
+      "attributes": [
+        {
+          "name": "codice invito",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "-",
+      "attributes": [
+        {
+          "name": "servizi scelti",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "evento",
+      "attributes": [
+        {
+          "name": "tipologia( matrimonio, laurea, concerto...)",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "data",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "luogo",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "budget",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitori",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "codice Fiscale",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "pIva",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "indirizzo Azienda",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "modalità di pagamento",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "invitati",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "codice fisacle",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "email",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "categoria (parente, amico..)",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "organizzatore",
+      "attributes": [
+        {
+          "name": "codice fiscale",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "residenza",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "piattaforma web",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "nome piattaforma",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizi",
+      "attributes": [
+        {
+          "name": "categoria( catering,parrucchiere, fioraio ...)",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "prezzi",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "IBAN",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "offre",
+      "source": "Fornitori",
+      "target": "Servizi",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "invitati",
+      "target": "evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "invitati",
+      "target": "piattaforma web",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "organizzatore",
+      "target": "evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "organizzatore",
+      "target": "invitati",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "piattaforma web",
+      "target": "Fornitori",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "piattaforma web",
+      "target": "organizzatore",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

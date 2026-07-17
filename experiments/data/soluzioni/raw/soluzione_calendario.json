@@ -1,0 +1,1813 @@
+{
+  "reference": {
+    "classes": [
+      {
+        "name": "Utente",
+        "synonyms": [],
+        "weight": "STRONG",
+        "message": "",
+        "forbiddenAttributes": [],
+        "attributes": [
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "cognome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "id",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "email",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "type": "Class",
+        "elementId": "46056644-aab8-42d8-9297-fad71b1c07af"
+      },
+      {
+        "name": "Appuntamento",
+        "synonyms": [],
+        "weight": "STRONG",
+        "message": "",
+        "forbiddenAttributes": [],
+        "attributes": [
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "oraInizio",
+            "synonyms": [],
+            "types": [
+              "DateTime"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "oraFine",
+            "synonyms": [],
+            "types": [
+              "DateTime"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "ricorrente",
+            "synonyms": [],
+            "types": [
+              "boolean"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "intervalloRicorrenza",
+            "synonyms": [],
+            "types": [
+              "int"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "type": "Class",
+        "elementId": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb"
+      },
+      {
+        "name": "Avviso",
+        "synonyms": [],
+        "weight": "STRONG",
+        "message": "",
+        "forbiddenAttributes": [],
+        "attributes": [
+          {
+            "name": "oraInvio",
+            "synonyms": [],
+            "types": [
+              "DateTime"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "messaggioCustom",
+            "synonyms": [],
+            "types": [
+              "boolean"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "type": "Class",
+        "elementId": "71a7a6b1-abb3-46f3-81a3-249ceb9c1a54"
+      },
+      {
+        "name": "Calendario",
+        "synonyms": [],
+        "weight": "STRONG",
+        "message": "",
+        "forbiddenAttributes": [],
+        "attributes": [
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "tipo",
+            "synonyms": [],
+            "types": [
+              "TipoCalendario"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "colore",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "vistaScelta",
+            "synonyms": [],
+            "types": [
+              "Vista"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Giornaliera",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Settimanale",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Mensile",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "type": "Class",
+        "elementId": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d"
+      },
+      {
+        "name": "TipoCalendario",
+        "synonyms": [],
+        "weight": "STRONG",
+        "message": "",
+        "forbiddenAttributes": [],
+        "attributes": [
+          {
+            "name": "Personale",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Lavoro",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Altro",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "type": "Enumeration",
+        "elementId": "d1e390ad-0465-4ad7-8399-ee35bf589795"
+      },
+      {
+        "name": "Vista",
+        "synonyms": [],
+        "weight": "STRONG",
+        "message": "",
+        "forbiddenAttributes": [],
+        "attributes": [
+          {
+            "name": "Giornaliera",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Settimanale",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Mensile",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "type": "Enumeration",
+        "elementId": "cfa584f8-30ad-41a0-be87-58e15abb546e"
+      }
+    ],
+    "associations": [
+      {
+        "message": "",
+        "name": "",
+        "synonyms": [],
+        "weight": "STRONG",
+        "type": "Default",
+        "source": {
+          "role": "",
+          "multiplicities": [
+            "1...*"
+          ],
+          "referenceClass": {
+            "name": "Utente",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "cognome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "id",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "email",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "46056644-aab8-42d8-9297-fad71b1c07af"
+          }
+        },
+        "target": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Calendario",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "tipo",
+                "synonyms": [],
+                "types": [
+                  "TipoCalendario"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "colore",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "vistaScelta",
+                "synonyms": [],
+                "types": [
+                  "Vista"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Giornaliera",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Settimanale",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Mensile",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d"
+          }
+        },
+        "elementId": "assoc_Utente_Calendario"
+      },
+      {
+        "message": "",
+        "name": "",
+        "synonyms": [],
+        "weight": "STRONG",
+        "type": "Default",
+        "source": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Calendario",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "tipo",
+                "synonyms": [],
+                "types": [
+                  "TipoCalendario"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "colore",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "vistaScelta",
+                "synonyms": [],
+                "types": [
+                  "Vista"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Giornaliera",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Settimanale",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Mensile",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d"
+          }
+        },
+        "target": {
+          "role": "",
+          "multiplicities": [
+            "*"
+          ],
+          "referenceClass": {
+            "name": "Appuntamento",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "oraInizio",
+                "synonyms": [],
+                "types": [
+                  "DateTime"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "oraFine",
+                "synonyms": [],
+                "types": [
+                  "DateTime"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "ricorrente",
+                "synonyms": [],
+                "types": [
+                  "boolean"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "intervalloRicorrenza",
+                "synonyms": [],
+                "types": [
+                  "int"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb"
+          }
+        },
+        "elementId": "assoc_Calendario_Appuntamento"
+      },
+      {
+        "message": "",
+        "name": "",
+        "synonyms": [],
+        "weight": "STRONG",
+        "type": "Default",
+        "source": {
+          "role": "",
+          "multiplicities": [
+            "*"
+          ],
+          "referenceClass": {
+            "name": "Appuntamento",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "oraInizio",
+                "synonyms": [],
+                "types": [
+                  "DateTime"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "oraFine",
+                "synonyms": [],
+                "types": [
+                  "DateTime"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "ricorrente",
+                "synonyms": [],
+                "types": [
+                  "boolean"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "intervalloRicorrenza",
+                "synonyms": [],
+                "types": [
+                  "int"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb"
+          }
+        },
+        "target": {
+          "role": "",
+          "multiplicities": [
+            "*"
+          ],
+          "referenceClass": {
+            "name": "Appuntamento",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "oraInizio",
+                "synonyms": [],
+                "types": [
+                  "DateTime"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "oraFine",
+                "synonyms": [],
+                "types": [
+                  "DateTime"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "ricorrente",
+                "synonyms": [],
+                "types": [
+                  "boolean"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "intervalloRicorrenza",
+                "synonyms": [],
+                "types": [
+                  "int"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb"
+          }
+        },
+        "elementId": "assoc_Appuntamento_Appuntamento"
+      },
+      {
+        "message": "",
+        "name": "",
+        "synonyms": [],
+        "weight": "STRONG",
+        "type": "Default",
+        "source": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Appuntamento",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "oraInizio",
+                "synonyms": [],
+                "types": [
+                  "DateTime"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "oraFine",
+                "synonyms": [],
+                "types": [
+                  "DateTime"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "ricorrente",
+                "synonyms": [],
+                "types": [
+                  "boolean"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "intervalloRicorrenza",
+                "synonyms": [],
+                "types": [
+                  "int"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb"
+          }
+        },
+        "target": {
+          "role": "",
+          "multiplicities": [
+            "*"
+          ],
+          "referenceClass": {
+            "name": "Avviso",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "oraInvio",
+                "synonyms": [],
+                "types": [
+                  "DateTime"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "messaggioCustom",
+                "synonyms": [],
+                "types": [
+                  "boolean"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "71a7a6b1-abb3-46f3-81a3-249ceb9c1a54"
+          }
+        },
+        "elementId": "assoc_Appuntamento_Avviso"
+      },
+      {
+        "message": "",
+        "name": "",
+        "synonyms": [],
+        "weight": "STRONG",
+        "type": "Default",
+        "source": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Calendario",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "tipo",
+                "synonyms": [],
+                "types": [
+                  "TipoCalendario"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "colore",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "vistaScelta",
+                "synonyms": [],
+                "types": [
+                  "Vista"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Giornaliera",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Settimanale",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Mensile",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d"
+          }
+        },
+        "target": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "TipoCalendario",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "Personale",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Lavoro",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Altro",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Enumeration",
+            "elementId": "d1e390ad-0465-4ad7-8399-ee35bf589795"
+          }
+        },
+        "elementId": "assoc_Calendario_TipoCalendario"
+      },
+      {
+        "message": "",
+        "name": "",
+        "synonyms": [],
+        "weight": "STRONG",
+        "type": "Default",
+        "source": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Calendario",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "tipo",
+                "synonyms": [],
+                "types": [
+                  "TipoCalendario"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "colore",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "vistaScelta",
+                "synonyms": [],
+                "types": [
+                  "Vista"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Giornaliera",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Settimanale",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Mensile",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d"
+          }
+        },
+        "target": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Vista",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "Giornaliera",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Settimanale",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "Mensile",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Enumeration",
+            "elementId": "cfa584f8-30ad-41a0-be87-58e15abb546e"
+          }
+        },
+        "elementId": "assoc_Calendario_Vista"
+      }
+    ],
+    "forbiddenClasses": [],
+    "forbiddenAssociations": []
+  },
+  "model": {
+    "version": "3.0.0",
+    "type": "ClassDiagram",
+    "size": {
+      "width": 1820,
+      "height": 1070
+    },
+    "interactive": {
+      "elements": {},
+      "relationships": {}
+    },
+    "elements": {
+      "46056644-aab8-42d8-9297-fad71b1c07af": {
+        "id": "46056644-aab8-42d8-9297-fad71b1c07af",
+        "name": "Utente",
+        "type": "Class",
+        "owner": null,
+        "bounds": {
+          "x": 375,
+          "y": 0,
+          "width": 150,
+          "height": 120
+        },
+        "attributes": [
+          "edd9cb2f-f1d4-425b-b035-3b5359e0d99f",
+          "7993b6ac-0d32-4c25-ab55-dea739a39c5d",
+          "8d49bf59-8e58-4981-9f30-4e528422bf99",
+          "e9a8e45a-4691-4fe2-bd2d-a0429f50c174"
+        ],
+        "methods": []
+      },
+      "edd9cb2f-f1d4-425b-b035-3b5359e0d99f": {
+        "id": "edd9cb2f-f1d4-425b-b035-3b5359e0d99f",
+        "name": "nome: string",
+        "type": "ClassAttribute",
+        "owner": "46056644-aab8-42d8-9297-fad71b1c07af",
+        "bounds": {
+          "x": 375.5,
+          "y": 40.5,
+          "width": 149,
+          "height": 20
+        }
+      },
+      "7993b6ac-0d32-4c25-ab55-dea739a39c5d": {
+        "id": "7993b6ac-0d32-4c25-ab55-dea739a39c5d",
+        "name": "cognome: string",
+        "type": "ClassAttribute",
+        "owner": "46056644-aab8-42d8-9297-fad71b1c07af",
+        "bounds": {
+          "x": 375.5,
+          "y": 60.5,
+          "width": 149,
+          "height": 20
+        }
+      },
+      "8d49bf59-8e58-4981-9f30-4e528422bf99": {
+        "id": "8d49bf59-8e58-4981-9f30-4e528422bf99",
+        "name": "id: string",
+        "type": "ClassAttribute",
+        "owner": "46056644-aab8-42d8-9297-fad71b1c07af",
+        "bounds": {
+          "x": 375.5,
+          "y": 80.5,
+          "width": 149,
+          "height": 20
+        }
+      },
+      "e9a8e45a-4691-4fe2-bd2d-a0429f50c174": {
+        "id": "e9a8e45a-4691-4fe2-bd2d-a0429f50c174",
+        "name": "email: string",
+        "type": "ClassAttribute",
+        "owner": "46056644-aab8-42d8-9297-fad71b1c07af",
+        "bounds": {
+          "x": 375.5,
+          "y": 100.5,
+          "width": 149,
+          "height": 20
+        }
+      },
+      "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb": {
+        "id": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb",
+        "name": "Appuntamento",
+        "type": "Class",
+        "owner": null,
+        "bounds": {
+          "x": -375,
+          "y": -90,
+          "width": 250,
+          "height": 140
+        },
+        "attributes": [
+          "42bd4a62-8c25-4bcc-bead-c08239630a77",
+          "034bc79c-3ad3-4860-a866-59ef2b9fe094",
+          "3d936b98-d41a-42c2-a5ab-2c833faa9bc9",
+          "83e98f72-c28c-4e20-a5fe-632992ae220c",
+          "ab1da8e4-90cd-4980-b85d-f761f815d5c1"
+        ],
+        "methods": []
+      },
+      "42bd4a62-8c25-4bcc-bead-c08239630a77": {
+        "id": "42bd4a62-8c25-4bcc-bead-c08239630a77",
+        "name": "nome: string",
+        "type": "ClassAttribute",
+        "owner": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb",
+        "bounds": {
+          "x": -374.5,
+          "y": -49.5,
+          "width": 249,
+          "height": 20
+        }
+      },
+      "034bc79c-3ad3-4860-a866-59ef2b9fe094": {
+        "id": "034bc79c-3ad3-4860-a866-59ef2b9fe094",
+        "name": "oraInizio: DateTime",
+        "type": "ClassAttribute",
+        "owner": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb",
+        "bounds": {
+          "x": -374.5,
+          "y": -29.5,
+          "width": 249,
+          "height": 20
+        }
+      },
+      "3d936b98-d41a-42c2-a5ab-2c833faa9bc9": {
+        "id": "3d936b98-d41a-42c2-a5ab-2c833faa9bc9",
+        "name": "oraFine: DateTime",
+        "type": "ClassAttribute",
+        "owner": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb",
+        "bounds": {
+          "x": -374.5,
+          "y": -9.5,
+          "width": 249,
+          "height": 20
+        }
+      },
+      "83e98f72-c28c-4e20-a5fe-632992ae220c": {
+        "id": "83e98f72-c28c-4e20-a5fe-632992ae220c",
+        "name": "ricorrente: boolean",
+        "type": "ClassAttribute",
+        "owner": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb",
+        "bounds": {
+          "x": -374.5,
+          "y": 10.5,
+          "width": 249,
+          "height": 20
+        }
+      },
+      "ab1da8e4-90cd-4980-b85d-f761f815d5c1": {
+        "id": "ab1da8e4-90cd-4980-b85d-f761f815d5c1",
+        "name": "intervalloRicorrenza: int",
+        "type": "ClassAttribute",
+        "owner": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb",
+        "bounds": {
+          "x": -374.5,
+          "y": 30.5,
+          "width": 249,
+          "height": 20
+        }
+      },
+      "71a7a6b1-abb3-46f3-81a3-249ceb9c1a54": {
+        "id": "71a7a6b1-abb3-46f3-81a3-249ceb9c1a54",
+        "name": "Avviso",
+        "type": "Class",
+        "owner": null,
+        "bounds": {
+          "x": -890,
+          "y": -300,
+          "width": 240,
+          "height": 80
+        },
+        "attributes": [
+          "98bf2a0f-d654-4584-8db5-06e495fed245",
+          "bd50581c-11a9-4b86-b160-de889b7fd341"
+        ],
+        "methods": []
+      },
+      "98bf2a0f-d654-4584-8db5-06e495fed245": {
+        "id": "98bf2a0f-d654-4584-8db5-06e495fed245",
+        "name": "oraInvio: DateTime",
+        "type": "ClassAttribute",
+        "owner": "71a7a6b1-abb3-46f3-81a3-249ceb9c1a54",
+        "bounds": {
+          "x": -889.5,
+          "y": -259.5,
+          "width": 239,
+          "height": 20
+        }
+      },
+      "bd50581c-11a9-4b86-b160-de889b7fd341": {
+        "id": "bd50581c-11a9-4b86-b160-de889b7fd341",
+        "name": "messaggioCustom: boolean",
+        "type": "ClassAttribute",
+        "owner": "71a7a6b1-abb3-46f3-81a3-249ceb9c1a54",
+        "bounds": {
+          "x": -889.5,
+          "y": -239.5,
+          "width": 239,
+          "height": 20
+        }
+      },
+      "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d": {
+        "id": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d",
+        "name": "Calendario",
+        "type": "Class",
+        "owner": null,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 200,
+          "height": 180
+        },
+        "attributes": [
+          "4a9b506a-aed7-4107-a6e6-30cb6b025176",
+          "df064dac-739a-4112-89fd-8909d7df5bdb",
+          "693f1c6b-5ab3-42b8-ae36-0ed6bd59ef65",
+          "c3e6b783-ec54-4a01-bae7-30fe44d0ccf1",
+          "a19a3ebb-4b26-41b8-b346-992fa48a4cdd",
+          "37628a28-cc79-4313-b1ca-94d9ce75f348",
+          "dac5b72f-26ef-46da-a49f-f85042733911"
+        ],
+        "methods": []
+      },
+      "4a9b506a-aed7-4107-a6e6-30cb6b025176": {
+        "id": "4a9b506a-aed7-4107-a6e6-30cb6b025176",
+        "name": "nome: string",
+        "type": "ClassAttribute",
+        "owner": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d",
+        "bounds": {
+          "x": 0.5,
+          "y": 40.5,
+          "width": 199,
+          "height": 20
+        }
+      },
+      "df064dac-739a-4112-89fd-8909d7df5bdb": {
+        "id": "df064dac-739a-4112-89fd-8909d7df5bdb",
+        "name": "tipo: TipoCalendario",
+        "type": "ClassAttribute",
+        "owner": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d",
+        "bounds": {
+          "x": 0.5,
+          "y": 60.5,
+          "width": 199,
+          "height": 20
+        }
+      },
+      "693f1c6b-5ab3-42b8-ae36-0ed6bd59ef65": {
+        "id": "693f1c6b-5ab3-42b8-ae36-0ed6bd59ef65",
+        "name": "colore: string",
+        "type": "ClassAttribute",
+        "owner": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d",
+        "bounds": {
+          "x": 0.5,
+          "y": 80.5,
+          "width": 199,
+          "height": 20
+        }
+      },
+      "c3e6b783-ec54-4a01-bae7-30fe44d0ccf1": {
+        "id": "c3e6b783-ec54-4a01-bae7-30fe44d0ccf1",
+        "name": "vistaScelta: Vista",
+        "type": "ClassAttribute",
+        "owner": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d",
+        "bounds": {
+          "x": 0.5,
+          "y": 100.5,
+          "width": 199,
+          "height": 20
+        }
+      },
+      "a19a3ebb-4b26-41b8-b346-992fa48a4cdd": {
+        "id": "a19a3ebb-4b26-41b8-b346-992fa48a4cdd",
+        "name": "Giornaliera: string",
+        "type": "ClassAttribute",
+        "owner": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d",
+        "bounds": {
+          "x": 0.5,
+          "y": 120.5,
+          "width": 199,
+          "height": 20
+        }
+      },
+      "37628a28-cc79-4313-b1ca-94d9ce75f348": {
+        "id": "37628a28-cc79-4313-b1ca-94d9ce75f348",
+        "name": "Settimanale: string",
+        "type": "ClassAttribute",
+        "owner": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d",
+        "bounds": {
+          "x": 0.5,
+          "y": 140.5,
+          "width": 199,
+          "height": 20
+        }
+      },
+      "dac5b72f-26ef-46da-a49f-f85042733911": {
+        "id": "dac5b72f-26ef-46da-a49f-f85042733911",
+        "name": "Mensile: string",
+        "type": "ClassAttribute",
+        "owner": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d",
+        "bounds": {
+          "x": 0.5,
+          "y": 160.5,
+          "width": 199,
+          "height": 20
+        }
+      },
+      "d1e390ad-0465-4ad7-8399-ee35bf589795": {
+        "id": "d1e390ad-0465-4ad7-8399-ee35bf589795",
+        "name": "TipoCalendario",
+        "type": "Enumeration",
+        "owner": null,
+        "bounds": {
+          "x": 0,
+          "y": 375,
+          "width": 160,
+          "height": 140
+        },
+        "attributes": [
+          "5641267b-5d8f-46b8-9e1e-586316da52a2",
+          "242d5fed-1a96-4a1d-bf24-09bd382bb8b3",
+          "380b2e53-650d-4109-a370-013dbf844752"
+        ],
+        "methods": []
+      },
+      "5641267b-5d8f-46b8-9e1e-586316da52a2": {
+        "id": "5641267b-5d8f-46b8-9e1e-586316da52a2",
+        "name": "Personale",
+        "type": "ClassAttribute",
+        "owner": "d1e390ad-0465-4ad7-8399-ee35bf589795",
+        "bounds": {
+          "x": 0.5,
+          "y": 425.5,
+          "width": 159,
+          "height": 30
+        }
+      },
+      "242d5fed-1a96-4a1d-bf24-09bd382bb8b3": {
+        "id": "242d5fed-1a96-4a1d-bf24-09bd382bb8b3",
+        "name": "Lavoro",
+        "type": "ClassAttribute",
+        "owner": "d1e390ad-0465-4ad7-8399-ee35bf589795",
+        "bounds": {
+          "x": 0.5,
+          "y": 455.5,
+          "width": 159,
+          "height": 30
+        }
+      },
+      "380b2e53-650d-4109-a370-013dbf844752": {
+        "id": "380b2e53-650d-4109-a370-013dbf844752",
+        "name": "Altro",
+        "type": "ClassAttribute",
+        "owner": "d1e390ad-0465-4ad7-8399-ee35bf589795",
+        "bounds": {
+          "x": 0.5,
+          "y": 485.5,
+          "width": 159,
+          "height": 30
+        }
+      },
+      "cfa584f8-30ad-41a0-be87-58e15abb546e": {
+        "id": "cfa584f8-30ad-41a0-be87-58e15abb546e",
+        "name": "Vista",
+        "type": "Enumeration",
+        "owner": null,
+        "bounds": {
+          "x": 0,
+          "y": -375,
+          "width": 160,
+          "height": 140
+        },
+        "attributes": [
+          "e5aa160d-f398-451f-a1a0-7b0cf4baf966",
+          "8ed66624-0849-4bfa-ab61-4c7d94260e44",
+          "a17ed6f7-ab41-46ad-a9ad-5573465f15c9"
+        ],
+        "methods": []
+      },
+      "e5aa160d-f398-451f-a1a0-7b0cf4baf966": {
+        "id": "e5aa160d-f398-451f-a1a0-7b0cf4baf966",
+        "name": "Giornaliera",
+        "type": "ClassAttribute",
+        "owner": "cfa584f8-30ad-41a0-be87-58e15abb546e",
+        "bounds": {
+          "x": 0.5,
+          "y": -324.5,
+          "width": 159,
+          "height": 30
+        }
+      },
+      "8ed66624-0849-4bfa-ab61-4c7d94260e44": {
+        "id": "8ed66624-0849-4bfa-ab61-4c7d94260e44",
+        "name": "Settimanale",
+        "type": "ClassAttribute",
+        "owner": "cfa584f8-30ad-41a0-be87-58e15abb546e",
+        "bounds": {
+          "x": 0.5,
+          "y": -294.5,
+          "width": 159,
+          "height": 30
+        }
+      },
+      "a17ed6f7-ab41-46ad-a9ad-5573465f15c9": {
+        "id": "a17ed6f7-ab41-46ad-a9ad-5573465f15c9",
+        "name": "Mensile",
+        "type": "ClassAttribute",
+        "owner": "cfa584f8-30ad-41a0-be87-58e15abb546e",
+        "bounds": {
+          "x": 0.5,
+          "y": -264.5,
+          "width": 159,
+          "height": 30
+        }
+      }
+    },
+    "relationships": {
+      "assoc_Utente_Calendario": {
+        "id": "assoc_Utente_Calendario",
+        "name": "ha",
+        "type": "ClassBidirectional",
+        "owner": null,
+        "bounds": {
+          "x": 200,
+          "y": 50,
+          "width": 175,
+          "height": 49.75
+        },
+        "path": [
+          {
+            "x": 175,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 10
+          }
+        ],
+        "source": {
+          "direction": "Left",
+          "element": "46056644-aab8-42d8-9297-fad71b1c07af",
+          "multiplicity": "1...*",
+          "role": ""
+        },
+        "target": {
+          "direction": "Right",
+          "element": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "isManuallyLayouted": false
+      },
+      "assoc_Calendario_Appuntamento": {
+        "id": "assoc_Calendario_Appuntamento",
+        "name": "contiene",
+        "type": "ClassBidirectional",
+        "owner": null,
+        "bounds": {
+          "x": -125,
+          "y": 15,
+          "width": 125,
+          "height": 49.75
+        },
+        "path": [
+          {
+            "x": 125,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 10
+          }
+        ],
+        "source": {
+          "direction": "Left",
+          "element": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "target": {
+          "direction": "Right",
+          "element": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb",
+          "multiplicity": "*",
+          "role": ""
+        },
+        "isManuallyLayouted": false
+      },
+      "assoc_Appuntamento_Appuntamento": {
+        "id": "assoc_Appuntamento_Appuntamento",
+        "name": "sovrapposto a",
+        "type": "ClassBidirectional",
+        "owner": null,
+        "bounds": {
+          "x": -415,
+          "y": -30,
+          "width": 300,
+          "height": 240
+        },
+        "path": [
+          {
+            "x": 165,
+            "y": 80
+          },
+          {
+            "x": 165,
+            "y": 230
+          },
+          {
+            "x": -133,
+            "y": 230
+          },
+          {
+            "x": -133,
+            "y": 10
+          },
+          {
+            "x": 40,
+            "y": 10
+          }
+        ],
+        "source": {
+          "direction": "Down",
+          "element": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb",
+          "multiplicity": "*",
+          "role": ""
+        },
+        "target": {
+          "direction": "Left",
+          "element": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb",
+          "multiplicity": "*",
+          "role": ""
+        },
+        "isManuallyLayouted": true
+      },
+      "assoc_Appuntamento_Avviso": {
+        "id": "assoc_Appuntamento_Avviso",
+        "name": "per",
+        "type": "ClassBidirectional",
+        "owner": null,
+        "bounds": {
+          "x": -650,
+          "y": -270,
+          "width": 413.90625,
+          "height": 190.75
+        },
+        "path": [
+          {
+            "x": 400,
+            "y": 180
+          },
+          {
+            "x": 400,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 10
+          }
+        ],
+        "source": {
+          "direction": "Up",
+          "element": "14dfd802-f01a-4b7c-a0d2-b01bc8514cdb",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "target": {
+          "direction": "Right",
+          "element": "71a7a6b1-abb3-46f3-81a3-249ceb9c1a54",
+          "multiplicity": "*",
+          "role": ""
+        },
+        "isManuallyLayouted": false
+      },
+      "assoc_Calendario_TipoCalendario": {
+        "id": "assoc_Calendario_TipoCalendario",
+        "name": "",
+        "type": "ClassBidirectional",
+        "owner": null,
+        "bounds": {
+          "x": 75,
+          "y": 180,
+          "width": 18.90625,
+          "height": 205.75
+        },
+        "path": [
+          {
+            "x": 5,
+            "y": 0
+          },
+          {
+            "x": 5,
+            "y": 195
+          }
+        ],
+        "source": {
+          "direction": "Down",
+          "element": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "target": {
+          "direction": "Up",
+          "element": "d1e390ad-0465-4ad7-8399-ee35bf589795",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "isManuallyLayouted": false
+      },
+      "assoc_Calendario_Vista": {
+        "id": "assoc_Calendario_Vista",
+        "name": "",
+        "type": "ClassBidirectional",
+        "owner": null,
+        "bounds": {
+          "x": 75,
+          "y": -235,
+          "width": 18.90625,
+          "height": 245.75
+        },
+        "path": [
+          {
+            "x": 5,
+            "y": 235
+          },
+          {
+            "x": 5,
+            "y": 0
+          }
+        ],
+        "source": {
+          "direction": "Up",
+          "element": "b3b2cf84-b75f-47b6-bd24-dcbaefb2432d",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "target": {
+          "direction": "Down",
+          "element": "cfa584f8-30ad-41a0-be87-58e15abb546e",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "isManuallyLayouted": false
+      }
+    },
+    "assessments": {}
+  }
+}

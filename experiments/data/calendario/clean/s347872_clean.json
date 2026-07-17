@@ -1,0 +1,70 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Calendario_riunioni",
+      "attributes": [
+        {
+          "name": "nome_riunione",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ora_inizio",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "ora fine",
+          "visibility": "+",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "CF",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Persona",
+      "target": "Calendario_riunioni",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

@@ -1,0 +1,158 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Catalogo",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Genere",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Anno Pubblicazione",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "TIpologia",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "Id",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "Id",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Data Inizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Data Fine",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Codice Fiscale",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Email",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "<Compone",
+      "source": "Catalogo",
+      "target": "Libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "<Concesso",
+      "source": "Prestito",
+      "target": "Libro",
+      "sourceMultiplicity": "0..N",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Sfoglia>",
+      "source": "Utente",
+      "target": "Catalogo",
+      "sourceMultiplicity": "N",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "<Riceve",
+      "source": "Utente",
+      "target": "Notifica",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Richiede>",
+      "source": "Utente",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..N",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

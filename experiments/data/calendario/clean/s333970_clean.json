@@ -1,0 +1,153 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "OraInizio",
+          "visibility": "",
+          "type": "time"
+        },
+        {
+          "name": "OraFine",
+          "visibility": "",
+          "type": "time"
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "Vista",
+          "visibility": "+",
+          "type": "enum"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Durata",
+      "attributes": [
+        {
+          "name": "Da",
+          "visibility": "",
+          "type": "date"
+        },
+        {
+          "name": "A",
+          "visibility": "",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Ricorrenza",
+      "attributes": [
+        {
+          "name": "Giorno",
+          "visibility": "",
+          "type": "date"
+        },
+        {
+          "name": "OraInizio",
+          "visibility": "",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "User",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Si estende",
+      "source": "Appuntamento",
+      "target": "Durata",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "può essere",
+      "source": "Appuntamento",
+      "target": "Ricorrenza",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Segna",
+      "source": "User",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Annulla",
+      "source": "User",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Modifica",
+      "source": "User",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Visualizza",
+      "source": "User",
+      "target": "Calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

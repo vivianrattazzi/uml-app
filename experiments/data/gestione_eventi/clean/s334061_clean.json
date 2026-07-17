@@ -1,0 +1,232 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "Partita IVA",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Indirizzo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "ModPagamento",
+          "visibility": "+",
+          "type": "String[]"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "enum"
+        },
+        {
+          "name": "Data",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "Luogo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Budget",
+          "visibility": "+",
+          "type": "Number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "Username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DataNascita",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "CodFiscale",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "CodiceInvito",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Mail",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "TIpo",
+          "visibility": "+",
+          "type": "enum"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "CodFiscale",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DataNascita",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "Indirizzo",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Pagamento",
+      "attributes": [
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "Tra Azienda e Servizio"
+      ]
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "Categoria",
+          "visibility": "+",
+          "type": "enum"
+        },
+        {
+          "name": "Prezzo",
+          "visibility": "+",
+          "type": "Number"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Offre",
+      "source": "Azienda",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Richiede",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Gestisce",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Partecipa",
+      "source": "Invitato",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Organizza",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

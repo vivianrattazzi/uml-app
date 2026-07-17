@@ -1,0 +1,276 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "App",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "CodiceInvito",
+      "attributes": [
+        {
+          "name": "Codice",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "TipoEvento",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Data",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "LuogoEvento",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Budget",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "PIVA",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Indirizzo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "modPagamento",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Indirizzo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "DataNascita",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "CodFiscale",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Indirizzo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Servizi",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Prezzo",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "IDpagamentoDigitale",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "App",
+      "target": "Organizzatore",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "App",
+      "sourceMultiplicity": "N",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "CodiceInvito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "è interessato a",
+      "source": "Evento",
+      "target": "Servizi",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitore",
+      "target": "App",
+      "sourceMultiplicity": "N",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offrire >",
+      "source": "Fornitore",
+      "target": "Servizi",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "CodiceInvito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "organizza",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invita >",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

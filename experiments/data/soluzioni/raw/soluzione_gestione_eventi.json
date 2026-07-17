@@ -1,0 +1,1856 @@
+{
+  "reference": {
+    "classes": [
+      {
+        "name": "Utente",
+        "synonyms": [],
+        "weight": "STRONG",
+        "message": "",
+        "forbiddenAttributes": [],
+        "attributes": [
+          {
+            "name": "username",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "password",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "cognome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "email",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "type": "Class",
+        "elementId": "3d4eea5f-fcfb-47b7-b657-6a429739e368"
+      },
+      {
+        "name": "Organizzatore",
+        "synonyms": [],
+        "weight": "STRONG",
+        "message": "",
+        "forbiddenAttributes": [],
+        "attributes": [
+          {
+            "name": "codiceFiscale",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "residenza",
+            "synonyms": [
+              "indirizzo",
+              "indirizzoResidenza"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "type": "Class",
+        "elementId": "b85a0401-5694-48b4-8e04-8a9da99919de"
+      },
+      {
+        "name": "Fornitore",
+        "synonyms": [],
+        "weight": "STRONG",
+        "message": "",
+        "forbiddenAttributes": [],
+        "attributes": [
+          {
+            "name": "nomeAzienda",
+            "synonyms": [
+              "nomeSocietà"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "partitaIVA",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "indirizzo",
+            "synonyms": [
+              "indirizzoAzienda"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "metodiPagamento",
+            "synonyms": [
+              "modalitaPagamento"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "iban",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "type": "Class",
+        "elementId": "ab28433a-db5a-49fb-887c-71facec2c8a8"
+      },
+      {
+        "name": "Evento",
+        "synonyms": [],
+        "weight": "STRONG",
+        "message": "",
+        "forbiddenAttributes": [],
+        "attributes": [
+          {
+            "name": "tipo",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "data",
+            "synonyms": [],
+            "types": [
+              "Date",
+              "DateTime"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "luogo",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "budget",
+            "synonyms": [],
+            "types": [
+              "float",
+              "double"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "type": "Class",
+        "elementId": "88b8b7b1-6e48-4500-91cf-48a7acf066c5"
+      },
+      {
+        "name": "Servizio",
+        "synonyms": [],
+        "weight": "STRONG",
+        "message": "",
+        "forbiddenAttributes": [],
+        "attributes": [
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "categoria",
+            "synonyms": [
+              "tipo"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "prezzo",
+            "synonyms": [],
+            "types": [
+              "float",
+              "double"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "type": "Class",
+        "elementId": "bc4ee8b0-6273-4d81-bfa9-d1f55e554c7b"
+      },
+      {
+        "name": "Invito",
+        "synonyms": [],
+        "weight": "STRONG",
+        "message": "",
+        "forbiddenAttributes": [],
+        "attributes": [
+          {
+            "name": "codice",
+            "synonyms": [
+              "id",
+              "idInvito",
+              "codiceInvito"
+            ],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "type": "Class",
+        "elementId": "26570f89-976c-40e0-9d80-71901fa4b372"
+      },
+      {
+        "name": "Invitato",
+        "synonyms": [],
+        "weight": "STRONG",
+        "message": "",
+        "forbiddenAttributes": [],
+        "attributes": [
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "cognome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "email",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "categoria",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "type": "Class",
+        "elementId": "8f963d5a-b70d-414e-adab-69d9cff126a5"
+      }
+    ],
+    "associations": [
+      {
+        "message": "",
+        "name": "",
+        "synonyms": [],
+        "weight": "STRONG",
+        "type": "Inheritance",
+        "source": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Organizzatore",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "codiceFiscale",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "residenza",
+                "synonyms": [
+                  "indirizzo",
+                  "indirizzoResidenza"
+                ],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "b85a0401-5694-48b4-8e04-8a9da99919de"
+          }
+        },
+        "target": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Utente",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "username",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "password",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "cognome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "email",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "3d4eea5f-fcfb-47b7-b657-6a429739e368"
+          }
+        },
+        "elementId": "assoc_Organizzatore_Utente"
+      },
+      {
+        "message": "",
+        "name": "",
+        "synonyms": [],
+        "weight": "STRONG",
+        "type": "Default",
+        "source": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Organizzatore",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "codiceFiscale",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "residenza",
+                "synonyms": [
+                  "indirizzo",
+                  "indirizzoResidenza"
+                ],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "b85a0401-5694-48b4-8e04-8a9da99919de"
+          }
+        },
+        "target": {
+          "role": "",
+          "multiplicities": [
+            "*"
+          ],
+          "referenceClass": {
+            "name": "Evento",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "tipo",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "data",
+                "synonyms": [],
+                "types": [
+                  "Date",
+                  "DateTime"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "luogo",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "budget",
+                "synonyms": [],
+                "types": [
+                  "float",
+                  "double"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "88b8b7b1-6e48-4500-91cf-48a7acf066c5"
+          }
+        },
+        "elementId": "assoc_Organizzatore_Evento"
+      },
+      {
+        "message": "",
+        "name": "",
+        "synonyms": [],
+        "weight": "STRONG",
+        "type": "Default",
+        "source": {
+          "role": "",
+          "multiplicities": [
+            "*"
+          ],
+          "referenceClass": {
+            "name": "Evento",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "tipo",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "data",
+                "synonyms": [],
+                "types": [
+                  "Date",
+                  "DateTime"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "luogo",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "budget",
+                "synonyms": [],
+                "types": [
+                  "float",
+                  "double"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "88b8b7b1-6e48-4500-91cf-48a7acf066c5"
+          }
+        },
+        "target": {
+          "role": "",
+          "multiplicities": [
+            "*"
+          ],
+          "referenceClass": {
+            "name": "Servizio",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "categoria",
+                "synonyms": [
+                  "tipo"
+                ],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "prezzo",
+                "synonyms": [],
+                "types": [
+                  "float",
+                  "double"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "bc4ee8b0-6273-4d81-bfa9-d1f55e554c7b"
+          }
+        },
+        "elementId": "assoc_Evento_Servizio"
+      },
+      {
+        "message": "",
+        "name": "",
+        "synonyms": [],
+        "weight": "STRONG",
+        "type": "Default",
+        "source": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Fornitore",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nomeAzienda",
+                "synonyms": [
+                  "nomeSocietà"
+                ],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "partitaIVA",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "indirizzo",
+                "synonyms": [
+                  "indirizzoAzienda"
+                ],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "metodiPagamento",
+                "synonyms": [
+                  "modalitaPagamento"
+                ],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "iban",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "ab28433a-db5a-49fb-887c-71facec2c8a8"
+          }
+        },
+        "target": {
+          "role": "",
+          "multiplicities": [
+            "*"
+          ],
+          "referenceClass": {
+            "name": "Servizio",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "categoria",
+                "synonyms": [
+                  "tipo"
+                ],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "prezzo",
+                "synonyms": [],
+                "types": [
+                  "float",
+                  "double"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "bc4ee8b0-6273-4d81-bfa9-d1f55e554c7b"
+          }
+        },
+        "elementId": "assoc_Fornitore_Servizio"
+      },
+      {
+        "message": "",
+        "name": "",
+        "synonyms": [],
+        "weight": "STRONG",
+        "type": "Default",
+        "source": {
+          "role": "",
+          "multiplicities": [
+            "*"
+          ],
+          "referenceClass": {
+            "name": "Invito",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "codice",
+                "synonyms": [
+                  "id",
+                  "idInvito",
+                  "codiceInvito"
+                ],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "26570f89-976c-40e0-9d80-71901fa4b372"
+          }
+        },
+        "target": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Evento",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "tipo",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "data",
+                "synonyms": [],
+                "types": [
+                  "Date",
+                  "DateTime"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "luogo",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "budget",
+                "synonyms": [],
+                "types": [
+                  "float",
+                  "double"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "88b8b7b1-6e48-4500-91cf-48a7acf066c5"
+          }
+        },
+        "elementId": "assoc_Invito_Evento"
+      },
+      {
+        "message": "",
+        "name": "",
+        "synonyms": [],
+        "weight": "STRONG",
+        "type": "Default",
+        "source": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Invitato",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "cognome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "email",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "categoria",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "8f963d5a-b70d-414e-adab-69d9cff126a5"
+          }
+        },
+        "target": {
+          "role": "",
+          "multiplicities": [
+            "*"
+          ],
+          "referenceClass": {
+            "name": "Invito",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "codice",
+                "synonyms": [
+                  "id",
+                  "idInvito",
+                  "codiceInvito"
+                ],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "26570f89-976c-40e0-9d80-71901fa4b372"
+          }
+        },
+        "elementId": "assoc_Invitato_Invito"
+      },
+      {
+        "message": "",
+        "name": "",
+        "synonyms": [],
+        "weight": "STRONG",
+        "type": "Inheritance",
+        "source": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Fornitore",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "nomeAzienda",
+                "synonyms": [
+                  "nomeSocietà"
+                ],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "partitaIVA",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "indirizzo",
+                "synonyms": [
+                  "indirizzoAzienda"
+                ],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "metodiPagamento",
+                "synonyms": [
+                  "modalitaPagamento"
+                ],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "iban",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "ab28433a-db5a-49fb-887c-71facec2c8a8"
+          }
+        },
+        "target": {
+          "role": "",
+          "multiplicities": [
+            "1"
+          ],
+          "referenceClass": {
+            "name": "Utente",
+            "synonyms": [],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+              {
+                "name": "username",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "password",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "nome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "cognome",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              },
+              {
+                "name": "email",
+                "synonyms": [],
+                "types": [
+                  "string"
+                ],
+                "weight": "STRONG",
+                "message": "",
+                "allowsForeignKeyName": false
+              }
+            ],
+            "type": "Class",
+            "elementId": "3d4eea5f-fcfb-47b7-b657-6a429739e368"
+          }
+        },
+        "elementId": "assoc_Fornitore_Utente"
+      }
+    ],
+    "forbiddenClasses": [],
+    "forbiddenAssociations": []
+  },
+  "model": {
+    "version": "3.0.0",
+    "type": "ClassDiagram",
+    "size": {
+      "width": 1960,
+      "height": 970
+    },
+    "interactive": {
+      "elements": {},
+      "relationships": {}
+    },
+    "elements": {
+      "3d4eea5f-fcfb-47b7-b657-6a429739e368": {
+        "id": "3d4eea5f-fcfb-47b7-b657-6a429739e368",
+        "name": "Utente",
+        "type": "Class",
+        "owner": null,
+        "bounds": {
+          "x": -300,
+          "y": -350,
+          "width": 160,
+          "height": 140
+        },
+        "attributes": [
+          "baf5e922-bcf8-4256-91b2-8dcd76aa9db0",
+          "73068312-fad5-4b39-b879-8712e2cec227",
+          "e2a8cf16-76cf-4084-b056-62ca0d1e7ecb",
+          "02a85730-8f9e-4901-a22f-d0b37e84223e",
+          "33942f78-d90b-4198-a867-fdf5e17a7f39"
+        ],
+        "methods": []
+      },
+      "baf5e922-bcf8-4256-91b2-8dcd76aa9db0": {
+        "id": "baf5e922-bcf8-4256-91b2-8dcd76aa9db0",
+        "name": "username: string",
+        "type": "ClassAttribute",
+        "owner": "3d4eea5f-fcfb-47b7-b657-6a429739e368",
+        "bounds": {
+          "x": -299.5,
+          "y": -309.5,
+          "width": 159,
+          "height": 20
+        }
+      },
+      "73068312-fad5-4b39-b879-8712e2cec227": {
+        "id": "73068312-fad5-4b39-b879-8712e2cec227",
+        "name": "password: string",
+        "type": "ClassAttribute",
+        "owner": "3d4eea5f-fcfb-47b7-b657-6a429739e368",
+        "bounds": {
+          "x": -299.5,
+          "y": -289.5,
+          "width": 159,
+          "height": 20
+        }
+      },
+      "e2a8cf16-76cf-4084-b056-62ca0d1e7ecb": {
+        "id": "e2a8cf16-76cf-4084-b056-62ca0d1e7ecb",
+        "name": "nome: string",
+        "type": "ClassAttribute",
+        "owner": "3d4eea5f-fcfb-47b7-b657-6a429739e368",
+        "bounds": {
+          "x": -299.5,
+          "y": -269.5,
+          "width": 159,
+          "height": 20
+        }
+      },
+      "02a85730-8f9e-4901-a22f-d0b37e84223e": {
+        "id": "02a85730-8f9e-4901-a22f-d0b37e84223e",
+        "name": "cognome: string",
+        "type": "ClassAttribute",
+        "owner": "3d4eea5f-fcfb-47b7-b657-6a429739e368",
+        "bounds": {
+          "x": -299.5,
+          "y": -249.5,
+          "width": 159,
+          "height": 20
+        }
+      },
+      "33942f78-d90b-4198-a867-fdf5e17a7f39": {
+        "id": "33942f78-d90b-4198-a867-fdf5e17a7f39",
+        "name": "email: string",
+        "type": "ClassAttribute",
+        "owner": "3d4eea5f-fcfb-47b7-b657-6a429739e368",
+        "bounds": {
+          "x": -299.5,
+          "y": -229.5,
+          "width": 159,
+          "height": 20
+        }
+      },
+      "b85a0401-5694-48b4-8e04-8a9da99919de": {
+        "id": "b85a0401-5694-48b4-8e04-8a9da99919de",
+        "name": "Organizzatore",
+        "type": "Class",
+        "owner": null,
+        "bounds": {
+          "x": -345,
+          "y": 0,
+          "width": 210,
+          "height": 80
+        },
+        "attributes": [
+          "58d41200-14ec-4a48-8ba1-c990db93c204",
+          "4a94ef05-4f16-4cc7-82c9-5e670eabd728"
+        ],
+        "methods": []
+      },
+      "58d41200-14ec-4a48-8ba1-c990db93c204": {
+        "id": "58d41200-14ec-4a48-8ba1-c990db93c204",
+        "name": "codiceFiscale: string",
+        "type": "ClassAttribute",
+        "owner": "b85a0401-5694-48b4-8e04-8a9da99919de",
+        "bounds": {
+          "x": -344.5,
+          "y": 40.5,
+          "width": 209,
+          "height": 20
+        }
+      },
+      "4a94ef05-4f16-4cc7-82c9-5e670eabd728": {
+        "id": "4a94ef05-4f16-4cc7-82c9-5e670eabd728",
+        "name": "residenza: string",
+        "type": "ClassAttribute",
+        "owner": "b85a0401-5694-48b4-8e04-8a9da99919de",
+        "bounds": {
+          "x": -344.5,
+          "y": 60.5,
+          "width": 209,
+          "height": 20
+        }
+      },
+      "ab28433a-db5a-49fb-887c-71facec2c8a8": {
+        "id": "ab28433a-db5a-49fb-887c-71facec2c8a8",
+        "name": "Fornitore",
+        "type": "Class",
+        "owner": null,
+        "bounds": {
+          "x": 690,
+          "y": 0,
+          "width": 230,
+          "height": 140
+        },
+        "attributes": [
+          "c9d69ee2-8165-4057-97a3-bfb948bd9879",
+          "3334267f-4b64-4793-92d4-f1277d5dc39b",
+          "280accd1-a46d-4809-85c2-d83a2ea4f44c",
+          "2bba2605-58b5-4932-ba26-638d2fe714ce",
+          "39019d71-67f7-478f-94cc-23046d4bb701"
+        ],
+        "methods": []
+      },
+      "c9d69ee2-8165-4057-97a3-bfb948bd9879": {
+        "id": "c9d69ee2-8165-4057-97a3-bfb948bd9879",
+        "name": "nomeAzienda: string",
+        "type": "ClassAttribute",
+        "owner": "ab28433a-db5a-49fb-887c-71facec2c8a8",
+        "bounds": {
+          "x": 690.5,
+          "y": 40.5,
+          "width": 229,
+          "height": 20
+        }
+      },
+      "3334267f-4b64-4793-92d4-f1277d5dc39b": {
+        "id": "3334267f-4b64-4793-92d4-f1277d5dc39b",
+        "name": "partitaIVA: string",
+        "type": "ClassAttribute",
+        "owner": "ab28433a-db5a-49fb-887c-71facec2c8a8",
+        "bounds": {
+          "x": 690.5,
+          "y": 60.5,
+          "width": 229,
+          "height": 20
+        }
+      },
+      "280accd1-a46d-4809-85c2-d83a2ea4f44c": {
+        "id": "280accd1-a46d-4809-85c2-d83a2ea4f44c",
+        "name": "indirizzo: string",
+        "type": "ClassAttribute",
+        "owner": "ab28433a-db5a-49fb-887c-71facec2c8a8",
+        "bounds": {
+          "x": 690.5,
+          "y": 80.5,
+          "width": 229,
+          "height": 20
+        }
+      },
+      "2bba2605-58b5-4932-ba26-638d2fe714ce": {
+        "id": "2bba2605-58b5-4932-ba26-638d2fe714ce",
+        "name": "metodiPagamento: string",
+        "type": "ClassAttribute",
+        "owner": "ab28433a-db5a-49fb-887c-71facec2c8a8",
+        "bounds": {
+          "x": 690.5,
+          "y": 100.5,
+          "width": 229,
+          "height": 20
+        }
+      },
+      "39019d71-67f7-478f-94cc-23046d4bb701": {
+        "id": "39019d71-67f7-478f-94cc-23046d4bb701",
+        "name": "iban: string",
+        "type": "ClassAttribute",
+        "owner": "ab28433a-db5a-49fb-887c-71facec2c8a8",
+        "bounds": {
+          "x": 690.5,
+          "y": 120.5,
+          "width": 229,
+          "height": 20
+        }
+      },
+      "88b8b7b1-6e48-4500-91cf-48a7acf066c5": {
+        "id": "88b8b7b1-6e48-4500-91cf-48a7acf066c5",
+        "name": "Evento",
+        "type": "Class",
+        "owner": null,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 130,
+          "height": 120
+        },
+        "attributes": [
+          "aa74132d-bd6a-4ad9-9220-91dba73d9943",
+          "e6ffc6e2-f047-4ad5-9487-98ff0566351c",
+          "c5f140b7-6599-4f62-ba0d-5ef229704a27",
+          "aa20102c-a965-4213-afab-b887c532c557"
+        ],
+        "methods": []
+      },
+      "aa74132d-bd6a-4ad9-9220-91dba73d9943": {
+        "id": "aa74132d-bd6a-4ad9-9220-91dba73d9943",
+        "name": "tipo: string",
+        "type": "ClassAttribute",
+        "owner": "88b8b7b1-6e48-4500-91cf-48a7acf066c5",
+        "bounds": {
+          "x": 0.5,
+          "y": 40.5,
+          "width": 129,
+          "height": 20
+        }
+      },
+      "e6ffc6e2-f047-4ad5-9487-98ff0566351c": {
+        "id": "e6ffc6e2-f047-4ad5-9487-98ff0566351c",
+        "name": "data: Date",
+        "type": "ClassAttribute",
+        "owner": "88b8b7b1-6e48-4500-91cf-48a7acf066c5",
+        "bounds": {
+          "x": 0.5,
+          "y": 60.5,
+          "width": 129,
+          "height": 20
+        }
+      },
+      "c5f140b7-6599-4f62-ba0d-5ef229704a27": {
+        "id": "c5f140b7-6599-4f62-ba0d-5ef229704a27",
+        "name": "luogo: string",
+        "type": "ClassAttribute",
+        "owner": "88b8b7b1-6e48-4500-91cf-48a7acf066c5",
+        "bounds": {
+          "x": 0.5,
+          "y": 80.5,
+          "width": 129,
+          "height": 20
+        }
+      },
+      "aa20102c-a965-4213-afab-b887c532c557": {
+        "id": "aa20102c-a965-4213-afab-b887c532c557",
+        "name": "budget: float",
+        "type": "ClassAttribute",
+        "owner": "88b8b7b1-6e48-4500-91cf-48a7acf066c5",
+        "bounds": {
+          "x": 0.5,
+          "y": 100.5,
+          "width": 129,
+          "height": 20
+        }
+      },
+      "bc4ee8b0-6273-4d81-bfa9-d1f55e554c7b": {
+        "id": "bc4ee8b0-6273-4d81-bfa9-d1f55e554c7b",
+        "name": "Servizio",
+        "type": "Class",
+        "owner": null,
+        "bounds": {
+          "x": 345,
+          "y": 0,
+          "width": 170,
+          "height": 100
+        },
+        "attributes": [
+          "ff877254-9db5-48d0-b04c-dfd21182ac1a",
+          "80c0108b-d1c4-4c80-a732-d03c4510cafa",
+          "aea21e9e-69e2-4c27-ad05-1c743d1e7712"
+        ],
+        "methods": []
+      },
+      "ff877254-9db5-48d0-b04c-dfd21182ac1a": {
+        "id": "ff877254-9db5-48d0-b04c-dfd21182ac1a",
+        "name": "nome: string",
+        "type": "ClassAttribute",
+        "owner": "bc4ee8b0-6273-4d81-bfa9-d1f55e554c7b",
+        "bounds": {
+          "x": 345.5,
+          "y": 40.5,
+          "width": 169,
+          "height": 20
+        }
+      },
+      "80c0108b-d1c4-4c80-a732-d03c4510cafa": {
+        "id": "80c0108b-d1c4-4c80-a732-d03c4510cafa",
+        "name": "categoria: string",
+        "type": "ClassAttribute",
+        "owner": "bc4ee8b0-6273-4d81-bfa9-d1f55e554c7b",
+        "bounds": {
+          "x": 345.5,
+          "y": 60.5,
+          "width": 169,
+          "height": 20
+        }
+      },
+      "aea21e9e-69e2-4c27-ad05-1c743d1e7712": {
+        "id": "aea21e9e-69e2-4c27-ad05-1c743d1e7712",
+        "name": "prezzo: float",
+        "type": "ClassAttribute",
+        "owner": "bc4ee8b0-6273-4d81-bfa9-d1f55e554c7b",
+        "bounds": {
+          "x": 345.5,
+          "y": 80.5,
+          "width": 169,
+          "height": 20
+        }
+      },
+      "26570f89-976c-40e0-9d80-71901fa4b372": {
+        "id": "26570f89-976c-40e0-9d80-71901fa4b372",
+        "name": "Invito",
+        "type": "Class",
+        "owner": null,
+        "bounds": {
+          "x": 0,
+          "y": 345,
+          "width": 140,
+          "height": 60
+        },
+        "attributes": [
+          "555b2968-4d04-4162-bbef-40864fbcc82a"
+        ],
+        "methods": []
+      },
+      "555b2968-4d04-4162-bbef-40864fbcc82a": {
+        "id": "555b2968-4d04-4162-bbef-40864fbcc82a",
+        "name": "codice: string",
+        "type": "ClassAttribute",
+        "owner": "26570f89-976c-40e0-9d80-71901fa4b372",
+        "bounds": {
+          "x": 0.5,
+          "y": 385.5,
+          "width": 139,
+          "height": 20
+        }
+      },
+      "8f963d5a-b70d-414e-adab-69d9cff126a5": {
+        "id": "8f963d5a-b70d-414e-adab-69d9cff126a5",
+        "name": "Invitato",
+        "type": "Class",
+        "owner": null,
+        "bounds": {
+          "x": -345,
+          "y": 345,
+          "width": 170,
+          "height": 120
+        },
+        "attributes": [
+          "5e9f0c3a-ab85-4050-b44f-78d0e63596bf",
+          "62469ac7-51c5-413c-8522-8569dcd25b5a",
+          "0d017cf7-cc5e-4b1a-a391-53bbcdfa2e88",
+          "d9296177-242d-46f4-9e51-f97bb03c460c"
+        ],
+        "methods": []
+      },
+      "5e9f0c3a-ab85-4050-b44f-78d0e63596bf": {
+        "id": "5e9f0c3a-ab85-4050-b44f-78d0e63596bf",
+        "name": "nome: string",
+        "type": "ClassAttribute",
+        "owner": "8f963d5a-b70d-414e-adab-69d9cff126a5",
+        "bounds": {
+          "x": -344.5,
+          "y": 385.5,
+          "width": 169,
+          "height": 20
+        }
+      },
+      "62469ac7-51c5-413c-8522-8569dcd25b5a": {
+        "id": "62469ac7-51c5-413c-8522-8569dcd25b5a",
+        "name": "cognome: string",
+        "type": "ClassAttribute",
+        "owner": "8f963d5a-b70d-414e-adab-69d9cff126a5",
+        "bounds": {
+          "x": -344.5,
+          "y": 405.5,
+          "width": 169,
+          "height": 20
+        }
+      },
+      "0d017cf7-cc5e-4b1a-a391-53bbcdfa2e88": {
+        "id": "0d017cf7-cc5e-4b1a-a391-53bbcdfa2e88",
+        "name": "email: string",
+        "type": "ClassAttribute",
+        "owner": "8f963d5a-b70d-414e-adab-69d9cff126a5",
+        "bounds": {
+          "x": -344.5,
+          "y": 425.5,
+          "width": 169,
+          "height": 20
+        }
+      },
+      "d9296177-242d-46f4-9e51-f97bb03c460c": {
+        "id": "d9296177-242d-46f4-9e51-f97bb03c460c",
+        "name": "categoria: string",
+        "type": "ClassAttribute",
+        "owner": "8f963d5a-b70d-414e-adab-69d9cff126a5",
+        "bounds": {
+          "x": -344.5,
+          "y": 445.5,
+          "width": 169,
+          "height": 20
+        }
+      }
+    },
+    "relationships": {
+      "assoc_Organizzatore_Utente": {
+        "id": "assoc_Organizzatore_Utente",
+        "name": "",
+        "type": "ClassInheritance",
+        "owner": null,
+        "bounds": {
+          "x": -385,
+          "y": -210,
+          "width": 178.90625,
+          "height": 289.75
+        },
+        "path": [
+          {
+            "x": 40,
+            "y": 250
+          },
+          {
+            "x": 0,
+            "y": 250
+          },
+          {
+            "x": 0,
+            "y": 105
+          },
+          {
+            "x": 165,
+            "y": 105
+          },
+          {
+            "x": 165,
+            "y": 0
+          }
+        ],
+        "source": {
+          "direction": "Left",
+          "element": "b85a0401-5694-48b4-8e04-8a9da99919de",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "target": {
+          "direction": "Down",
+          "element": "3d4eea5f-fcfb-47b7-b657-6a429739e368",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "isManuallyLayouted": false
+      },
+      "assoc_Organizzatore_Evento": {
+        "id": "assoc_Organizzatore_Evento",
+        "name": "crea",
+        "type": "ClassBidirectional",
+        "owner": null,
+        "bounds": {
+          "x": -135,
+          "y": 30,
+          "width": 135,
+          "height": 49.75
+        },
+        "path": [
+          {
+            "x": 0,
+            "y": 10
+          },
+          {
+            "x": 135,
+            "y": 10
+          }
+        ],
+        "source": {
+          "direction": "Right",
+          "element": "b85a0401-5694-48b4-8e04-8a9da99919de",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "target": {
+          "direction": "Left",
+          "element": "88b8b7b1-6e48-4500-91cf-48a7acf066c5",
+          "multiplicity": "*",
+          "role": ""
+        },
+        "isManuallyLayouted": false
+      },
+      "assoc_Evento_Servizio": {
+        "id": "assoc_Evento_Servizio",
+        "name": "include",
+        "type": "ClassBidirectional",
+        "owner": null,
+        "bounds": {
+          "x": 130,
+          "y": 40,
+          "width": 215,
+          "height": 49.75
+        },
+        "path": [
+          {
+            "x": 0,
+            "y": 10
+          },
+          {
+            "x": 215,
+            "y": 10
+          }
+        ],
+        "source": {
+          "direction": "Right",
+          "element": "88b8b7b1-6e48-4500-91cf-48a7acf066c5",
+          "multiplicity": "*",
+          "role": ""
+        },
+        "target": {
+          "direction": "Left",
+          "element": "bc4ee8b0-6273-4d81-bfa9-d1f55e554c7b",
+          "multiplicity": "*",
+          "role": ""
+        },
+        "isManuallyLayouted": false
+      },
+      "assoc_Fornitore_Servizio": {
+        "id": "assoc_Fornitore_Servizio",
+        "name": "fornisce",
+        "type": "ClassBidirectional",
+        "owner": null,
+        "bounds": {
+          "x": 515,
+          "y": 40,
+          "width": 175,
+          "height": 49.75
+        },
+        "path": [
+          {
+            "x": 175,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 10
+          }
+        ],
+        "source": {
+          "direction": "Left",
+          "element": "ab28433a-db5a-49fb-887c-71facec2c8a8",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "target": {
+          "direction": "Right",
+          "element": "bc4ee8b0-6273-4d81-bfa9-d1f55e554c7b",
+          "multiplicity": "*",
+          "role": ""
+        },
+        "isManuallyLayouted": false
+      },
+      "assoc_Invito_Evento": {
+        "id": "assoc_Invito_Evento",
+        "name": "appartiene a",
+        "type": "ClassBidirectional",
+        "owner": null,
+        "bounds": {
+          "x": 60,
+          "y": 120,
+          "width": 18.90625,
+          "height": 235.75
+        },
+        "path": [
+          {
+            "x": 5,
+            "y": 225
+          },
+          {
+            "x": 5,
+            "y": 0
+          }
+        ],
+        "source": {
+          "direction": "Up",
+          "element": "26570f89-976c-40e0-9d80-71901fa4b372",
+          "multiplicity": "*",
+          "role": ""
+        },
+        "target": {
+          "direction": "Down",
+          "element": "88b8b7b1-6e48-4500-91cf-48a7acf066c5",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "isManuallyLayouted": false
+      },
+      "assoc_Invitato_Invito": {
+        "id": "assoc_Invitato_Invito",
+        "name": "riceve",
+        "type": "ClassBidirectional",
+        "owner": null,
+        "bounds": {
+          "x": -175,
+          "y": 365,
+          "width": 175,
+          "height": 49.75
+        },
+        "path": [
+          {
+            "x": 0,
+            "y": 10
+          },
+          {
+            "x": 175,
+            "y": 10
+          }
+        ],
+        "source": {
+          "direction": "Right",
+          "element": "8f963d5a-b70d-414e-adab-69d9cff126a5",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "target": {
+          "direction": "Left",
+          "element": "26570f89-976c-40e0-9d80-71901fa4b372",
+          "multiplicity": "*",
+          "role": ""
+        },
+        "isManuallyLayouted": false
+      },
+      "assoc_Fornitore_Utente": {
+        "id": "assoc_Fornitore_Utente",
+        "name": "",
+        "type": "ClassInheritance",
+        "owner": null,
+        "bounds": {
+          "x": -140,
+          "y": -290,
+          "width": 1100,
+          "height": 399.75
+        },
+        "path": [
+          {
+            "x": 1060,
+            "y": 360
+          },
+          {
+            "x": 1100,
+            "y": 360
+          },
+          {
+            "x": 1100,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 10
+          }
+        ],
+        "source": {
+          "direction": "Right",
+          "element": "ab28433a-db5a-49fb-887c-71facec2c8a8",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "target": {
+          "direction": "Right",
+          "element": "3d4eea5f-fcfb-47b7-b657-6a429739e368",
+          "multiplicity": "1",
+          "role": ""
+        },
+        "isManuallyLayouted": false
+      }
+    },
+    "assessments": {}
+  }
+}

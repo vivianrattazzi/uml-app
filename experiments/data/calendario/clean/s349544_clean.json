@@ -1,0 +1,142 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "RicezioneAvviso",
+          "visibility": "",
+          "type": "Boolean"
+        },
+        {
+          "name": "OrarioAvviso",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "Tipologia",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Ora",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Giorno",
+      "attributes": [
+        {
+          "name": "Tipologia",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Ricorrente",
+          "visibility": "",
+          "type": "Boolean"
+        },
+        {
+          "name": "OraInizio",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "OraFine",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Mail",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Password",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Avviso",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Avviso",
+      "target": "Utente",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Giorno",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

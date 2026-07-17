@@ -1,0 +1,188 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "OraInizio",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "OraFine",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DataInizio",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "DataFine",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento_ricorrente",
+      "attributes": [
+        {
+          "name": "Frequenza",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "AttualmenteAttivo",
+          "visibility": "+",
+          "type": "Boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DataInizio",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "DataFine",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Testo",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "User",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "Contiene",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento_ricorrente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "genera",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "User",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "Riceve",
+      "sourceRole": "*",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "User",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "Gestisce",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "User",
+      "target": "Calendario",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "Definisce",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

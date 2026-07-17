@@ -1,0 +1,186 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Autore",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "Stringa"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "Stringa"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Copia",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Copia Digitale",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Copia Fisica",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "Titolo",
+          "visibility": "+",
+          "type": "Stringa"
+        },
+        {
+          "name": "ISBN",
+          "visibility": "+",
+          "type": "Stringa"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "Data Inizio",
+          "visibility": "+",
+          "type": "Data"
+        },
+        {
+          "name": "Data Fine",
+          "visibility": "+",
+          "type": "Data"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito Restituito",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "Stringa"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "Stringa"
+        },
+        {
+          "name": "Mail",
+          "visibility": "+",
+          "type": "Stringa"
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": "Stringa"
+        },
+        {
+          "name": "Data Nascita",
+          "visibility": "+",
+          "type": "Data"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "pubblica",
+      "source": "Autore",
+      "target": "Libro",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Copia",
+      "target": "Libro",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Copia",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Copia",
+      "target": "Prestito Restituito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito",
+      "target": "Utente",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito Restituito",
+      "target": "Prestito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito Restituito",
+      "target": "Utente",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Copia Digitale",
+      "parent": "Copia"
+    },
+    {
+      "child": "Copia Fisica",
+      "parent": "Copia"
+    }
+  ]
+}

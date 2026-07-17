@@ -1,0 +1,221 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Ora_inizio",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "Ora_fine",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "si_ripete",
+          "visibility": "+",
+          "type": "Boolean"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "tipo_vista",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "lista_apuntamenti",
+          "visibility": "+",
+          "type": "<list>"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Conflitto",
+      "attributes": [
+        {
+          "name": "conflict",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "startDate",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "endDate",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "Days",
+          "visibility": "+",
+          "type": "list<String>"
+        }
+      ],
+      "methods": [
+        "+ verify_conflict()",
+        "+ reject-appointment()",
+        "+ set_appointment"
+      ]
+    },
+    {
+      "name": "Layout",
+      "attributes": [
+        {
+          "name": "mode",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ Set_layout()"
+      ]
+    },
+    {
+      "name": "Mail_avviso",
+      "attributes": [
+        {
+          "name": "Header",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Body",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Date",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "code",
+          "visibility": "+",
+          "type": "number"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ crea_evento()",
+        "+elimina_evento()",
+        "+modifica_evento()",
+        "+ set_layout()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "appare in",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "verifia",
+      "source": "Appuntamento",
+      "target": "Conflitto",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "setta in",
+      "source": "Conflitto",
+      "target": "Calendario",
+      "sourceMultiplicity": "n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Mostra",
+      "source": "Layout",
+      "target": "Calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "inviato a",
+      "source": "Mail_avviso",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea/modifica/elimina",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "visualissa/ set",
+      "source": "Utente",
+      "target": "Layout",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

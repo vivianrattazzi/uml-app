@@ -1,0 +1,167 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "APPCALENDARIO",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "APPUNTAMENTO",
+      "attributes": [
+        {
+          "name": "orarioI",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "orarioF",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "giornoInizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "giornoFine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "ricorrente",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "AVVISO",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "messaggio",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "LAYOUT",
+      "attributes": [
+        {
+          "name": "tipo(giornaliera,settimanale...)",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "USER",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "APPCALENDARIO",
+      "target": "APPUNTAMENTO",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "modifica",
+      "source": "APPCALENDARIO",
+      "target": "APPUNTAMENTO",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "annulla",
+      "source": "APPCALENDARIO",
+      "target": "APPUNTAMENTO",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "visualizza",
+      "source": "APPCALENDARIO",
+      "target": "LAYOUT",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invia",
+      "source": "AVVISO",
+      "target": "APPCALENDARIO",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riferito a",
+      "source": "AVVISO",
+      "target": "APPUNTAMENTO",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "usa",
+      "source": "USER",
+      "target": "APPCALENDARIO",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

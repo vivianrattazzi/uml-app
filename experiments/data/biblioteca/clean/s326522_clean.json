@@ -1,0 +1,167 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "CATALOGO LIBRI",
+      "attributes": [
+        {
+          "name": "prestito",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "data prestito",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "data scadenza prestito",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "data restituzione",
+          "visibility": "+",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "genere",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "enum: {cartaceo, digitale}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "NOTIFICA",
+      "attributes": [
+        {
+          "name": "data scadenza prestito",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "nome libro",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "SISTEMA",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "UTENTE",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data di nascita",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "residenza",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "codice fiscale",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Libro",
+      "target": "CATALOGO LIBRI",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ha",
+      "source": "SISTEMA",
+      "target": "CATALOGO LIBRI",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invia",
+      "source": "SISTEMA",
+      "target": "NOTIFICA",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "SISTEMA",
+      "target": "UTENTE",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "chiede prestito",
+      "source": "UTENTE",
+      "target": "CATALOGO LIBRI",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "UTENTE",
+      "target": "NOTIFICA",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

@@ -1,0 +1,241 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Partita IVA"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Città",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Nome"
+        },
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "CAP"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Nome"
+        },
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Tipo"
+        },
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Data"
+        },
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Luogo"
+        },
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Budget"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Nome"
+        },
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Cognome"
+        },
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Email"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Metodo di Pagamento",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Codice F."
+        },
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Username"
+        },
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "password"
+        },
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Data di nascita"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Categoria"
+        },
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": ": Prezzo"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Risiede",
+      "source": "Azienda",
+      "target": "Città",
+      "sourceMultiplicity": "0...N",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Usrufruisce",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "0...N",
+      "targetMultiplicity": "0..N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Gestisce",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Organizza",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0...N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Invita",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "1...N",
+      "targetMultiplicity": "1...N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Risiede",
+      "source": "Persona",
+      "target": "Città",
+      "sourceMultiplicity": "0...N",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Offre",
+      "source": "Servizio",
+      "target": "Azienda",
+      "sourceMultiplicity": "1...N",
+      "targetMultiplicity": "1....N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Accetta",
+      "source": "Servizio",
+      "target": "Metodo di Pagamento",
+      "sourceMultiplicity": "0...N",
+      "targetMultiplicity": "1...N",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "Persona"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "Persona"
+    }
+  ]
+}

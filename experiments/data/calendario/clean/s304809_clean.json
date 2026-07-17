@@ -1,0 +1,162 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora fine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data fine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "numero conflitti",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "priorità nei conflitti",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "avviso",
+      "attributes": [
+        {
+          "name": "tempo_prima_in _cui_scattare",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Calendario personale",
+      "attributes": [
+        {
+          "name": "vista",
+          "visibility": "",
+          "type": "{giornaliera, settimanale, mensile}"
+        },
+        {
+          "name": "mail utente",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "notifica",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "utente",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "user",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "salted_password",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "Appuntamento",
+      "target": "Calendario personale",
+      "sourceMultiplicity": "0..n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ha",
+      "source": "avviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "0..n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "avviso",
+      "target": "notifica",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "Calendario",
+      "target": "utente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Calendario personale",
+      "target": "utente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

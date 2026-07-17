@@ -1,0 +1,213 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "luogo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "budget",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "username",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "anno nascita",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "partita iva",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "indirizzo azienda",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "accetta contanti",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "accetta bonifico",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "accetta pagamento online",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invito",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "mail",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "codice fiscale",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "anno di nascita",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "indirizzo di residenza",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "descrizione",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "costo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "IBAN",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "account digitale",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "< permette accesso a",
+      "source": "Evento",
+      "target": "Invito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "usufruisce >",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "eroga >",
+      "source": "Fornitore",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "organizza >",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

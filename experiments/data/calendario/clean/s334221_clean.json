@@ -1,0 +1,222 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "idAppuntamento",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "mail",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "idAppuntamento",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "idUtente",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Conflitti",
+      "attributes": [
+        {
+          "name": "idAppuntamento1",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "idAppuntamento2",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Modifica",
+      "attributes": [
+        {
+          "name": "idAppuntamento",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "nuovoOrario",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prolungati",
+      "attributes": [
+        {
+          "name": "durata",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Ricorrenti",
+      "attributes": [
+        {
+          "name": "orarioFisso",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "mail",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "idUtente",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "riguarda",
+      "source": "Avviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riguarda",
+      "source": "Conflitti",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riguarda",
+      "source": "Modifica",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Riceve",
+      "source": "Utente",
+      "target": "Avviso",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "visualizza",
+      "source": "Utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "Utente",
+      "target": "Conflitti",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "può",
+      "source": "Utente",
+      "target": "Modifica",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Prolungati",
+      "parent": "Appuntamento"
+    },
+    {
+      "child": "Ricorrenti",
+      "parent": "Appuntamento"
+    }
+  ]
+}
