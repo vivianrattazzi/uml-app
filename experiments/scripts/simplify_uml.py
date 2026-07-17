@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-simplify_uml.py
+simplify_uml.py --> normalizzare la sintassi del diagramma, senza modificarne il significato.
 
 Converte JSON UML esportati dall'app/draw.io in JSON semplificati per test LLM.
 
