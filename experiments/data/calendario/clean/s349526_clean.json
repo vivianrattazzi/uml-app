@@ -1,0 +1,116 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "ora_inizio",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "ora_fine",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ modifica_appuntamento()",
+        "+ annulla_appuntamento()",
+        "+ imposta_ricorrente()"
+      ]
+    },
+    {
+      "name": "avviso",
+      "attributes": [
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "calendario",
+      "attributes": [
+        {
+          "name": "id_calendario",
+          "visibility": "+",
+          "type": "number"
+        }
+      ],
+      "methods": [
+        "+ vista_settimanale()",
+        "+ vista_giornaliera()",
+        "+ vista_mensile()",
+        "+ gestione_conflitti()"
+      ]
+    },
+    {
+      "name": "persona",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "id_utente",
+          "visibility": "+",
+          "type": "numer"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "avviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "persona",
+      "target": "calendario",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

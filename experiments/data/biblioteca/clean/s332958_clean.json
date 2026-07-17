@@ -1,0 +1,134 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Libreria",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "Titolo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Autore",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "enum [cartaceo, digitale]"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "messaggio",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "Inizio",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "Fine",
+          "visibility": "+",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "possiede",
+      "source": "Libreria",
+      "target": "Libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ha iscritti",
+      "source": "Libreria",
+      "target": "Utente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "e' in",
+      "source": "Libro",
+      "target": "Prestito",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "0..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "genera",
+      "source": "Prestito",
+      "target": "Notifica",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ha preso in",
+      "source": "Utente",
+      "target": "Prestito",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "0..1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

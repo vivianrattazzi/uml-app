@@ -1,0 +1,307 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Account",
+      "attributes": [
+        {
+          "name": "Mail",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "PIVA",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "NomeAzienda",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Città",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Provincia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Via",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "CAP",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "ModPagamento",
+          "visibility": "+",
+          "type": "Enum (Bonifico, Bancomat, ecc.)"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "Data",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "Città",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Provincia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Via",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "CAP",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Budget",
+          "visibility": "+",
+          "type": "Float"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizi",
+      "attributes": [
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Tipo",
+      "attributes": [
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "CodFiscale",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DataNascita",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "Città",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Provincia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Via",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "CAP",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Fornisce",
+      "source": "Azienda",
+      "target": "Servizi",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Servizi",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Tipo",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Lavora per",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitore",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "Evento",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Account",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

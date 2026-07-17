@@ -1,0 +1,179 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Account",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "DataInizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "DataFine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Tipo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Ricorrenza",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "AppuntamentoInConflitto",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "DataInizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "DataFine",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Contenuto",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Cognome",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "in conflitto con",
+      "source": "Appuntamento",
+      "target": "AppuntamentoInConflitto",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "legato a",
+      "source": "Avviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "associato a",
+      "source": "Calendario",
+      "target": "Account",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "associato a",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "posseduto da",
+      "source": "Utente",
+      "target": "Account",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

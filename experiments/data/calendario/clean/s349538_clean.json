@@ -1,0 +1,147 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "OraInizio",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "OraFine",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "tipologiaVista",
+          "visibility": "+",
+          "type": "enum"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "OptAppuntamento - IntermediateClass",
+      "attributes": [
+        {
+          "name": "annullato",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "conflitto",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "dataInizio",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "dataFine",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ripeti",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Su",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Invia Mail",
+      "source": "Appuntamento",
+      "target": "Persona",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "OptAppuntamento - IntermediateClass",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Fissa",
+      "source": "Persona",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

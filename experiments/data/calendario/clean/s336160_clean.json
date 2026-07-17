@@ -1,0 +1,183 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "data_ora_inizio",
+          "visibility": "",
+          "type": "timestamp"
+        },
+        {
+          "name": "data_ora_fine",
+          "visibility": "",
+          "type": "timestamp"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "ricorrente",
+          "visibility": "",
+          "type": "boolean"
+        },
+        {
+          "name": "avviso",
+          "visibility": "",
+          "type": "boolean"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "vista",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Mail",
+      "attributes": [
+        {
+          "name": "invio",
+          "visibility": "",
+          "type": "timestamp"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "stato",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "fuso_orario",
+          "visibility": "",
+          "type": "number"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Ricorrenza",
+      "attributes": [
+        {
+          "name": "n_volte",
+          "visibility": "",
+          "type": "number"
+        },
+        {
+          "name": "intervallo_giorni",
+          "visibility": "",
+          "type": "number"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "in conflitto con",
+      "source": "Appuntamento",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "0...*",
+      "targetMultiplicity": "0...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "composto da",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "0...*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invia",
+      "source": "Appuntamento",
+      "target": "Mail",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "caratterizzato da",
+      "source": "Appuntamento",
+      "target": "Ricorrenza",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0...1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestito da",
+      "source": "Persona",
+      "target": "Calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

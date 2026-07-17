@@ -1,0 +1,76 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data_i",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data_f",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "user_id",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "get(id)",
+        "set(id)",
+        "edit(id, nome, data_i, data_f, tipologia)",
+        "get_all(user_id)",
+        "delete(id)"
+      ]
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "get_appointments()",
+        "create_appointment(nome, data_i, data_f, tipologia)",
+        "edit_appointment(appointment_id, nome, data_i, data_f, tipologia)",
+        "delete_appointment(appointment_id, nome, data_i, data_f, tipologia)"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Utente",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

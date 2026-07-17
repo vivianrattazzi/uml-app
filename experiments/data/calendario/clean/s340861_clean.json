@@ -1,0 +1,127 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nomeAppuntamento",
+          "visibility": "",
+          "type": "Text"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": "Text"
+        },
+        {
+          "name": "statoAppuntamento",
+          "visibility": "",
+          "type": "Boolean"
+        },
+        {
+          "name": "eventoRicorrente",
+          "visibility": "",
+          "type": "Boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "modalitaVisualizzazione",
+          "visibility": "",
+          "type": "Text"
+        },
+        {
+          "name": "avvisiAttivi",
+          "visibility": "",
+          "type": "Boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Durata",
+      "attributes": [
+        {
+          "name": "oraInizio",
+          "visibility": "",
+          "type": "Date"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "",
+          "type": "Date"
+        },
+        {
+          "name": "dataInizio",
+          "visibility": "",
+          "type": "Date"
+        },
+        {
+          "name": "dataFine",
+          "visibility": "",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "",
+          "type": "Text"
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "Text"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "Text"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "ha",
+      "source": "Appuntamento",
+      "target": "Durata",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ha",
+      "source": "Utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

@@ -1,0 +1,117 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Apuntamento",
+      "attributes": [
+        {
+          "name": "Id",
+          "visibility": "+",
+          "type": "integer"
+        },
+        {
+          "name": "StartDate",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "EndDate",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "Type",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avvisi",
+      "attributes": [
+        {
+          "name": "Id",
+          "visibility": "+",
+          "type": "Integer"
+        },
+        {
+          "name": "Date",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "User",
+      "attributes": [
+        {
+          "name": "Id",
+          "visibility": "+",
+          "type": "integer"
+        },
+        {
+          "name": "Email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Name",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Surname",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ViewMode",
+      "attributes": [
+        {
+          "name": "ViewMode",
+          "visibility": "+",
+          "type": "ViewType"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Avvisi",
+      "target": "Apuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Avvisi",
+      "target": "User",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "User",
+      "target": "Apuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

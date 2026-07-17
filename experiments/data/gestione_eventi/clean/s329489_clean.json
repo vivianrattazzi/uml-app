@@ -1,0 +1,205 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipo_evento",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "double"
+        },
+        {
+          "name": "servizi_richiesti",
+          "visibility": "+",
+          "type": "enum {catering, fiori, servizio taxi}"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "fornitore",
+      "attributes": [
+        {
+          "name": "Piva",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "indirizzo_azienda",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "mod_pagamento",
+          "visibility": "+",
+          "type": "enum {contanti, bancomant, bonifico}"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "enum {amico, parente, collega}"
+        },
+        {
+          "name": "codice_invito",
+          "visibility": "+",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "organizzatore",
+      "attributes": [
+        {
+          "name": "CF",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo_residenza",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Servizio_offerto",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "double"
+        },
+        {
+          "name": "pagamento",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Aggiunge",
+      "source": "fornitore",
+      "target": "Servizio_offerto",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Crea",
+      "source": "organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Invita",
+      "source": "organizzatore",
+      "target": "invitato",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "fornitore",
+      "parent": "Utente"
+    },
+    {
+      "child": "organizzatore",
+      "parent": "Utente"
+    }
+  ]
+}

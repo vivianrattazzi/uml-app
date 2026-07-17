@@ -1,0 +1,112 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Ora d'inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Ora di fine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "Motivazione",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "Giorno",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Mese",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Anno",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Username",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Genera",
+      "source": "Appuntamento",
+      "target": "Avviso",
+      "sourceMultiplicity": "0..N",
+      "targetMultiplicity": "0..N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Gestisce",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "0..N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Visualizza",
+      "source": "Utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

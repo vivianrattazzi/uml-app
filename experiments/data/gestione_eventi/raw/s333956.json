@@ -1,0 +1,959 @@
+{
+  "version": "2.0.0",
+  "type": "ClassDiagram",
+  "size": {
+    "width": 920,
+    "height": 760
+  },
+  "interactive": {
+    "elements": [],
+    "relationships": []
+  },
+  "elements": [
+    {
+      "id": "e680e97b-af07-4252-a4b4-90f034f8c939",
+      "name": "Fornitore",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 0,
+        "y": 490,
+        "width": 180,
+        "height": 180
+      },
+      "stereotype": null,
+      "attributes": [
+        "4b9f00d1-ecfb-4e08-b58a-e997f48e6aac",
+        "71f34c80-dff2-48a4-8abe-e609141f581b",
+        "a6d89ede-4fbc-4f55-a4c8-50b71b9943f2"
+      ],
+      "methods": [
+        "e99fb1f8-a4b4-4938-a93b-baf6d09d24af",
+        "9d4f5b22-7fa2-41b9-9b5d-cd020599ff29"
+      ]
+    },
+    {
+      "id": "4b9f00d1-ecfb-4e08-b58a-e997f48e6aac",
+      "name": "+ Nome azienda: String",
+      "type": "ClassAttribute",
+      "owner": "e680e97b-af07-4252-a4b4-90f034f8c939",
+      "bounds": {
+        "x": 0.5,
+        "y": 520.5,
+        "width": 179,
+        "height": 30
+      }
+    },
+    {
+      "id": "71f34c80-dff2-48a4-8abe-e609141f581b",
+      "name": "+ IVA Azienda: String",
+      "type": "ClassAttribute",
+      "owner": "e680e97b-af07-4252-a4b4-90f034f8c939",
+      "bounds": {
+        "x": 0.5,
+        "y": 550.5,
+        "width": 179,
+        "height": 30
+      }
+    },
+    {
+      "id": "a6d89ede-4fbc-4f55-a4c8-50b71b9943f2",
+      "name": "+ Pagamenti: Enum(String)",
+      "type": "ClassAttribute",
+      "owner": "e680e97b-af07-4252-a4b4-90f034f8c939",
+      "bounds": {
+        "x": 0.5,
+        "y": 580.5,
+        "width": 179,
+        "height": 30
+      }
+    },
+    {
+      "id": "e99fb1f8-a4b4-4938-a93b-baf6d09d24af",
+      "name": "+ Inserire servizi",
+      "type": "ClassMethod",
+      "owner": "e680e97b-af07-4252-a4b4-90f034f8c939",
+      "bounds": {
+        "x": 0.5,
+        "y": 610.5,
+        "width": 179,
+        "height": 30
+      }
+    },
+    {
+      "id": "9d4f5b22-7fa2-41b9-9b5d-cd020599ff29",
+      "name": "+ Invita",
+      "type": "ClassMethod",
+      "owner": "e680e97b-af07-4252-a4b4-90f034f8c939",
+      "bounds": {
+        "x": 0.5,
+        "y": 640.5,
+        "width": 179,
+        "height": 30
+      }
+    },
+    {
+      "id": "c57a67b4-dddb-4c25-83e2-36e0a91a7797",
+      "name": "Servizio",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 710,
+        "y": 310,
+        "width": 170,
+        "height": 210
+      },
+      "stereotype": null,
+      "attributes": [
+        "8f841367-c063-4e9a-a88c-729968130b67",
+        "b7e05f71-27f3-4413-80c8-5ab10a76c075",
+        "8abb06c2-fa58-4d8c-ac39-83f0fe3916d1",
+        "011299dd-fb54-484d-b8ed-e88518f13637",
+        "e503dd81-5dfa-40f0-a6de-6b3c71ec77ee"
+      ],
+      "methods": [
+        "f288b73b-f369-4817-9f38-b00e21d6bc20"
+      ]
+    },
+    {
+      "id": "8f841367-c063-4e9a-a88c-729968130b67",
+      "name": "+ Tipo: String",
+      "type": "ClassAttribute",
+      "owner": "c57a67b4-dddb-4c25-83e2-36e0a91a7797",
+      "bounds": {
+        "x": 710.5,
+        "y": 340.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    {
+      "id": "b7e05f71-27f3-4413-80c8-5ab10a76c075",
+      "name": "+ Prezzo: Number",
+      "type": "ClassAttribute",
+      "owner": "c57a67b4-dddb-4c25-83e2-36e0a91a7797",
+      "bounds": {
+        "x": 710.5,
+        "y": 370.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    {
+      "id": "8abb06c2-fa58-4d8c-ac39-83f0fe3916d1",
+      "name": "+ IBAN: String or Null",
+      "type": "ClassAttribute",
+      "owner": "c57a67b4-dddb-4c25-83e2-36e0a91a7797",
+      "bounds": {
+        "x": 710.5,
+        "y": 400.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    {
+      "id": "011299dd-fb54-484d-b8ed-e88518f13637",
+      "name": "+ Account: Boolean",
+      "type": "ClassAttribute",
+      "owner": "c57a67b4-dddb-4c25-83e2-36e0a91a7797",
+      "bounds": {
+        "x": 710.5,
+        "y": 430.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    {
+      "id": "e503dd81-5dfa-40f0-a6de-6b3c71ec77ee",
+      "name": "+ Username: String or Null",
+      "type": "ClassAttribute",
+      "owner": "c57a67b4-dddb-4c25-83e2-36e0a91a7797",
+      "bounds": {
+        "x": 710.5,
+        "y": 460.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    {
+      "id": "f288b73b-f369-4817-9f38-b00e21d6bc20",
+      "name": "",
+      "type": "ClassMethod",
+      "owner": "c57a67b4-dddb-4c25-83e2-36e0a91a7797",
+      "bounds": {
+        "x": 710.5,
+        "y": 490.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    {
+      "id": "16b4d230-d9b9-43b6-98f3-71c8456b0cbb",
+      "name": "Luogo",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 450,
+        "y": 50,
+        "width": 160,
+        "height": 150
+      },
+      "stereotype": null,
+      "attributes": [
+        "0aaf5655-32b1-4537-b2e9-0c477c74db94",
+        "dbf462ae-fa08-463c-af32-80b35f251d72",
+        "02bf29ae-c9fa-4487-aeb2-ef6046ff67aa"
+      ],
+      "methods": [
+        "0cadd151-ca3b-4f75-9eba-9ec991afc668"
+      ]
+    },
+    {
+      "id": "0aaf5655-32b1-4537-b2e9-0c477c74db94",
+      "name": "+ Via",
+      "type": "ClassAttribute",
+      "owner": "16b4d230-d9b9-43b6-98f3-71c8456b0cbb",
+      "bounds": {
+        "x": 450.5,
+        "y": 80.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "dbf462ae-fa08-463c-af32-80b35f251d72",
+      "name": "+ Numero civico",
+      "type": "ClassAttribute",
+      "owner": "16b4d230-d9b9-43b6-98f3-71c8456b0cbb",
+      "bounds": {
+        "x": 450.5,
+        "y": 110.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "02bf29ae-c9fa-4487-aeb2-ef6046ff67aa",
+      "name": "+ Piazza",
+      "type": "ClassAttribute",
+      "owner": "16b4d230-d9b9-43b6-98f3-71c8456b0cbb",
+      "bounds": {
+        "x": 450.5,
+        "y": 140.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "0cadd151-ca3b-4f75-9eba-9ec991afc668",
+      "name": "",
+      "type": "ClassMethod",
+      "owner": "16b4d230-d9b9-43b6-98f3-71c8456b0cbb",
+      "bounds": {
+        "x": 450.5,
+        "y": 170.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "607a8e3e-5c13-49c3-9f49-c25cd142986b",
+      "name": "Evento",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 440,
+        "y": 350,
+        "width": 160,
+        "height": 150
+      },
+      "stereotype": null,
+      "attributes": [
+        "db54d55f-b9a5-4b3a-ad4b-89fa51f137fc",
+        "5b80bdfc-ddf5-485a-bacb-0f4e43a47ac9",
+        "f56e4bbf-9824-4b40-a4e7-9393ff3e3136"
+      ],
+      "methods": [
+        "b94aed75-540b-4e23-b3b4-ab3cff6b1079"
+      ]
+    },
+    {
+      "id": "db54d55f-b9a5-4b3a-ad4b-89fa51f137fc",
+      "name": "+ Tipo: String",
+      "type": "ClassAttribute",
+      "owner": "607a8e3e-5c13-49c3-9f49-c25cd142986b",
+      "bounds": {
+        "x": 440.5,
+        "y": 380.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "5b80bdfc-ddf5-485a-bacb-0f4e43a47ac9",
+      "name": "+ Data: Date",
+      "type": "ClassAttribute",
+      "owner": "607a8e3e-5c13-49c3-9f49-c25cd142986b",
+      "bounds": {
+        "x": 440.5,
+        "y": 410.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "f56e4bbf-9824-4b40-a4e7-9393ff3e3136",
+      "name": "+ Budget: Number",
+      "type": "ClassAttribute",
+      "owner": "607a8e3e-5c13-49c3-9f49-c25cd142986b",
+      "bounds": {
+        "x": 440.5,
+        "y": 440.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "b94aed75-540b-4e23-b3b4-ab3cff6b1079",
+      "name": "",
+      "type": "ClassMethod",
+      "owner": "607a8e3e-5c13-49c3-9f49-c25cd142986b",
+      "bounds": {
+        "x": 440.5,
+        "y": 470.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "d53aec33-7915-4f3d-8c95-8facfb9ac465",
+      "name": "Organizzatore",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 250,
+        "y": 510,
+        "width": 160,
+        "height": 120
+      },
+      "stereotype": null,
+      "attributes": [
+        "6f41e99e-6e8b-414c-bf19-0f8d2d611100"
+      ],
+      "methods": [
+        "c2515b79-4f03-4742-b27f-8cc7cf44356a",
+        "753b219e-4370-436e-9eca-56bcfefd60d4"
+      ]
+    },
+    {
+      "id": "6f41e99e-6e8b-414c-bf19-0f8d2d611100",
+      "name": "+ Codice fiscale: String",
+      "type": "ClassAttribute",
+      "owner": "d53aec33-7915-4f3d-8c95-8facfb9ac465",
+      "bounds": {
+        "x": 250.5,
+        "y": 540.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "c2515b79-4f03-4742-b27f-8cc7cf44356a",
+      "name": "+ Organizzare eventi",
+      "type": "ClassMethod",
+      "owner": "d53aec33-7915-4f3d-8c95-8facfb9ac465",
+      "bounds": {
+        "x": 250.5,
+        "y": 570.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "753b219e-4370-436e-9eca-56bcfefd60d4",
+      "name": "+ Scegliere servizi",
+      "type": "ClassMethod",
+      "owner": "d53aec33-7915-4f3d-8c95-8facfb9ac465",
+      "bounds": {
+        "x": 250.5,
+        "y": 600.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "abc85748-8b89-4a4f-adfa-2069af9620e8",
+      "name": "Invitato",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 130,
+        "y": 400,
+        "width": 160,
+        "height": 90
+      },
+      "stereotype": null,
+      "attributes": [
+        "d159706f-4702-422e-af17-925fe7612411"
+      ],
+      "methods": [
+        "f321dd38-08b3-4189-9dd3-52008afc833d"
+      ]
+    },
+    {
+      "id": "d159706f-4702-422e-af17-925fe7612411",
+      "name": "",
+      "type": "ClassAttribute",
+      "owner": "abc85748-8b89-4a4f-adfa-2069af9620e8",
+      "bounds": {
+        "x": 130.5,
+        "y": 430.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "f321dd38-08b3-4189-9dd3-52008afc833d",
+      "name": "",
+      "type": "ClassMethod",
+      "owner": "abc85748-8b89-4a4f-adfa-2069af9620e8",
+      "bounds": {
+        "x": 130.5,
+        "y": 460.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "ccef0175-60ef-4198-ab24-505044ef203f",
+      "name": "Utente",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 180,
+        "y": 40,
+        "width": 160,
+        "height": 300
+      },
+      "stereotype": null,
+      "attributes": [
+        "f2674f22-4440-433b-98ee-6766f7a141df",
+        "a3c9e5b8-de1f-416d-920e-d21ed40a0031",
+        "b62b7aad-b428-471b-8caa-183268366b42",
+        "f6a1611e-8799-4e9d-b2df-10090d33e47e",
+        "533b87b3-2632-4b78-9aa2-c4f861e5c4e3"
+      ],
+      "methods": [
+        "76fab612-7d49-48f9-90c1-5184f9ae08c3",
+        "3dd0b849-4b2b-4cc0-ba9d-6b4375230edf",
+        "4ce6b157-c566-4fe3-ae82-8f2480eece46",
+        "22dfd92f-a49d-4f77-b055-6395ed40c60f"
+      ]
+    },
+    {
+      "id": "f2674f22-4440-433b-98ee-6766f7a141df",
+      "name": "+ Nome: String",
+      "type": "ClassAttribute",
+      "owner": "ccef0175-60ef-4198-ab24-505044ef203f",
+      "bounds": {
+        "x": 180.5,
+        "y": 70.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "a3c9e5b8-de1f-416d-920e-d21ed40a0031",
+      "name": "+ Cognome",
+      "type": "ClassAttribute",
+      "owner": "ccef0175-60ef-4198-ab24-505044ef203f",
+      "bounds": {
+        "x": 180.5,
+        "y": 100.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "b62b7aad-b428-471b-8caa-183268366b42",
+      "name": "+ Username",
+      "type": "ClassAttribute",
+      "owner": "ccef0175-60ef-4198-ab24-505044ef203f",
+      "bounds": {
+        "x": 180.5,
+        "y": 130.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "f6a1611e-8799-4e9d-b2df-10090d33e47e",
+      "name": "+ Password",
+      "type": "ClassAttribute",
+      "owner": "ccef0175-60ef-4198-ab24-505044ef203f",
+      "bounds": {
+        "x": 180.5,
+        "y": 160.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "533b87b3-2632-4b78-9aa2-c4f861e5c4e3",
+      "name": "+ Mail",
+      "type": "ClassAttribute",
+      "owner": "ccef0175-60ef-4198-ab24-505044ef203f",
+      "bounds": {
+        "x": 180.5,
+        "y": 190.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "76fab612-7d49-48f9-90c1-5184f9ae08c3",
+      "name": "+ Invita",
+      "type": "ClassMethod",
+      "owner": "ccef0175-60ef-4198-ab24-505044ef203f",
+      "bounds": {
+        "x": 180.5,
+        "y": 220.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "3dd0b849-4b2b-4cc0-ba9d-6b4375230edf",
+      "name": "+ Organizza",
+      "type": "ClassMethod",
+      "owner": "ccef0175-60ef-4198-ab24-505044ef203f",
+      "bounds": {
+        "x": 180.5,
+        "y": 250.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "4ce6b157-c566-4fe3-ae82-8f2480eece46",
+      "name": "+ Sceglie servizi",
+      "type": "ClassMethod",
+      "owner": "ccef0175-60ef-4198-ab24-505044ef203f",
+      "bounds": {
+        "x": 180.5,
+        "y": 280.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "22dfd92f-a49d-4f77-b055-6395ed40c60f",
+      "name": "+ Registrazione",
+      "type": "ClassMethod",
+      "owner": "ccef0175-60ef-4198-ab24-505044ef203f",
+      "bounds": {
+        "x": 180.5,
+        "y": 310.5,
+        "width": 159,
+        "height": 30
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "1e3e0a49-e740-4b25-9911-a28614e045ae",
+      "name": "Abita in ->",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 340,
+        "y": 115,
+        "width": 110,
+        "height": 44.60000038146973
+      },
+      "path": [
+        {
+          "x": 110,
+          "y": 10
+        },
+        {
+          "x": 0,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Left",
+        "element": "16b4d230-d9b9-43b6-98f3-71c8456b0cbb",
+        "multiplicity": "1..*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Right",
+        "element": "ccef0175-60ef-4198-ab24-505044ef203f",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "2897f84e-f4ca-4de0-b241-a1e2f901f8f5",
+      "name": "Si svolge in",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 520,
+        "y": 200,
+        "width": 29.83125114440918,
+        "height": 155.60000038146973
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 150
+        },
+        {
+          "x": 5,
+          "y": 0
+        }
+      ],
+      "source": {
+        "direction": "Up",
+        "element": "607a8e3e-5c13-49c3-9f49-c25cd142986b",
+        "multiplicity": "0..*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Down",
+        "element": "16b4d230-d9b9-43b6-98f3-71c8456b0cbb",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "38f34184-5306-424d-867c-37e065c3629f",
+      "name": "Prevede ->",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 600,
+        "y": 415,
+        "width": 110,
+        "height": 44.60000038146973
+      },
+      "path": [
+        {
+          "x": 110,
+          "y": 10
+        },
+        {
+          "x": 0,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Left",
+        "element": "c57a67b4-dddb-4c25-83e2-36e0a91a7797",
+        "multiplicity": "1..*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Upright",
+        "element": "607a8e3e-5c13-49c3-9f49-c25cd142986b",
+        "multiplicity": "1..*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "a9121a27-f796-44bc-848b-9228091f4d44",
+      "name": "",
+      "type": "ClassAggregation",
+      "owner": null,
+      "bounds": {
+        "x": 85,
+        "y": 340,
+        "width": 180,
+        "height": 150
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 150
+        },
+        {
+          "x": 5,
+          "y": 75
+        },
+        {
+          "x": 175,
+          "y": 75
+        },
+        {
+          "x": 175,
+          "y": 0
+        }
+      ],
+      "source": {
+        "direction": "Up",
+        "element": "e680e97b-af07-4252-a4b4-90f034f8c939",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Down",
+        "element": "ccef0175-60ef-4198-ab24-505044ef203f",
+        "multiplicity": "",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "815530b3-72e0-49f8-b836-5a935211db2c",
+      "name": "",
+      "type": "ClassAggregation",
+      "owner": null,
+      "bounds": {
+        "x": 230,
+        "y": 340,
+        "width": 10,
+        "height": 60
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 60
+        },
+        {
+          "x": 5,
+          "y": 0
+        }
+      ],
+      "source": {
+        "direction": "Up",
+        "element": "abc85748-8b89-4a4f-adfa-2069af9620e8",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Down",
+        "element": "ccef0175-60ef-4198-ab24-505044ef203f",
+        "multiplicity": "",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "9a06992e-bf0a-409d-91e7-43f020b74e53",
+      "name": "",
+      "type": "ClassAggregation",
+      "owner": null,
+      "bounds": {
+        "x": 290,
+        "y": 340,
+        "width": 10,
+        "height": 170
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 170
+        },
+        {
+          "x": 5,
+          "y": 0
+        }
+      ],
+      "source": {
+        "direction": "Up",
+        "element": "d53aec33-7915-4f3d-8c95-8facfb9ac465",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Down",
+        "element": "ccef0175-60ef-4198-ab24-505044ef203f",
+        "multiplicity": "",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "959ef642-d80b-470c-90cd-2c81d2769dfb",
+      "name": "Invita",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 140,
+        "y": 0,
+        "width": 144.83125114440918,
+        "height": 380
+      },
+      "path": [
+        {
+          "x": 120,
+          "y": 340
+        },
+        {
+          "x": 120,
+          "y": 380
+        },
+        {
+          "x": 0,
+          "y": 380
+        },
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 120,
+          "y": 0
+        },
+        {
+          "x": 120,
+          "y": 40
+        }
+      ],
+      "source": {
+        "direction": "Down",
+        "element": "ccef0175-60ef-4198-ab24-505044ef203f",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "target": {
+        "direction": "Up",
+        "element": "ccef0175-60ef-4198-ab24-505044ef203f",
+        "multiplicity": "1..*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "ea806b63-bc05-4d50-90c0-0da41d305cb2",
+      "name": "Inserisce",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 85,
+        "y": 520,
+        "width": 734.8312511444092,
+        "height": 190
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 150
+        },
+        {
+          "x": 5,
+          "y": 190
+        },
+        {
+          "x": 710,
+          "y": 190
+        },
+        {
+          "x": 710,
+          "y": 0
+        }
+      ],
+      "source": {
+        "direction": "Down",
+        "element": "e680e97b-af07-4252-a4b4-90f034f8c939",
+        "multiplicity": "1..*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Down",
+        "element": "c57a67b4-dddb-4c25-83e2-36e0a91a7797",
+        "multiplicity": "0..*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "bf1bdc70-f880-43a9-8bcc-972c2b3b9746",
+      "name": "Organizza",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 410,
+        "y": 500,
+        "width": 134.83125114440918,
+        "height": 104.60000038146973
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 70
+        },
+        {
+          "x": 110,
+          "y": 70
+        },
+        {
+          "x": 110,
+          "y": 0
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "d53aec33-7915-4f3d-8c95-8facfb9ac465",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "target": {
+        "direction": "Down",
+        "element": "607a8e3e-5c13-49c3-9f49-c25cd142986b",
+        "multiplicity": "0..*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "dc36139c-de24-4f5e-8f07-3d89fc94cd4e",
+      "name": "Sceglie servizi",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 325,
+        "y": 520,
+        "width": 494.8312511444092,
+        "height": 150
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 110
+        },
+        {
+          "x": 5,
+          "y": 150
+        },
+        {
+          "x": 470,
+          "y": 150
+        },
+        {
+          "x": 470,
+          "y": 0
+        }
+      ],
+      "source": {
+        "direction": "Down",
+        "element": "d53aec33-7915-4f3d-8c95-8facfb9ac465",
+        "multiplicity": "0..*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Down",
+        "element": "c57a67b4-dddb-4c25-83e2-36e0a91a7797",
+        "multiplicity": "1..*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    }
+  ],
+  "assessments": []
+}

@@ -1,0 +1,259 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "Enumeration"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "email (da cui inviare)"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornisce",
+      "attributes": [
+        {
+          "name": "costo",
+          "visibility": "+",
+          "type": "number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "PIVA",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "Iban",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "denominazione",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "mod_pay",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Indirizzi",
+      "attributes": [
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Cap",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "città",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Nazione",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "provincia",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "email"
+        },
+        {
+          "name": "code_invito",
+          "visibility": "+",
+          "type": "number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "CF",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data_nascita",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizi",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Indirizzi",
+      "sourceMultiplicity": "0..n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Lista di invitati",
+      "source": "Evento",
+      "target": "Invitato",
+      "sourceMultiplicity": "0..n",
+      "targetMultiplicity": "0..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "necessita di",
+      "source": "Evento",
+      "target": "Servizi",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornisce",
+      "target": "Fornitore",
+      "sourceMultiplicity": "0..n",
+      "targetMultiplicity": "0..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornisce",
+      "target": "Servizi",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "sede legale",
+      "source": "Fornitore",
+      "target": "Indirizzi",
+      "sourceMultiplicity": "0..n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Definisce",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1..1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "residenza",
+      "source": "Organizzatore",
+      "target": "Indirizzi",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "Persona"
+    },
+    {
+      "child": "Invitato",
+      "parent": "Persona"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "Persona"
+    }
+  ]
+}

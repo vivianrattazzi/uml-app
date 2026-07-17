@@ -1,0 +1,525 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "",
+          "type": "DateTime"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "",
+          "type": "DateTime"
+        },
+        {
+          "name": "ricorrente",
+          "visibility": "",
+          "type": "boolean"
+        },
+        {
+          "name": "intervalloRicorrenza",
+          "visibility": "",
+          "type": "int"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "oraInvio",
+          "visibility": "",
+          "type": "DateTime"
+        },
+        {
+          "name": "messaggioCustom",
+          "visibility": "",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "tipo",
+          "visibility": "",
+          "type": "TipoCalendario"
+        },
+        {
+          "name": "colore",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "vistaScelta",
+          "visibility": "",
+          "type": "Vista"
+        },
+        {
+          "name": "Giornaliera",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "Settimanale",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "Mensile",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "sovrapposto a",
+      "source": "Appuntamento",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "per",
+      "source": "Appuntamento",
+      "target": "Avviso",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ha",
+      "source": "Utente",
+      "target": "Calendario",
+      "sourceMultiplicity": "1...*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [],
+  "reference": {
+    "classes": [
+      {
+        "name": "Utente",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "cognome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "id",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "email",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Appuntamento",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "oraInizio",
+            "synonyms": [],
+            "types": [
+              "DateTime"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "oraFine",
+            "synonyms": [],
+            "types": [
+              "DateTime"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "ricorrente",
+            "synonyms": [],
+            "types": [
+              "boolean"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "intervalloRicorrenza",
+            "synonyms": [],
+            "types": [
+              "int"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Avviso",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "oraInvio",
+            "synonyms": [],
+            "types": [
+              "DateTime"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "messaggioCustom",
+            "synonyms": [],
+            "types": [
+              "boolean"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Calendario",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "nome",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "tipo",
+            "synonyms": [],
+            "types": [
+              "TipoCalendario"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "colore",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "vistaScelta",
+            "synonyms": [],
+            "types": [
+              "Vista"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Giornaliera",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Settimanale",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Mensile",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "TipoCalendario",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "Personale",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Lavoro",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Altro",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      },
+      {
+        "name": "Vista",
+        "synonyms": [],
+        "weight": "STRONG",
+        "attributes": [
+          {
+            "name": "Giornaliera",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Settimanale",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          },
+          {
+            "name": "Mensile",
+            "synonyms": [],
+            "types": [
+              "string"
+            ],
+            "weight": "STRONG",
+            "allowsForeignKeyName": false
+          }
+        ],
+        "forbiddenAttributes": []
+      }
+    ],
+    "associations": [
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Utente",
+        "target": "Calendario",
+        "sourceMultiplicity": [
+          "1...*"
+        ],
+        "targetMultiplicity": [
+          "1"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Calendario",
+        "target": "Appuntamento",
+        "sourceMultiplicity": [
+          "1"
+        ],
+        "targetMultiplicity": [
+          "*"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Appuntamento",
+        "target": "Appuntamento",
+        "sourceMultiplicity": [
+          "*"
+        ],
+        "targetMultiplicity": [
+          "*"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Appuntamento",
+        "target": "Avviso",
+        "sourceMultiplicity": [
+          "1"
+        ],
+        "targetMultiplicity": [
+          "*"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Calendario",
+        "target": "TipoCalendario",
+        "sourceMultiplicity": [
+          "1"
+        ],
+        "targetMultiplicity": [
+          "1"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      },
+      {
+        "type": "Default",
+        "name": "",
+        "source": "Calendario",
+        "target": "Vista",
+        "sourceMultiplicity": [
+          "1"
+        ],
+        "targetMultiplicity": [
+          "1"
+        ],
+        "sourceRole": "",
+        "targetRole": "",
+        "weight": "STRONG"
+      }
+    ],
+    "inheritance": [],
+    "forbiddenClasses": [],
+    "forbiddenAssociations": []
+  }
+}

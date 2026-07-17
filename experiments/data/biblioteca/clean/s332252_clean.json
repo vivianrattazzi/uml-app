@@ -1,0 +1,147 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Catalogo",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "titolo",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "casa editrice",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "autore",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "tipologa",
+          "visibility": "",
+          "type": "enum(cartaceo, digitale)"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "notifica",
+      "attributes": [
+        {
+          "name": "tipo notifica",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "stato",
+          "visibility": "",
+          "type": "enum(SUCCESFULL, ERROR)"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "data di prestito",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data di restituzione",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cf",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "data di nascita",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "Catalogo",
+      "target": "Libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "di",
+      "source": "Prestito",
+      "target": "Libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "può prende",
+      "source": "Prestito",
+      "target": "Utente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ricevono",
+      "source": "Utente",
+      "target": "notifica",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

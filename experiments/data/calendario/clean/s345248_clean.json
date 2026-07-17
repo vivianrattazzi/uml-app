@@ -1,0 +1,201 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "bool",
+          "visibility": "",
+          "type": "ricorrente"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "appuntamentoLungo",
+      "attributes": [
+        {
+          "name": "durata",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "appuntamentoPeriodico",
+      "attributes": [
+        {
+          "name": "ogniQuantiGiorniSiRipete",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "calendario",
+      "attributes": [
+        {
+          "name": "modalitàVisualizzazione",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "data",
+      "attributes": [
+        {
+          "name": "startDate",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "endDate",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "startHour",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "endHour",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "mail",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "schedulerAppuntamento",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "sistema mail",
+      "attributes": [
+        {
+          "name": "mailDestinatario",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "informazioniAppuntamento",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "appuntamento",
+      "target": "calendario",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "sendsData",
+      "source": "calendario",
+      "target": "sistema mail",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "schedule appointments on",
+      "source": "data",
+      "target": "schedulerAppuntamento",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "create/modify/delete",
+      "source": "Persona",
+      "target": "appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "is scheduled via",
+      "source": "schedulerAppuntamento",
+      "target": "appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "is notified",
+      "source": "sistema mail",
+      "target": "Persona",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "appuntamentoLungo",
+      "parent": "appuntamento"
+    },
+    {
+      "child": "appuntamentoPeriodico",
+      "parent": "appuntamento"
+    }
+  ]
+}

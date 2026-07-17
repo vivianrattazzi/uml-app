@@ -1,0 +1,111 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "pagine",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ISBN",
+          "visibility": "+",
+          "type": "int"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "data_inizio",
+          "visibility": "+",
+          "type": "yyyymmdd"
+        },
+        {
+          "name": "data_fine",
+          "visibility": "+",
+          "type": "yyyymmdd"
+        },
+        {
+          "name": "id_utente",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "id_prestito",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "ISBN",
+          "visibility": "+",
+          "type": "int"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "stringa"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "stringa"
+        },
+        {
+          "name": "data di nascita",
+          "visibility": "+",
+          "type": "yyyymmdd"
+        },
+        {
+          "name": "id_utente",
+          "visibility": "+",
+          "type": "int"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Libro",
+      "target": "Prestito",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Prestito",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

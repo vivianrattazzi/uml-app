@@ -1,0 +1,126 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Ora_inizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Ora_fine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Tipologia",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Annullato",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Giorno_inizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Giorno_fine",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "Indirizzo_mail",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Messaggio",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Giorno",
+      "attributes": [
+        {
+          "name": "Giorno_della_settimana",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Data",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Settimana_del_mese",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Mese_anno",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "manda un >",
+      "source": "Avviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "è composto da >",
+      "source": "Calendario",
+      "target": "Giorno",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "< fissato per",
+      "source": "Giorno",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

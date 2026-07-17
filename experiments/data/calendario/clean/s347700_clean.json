@@ -1,0 +1,116 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data_inizio",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data_fine",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Email",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "User",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ elimina_appuntamento()",
+        "+ modificare_appuntamento()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "ha",
+      "source": "Appuntamento",
+      "target": "Email",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "0,N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "notifica",
+      "source": "Email",
+      "target": "User",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "0,N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fissa",
+      "source": "User",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "0,N",
+      "targetMultiplicity": "1,1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "visualizza",
+      "source": "User",
+      "target": "Calendario",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "1,1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

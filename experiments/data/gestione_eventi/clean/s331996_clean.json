@@ -1,0 +1,261 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "evento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "visibility": "",
+          "type": "date"
+        },
+        {
+          "name": "longitudine",
+          "visibility": "",
+          "type": "number"
+        },
+        {
+          "name": "latitudine",
+          "visibility": "",
+          "type": "number"
+        },
+        {
+          "name": "budjet",
+          "visibility": "",
+          "type": "number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "fornitore",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "nomeAzienda",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "partitaIva",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "indirizzoAzienda",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "mail",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "invito",
+      "attributes": [
+        {
+          "name": "codice",
+          "visibility": "+",
+          "type": "number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "listaInvitati",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "modalitaPagamento",
+      "attributes": [
+        {
+          "name": "modalita",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "organizzatore",
+      "attributes": [
+        {
+          "name": "codFiscale",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "Sting"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "servizi",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "prezo",
+          "visibility": "",
+          "type": "number"
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "fornitore",
+      "target": "evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "invitato",
+      "target": "invito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "invito",
+      "target": "organizzatore",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "listaInvitati",
+      "target": "evento",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "modalitaPagamento",
+      "target": "fornitore",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "organizzatore",
+      "target": "evento",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ha",
+      "source": "servizi",
+      "target": "evento",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offre",
+      "source": "servizi",
+      "target": "fornitore",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

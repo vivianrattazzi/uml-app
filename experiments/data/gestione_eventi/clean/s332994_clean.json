@@ -1,0 +1,198 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "Data",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "Luogo",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "Budget",
+          "visibility": "+",
+          "type": "FLOAT"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "DataDiNascita",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "LuogoDiNascita",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "PartitivaIVA",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "IndirizzoAzienda",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "CartaDiCredito. BOOLEAN",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Contanti",
+          "visibility": "+",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "Username",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": "TEXT"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "DataDiNascita",
+          "visibility": "+",
+          "type": "TEXT"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "CodiceFiscale",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "Username",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "DataDiNascita",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "LuogoDiNascita",
+          "visibility": "+",
+          "type": "TEXT"
+        },
+        {
+          "name": "Residenza",
+          "visibility": "+",
+          "type": "TEXT"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "Categoria",
+          "visibility": "+",
+          "type": "TEXT"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

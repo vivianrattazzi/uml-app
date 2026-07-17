@@ -1,0 +1,170 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "id appuntamento",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "titolo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "descrizione",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "orainizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ora fine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data inizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Data fine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ricorrenza",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "avviso",
+      "attributes": [
+        {
+          "name": "id Avviso",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "titolo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "descrizione",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "id calendario",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "utente",
+      "attributes": [
+        {
+          "name": "Id utente",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Email",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "Password",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "avviso",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "1,1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "avviso",
+      "target": "utente",
+      "sourceMultiplicity": "0,N",
+      "targetMultiplicity": "1,1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "0,N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1,1",
+      "targetMultiplicity": "1,N",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

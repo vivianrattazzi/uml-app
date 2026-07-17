@@ -1,0 +1,216 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Account",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "titolo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "autore",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "casaEditrice",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "annoPubblicazione",
+          "visibility": "+",
+          "type": "integer"
+        },
+        {
+          "name": "formato",
+          "visibility": "+",
+          "type": "enum {cartaceo, digitale}"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "timestampNotifica",
+          "visibility": "+",
+          "type": "Datetime"
+        },
+        {
+          "name": "testoPromemoriaRestituzione",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "giorniRimanentiPrestito",
+          "visibility": "+",
+          "type": "integer"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "dataPrestito",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "dataRestituzioneMax",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "restituito",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Restituzione",
+      "attributes": [
+        {
+          "name": "dataRestituzioneEffettiva",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cellulare",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "codFiscale",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Possiede",
+      "source": "Account",
+      "target": "Utente",
+      "sourceMultiplicity": "1..1",
+      "targetMultiplicity": "1..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "Libro",
+      "sourceMultiplicity": "0..N",
+      "targetMultiplicity": "1..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Notifica",
+      "target": "Utente",
+      "sourceMultiplicity": "0..N",
+      "targetMultiplicity": "1..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito",
+      "target": "Libro",
+      "sourceMultiplicity": "0..N",
+      "targetMultiplicity": "1..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Restituzione",
+      "target": "Libro",
+      "sourceMultiplicity": "0..N",
+      "targetMultiplicity": "1..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Restituzione",
+      "target": "Utente",
+      "sourceMultiplicity": "0..N",
+      "targetMultiplicity": "1..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Prestito",
+      "sourceMultiplicity": "1..1",
+      "targetMultiplicity": "0..N",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

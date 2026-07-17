@@ -1,0 +1,278 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "IBAN",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "tipoPagamento",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "tipo",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "data",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "luogo",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "budget",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "partita IVA",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "mail",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "categoria (parentela)",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "InvitatoEvento",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "codiceInvito",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codice fiscale",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "residenza",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "categoria",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "prezzo",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ServizioAzienda",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ServizioEvento",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "User",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "-",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "-",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Azienda",
+      "target": "ServizioAzienda",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1...M",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "ServizioEvento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1...M",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..M",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "InvitatoEvento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..M",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "InvitatoEvento",
+      "target": "Evento",
+      "sourceMultiplicity": "1..M",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..M",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizio",
+      "target": "ServizioAzienda",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..M",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizio",
+      "target": "ServizioEvento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1...M",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "User"
+    },
+    {
+      "child": "Invitato",
+      "parent": "User"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "User"
+    }
+  ]
+}

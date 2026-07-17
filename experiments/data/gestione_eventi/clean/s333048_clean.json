@@ -1,0 +1,244 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "DateTime"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "float"
+        },
+        {
+          "name": "servizi_richiesti",
+          "visibility": "+",
+          "type": "Enum{CATERING, PARRUCCHIERE, FIORAIO, TAXI}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "partita_iva",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "indirizzo_azienda",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "modalità_pagamento",
+          "visibility": "+",
+          "type": "Enum{CARTACREDITO,ASSEGNO,CONTANTI}}"
+        },
+        {
+          "name": "codice_fiscale_titolare",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "tipologia_invito",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "codice",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Luogo",
+      "attributes": [
+        {
+          "name": "paese",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "città",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codice_fiscale",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "data_di_nascita",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "Enum{CATERING, PARRUCCHIERE, FIORAIO, TAXI}"
+        },
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "float"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "account_digitale",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "rifornisce",
+      "source": "Evento",
+      "target": "Fornitore",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invita",
+      "source": "Evento",
+      "target": "Invitato",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "presso",
+      "source": "Evento",
+      "target": "Luogo",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offre",
+      "source": "Fornitore",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "risiede a",
+      "source": "Organizzatore",
+      "target": "Luogo",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

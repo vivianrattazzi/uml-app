@@ -1,0 +1,263 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Categoria",
+      "attributes": [
+        {
+          "name": "titolo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "descrizione",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "IDcategoria",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "IDevento",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "titolo",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipo",
+          "visibility": "",
+          "type": "enum: {matrimonio, concerto, laurea, altro}"
+        },
+        {
+          "name": "data",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "luogo",
+          "visibility": "",
+          "type": "[longitude, latitude]"
+        },
+        {
+          "name": "budget",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "dataNascita",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "piva",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "indirizzoAzienda",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "pagamentiAccettati",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "IBAN",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "servizioPagamentoDigitale",
+          "visibility": "",
+          "type": "Optional"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "mail",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": "enum{PARENTE, COLLEGA, AMICO, ALTRO}"
+        },
+        {
+          "name": "codiceInvito",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ListaInvitati",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "residenza",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "codFiscale",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "password",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "IDservizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "descrizione",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "prezzo",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "include",
+      "source": "Evento",
+      "target": "Categoria",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fornisce",
+      "source": "Fornitore",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "inclusoIn",
+      "source": "Invitato",
+      "target": "ListaInvitati",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riguardoA",
+      "source": "ListaInvitati",
+      "target": "Evento",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "organizza",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "appartiene",
+      "source": "Servizio",
+      "target": "Categoria",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "Persona"
+    },
+    {
+      "child": "Invitato",
+      "parent": "Persona"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "Persona"
+    }
+  ]
+}

@@ -1,0 +1,451 @@
+{
+  "version": "3.0.0",
+  "type": "ClassDiagram",
+  "size": {
+    "width": 2160,
+    "height": 920
+  },
+  "interactive": {
+    "elements": {},
+    "relationships": {}
+  },
+  "elements": {
+    "861acdb9-392f-45ad-96a5-4178b09cb926": {
+      "id": "861acdb9-392f-45ad-96a5-4178b09cb926",
+      "name": "Calendario",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": -150,
+        "y": -300,
+        "width": 230,
+        "height": 130
+      },
+      "attributes": [
+        "ce00ba76-1541-41fd-bb47-404f7dbeddd3",
+        "fc139185-2d4f-4ceb-be07-317fa7155836"
+      ],
+      "methods": [
+        "84f8a5b3-d719-42ce-a449-eae1fce10d5e"
+      ]
+    },
+    "ce00ba76-1541-41fd-bb47-404f7dbeddd3": {
+      "id": "ce00ba76-1541-41fd-bb47-404f7dbeddd3",
+      "name": "modalitaVisualizzazione: Text",
+      "type": "ClassAttribute",
+      "owner": "861acdb9-392f-45ad-96a5-4178b09cb926",
+      "bounds": {
+        "x": -149.5,
+        "y": -259.5,
+        "width": 229,
+        "height": 30
+      }
+    },
+    "fc139185-2d4f-4ceb-be07-317fa7155836": {
+      "id": "fc139185-2d4f-4ceb-be07-317fa7155836",
+      "name": "avvisiAttivi: Boolean",
+      "type": "ClassAttribute",
+      "owner": "861acdb9-392f-45ad-96a5-4178b09cb926",
+      "bounds": {
+        "x": -149.5,
+        "y": -229.5,
+        "width": 229,
+        "height": 30
+      }
+    },
+    "84f8a5b3-d719-42ce-a449-eae1fce10d5e": {
+      "id": "84f8a5b3-d719-42ce-a449-eae1fce10d5e",
+      "name": "",
+      "type": "ClassMethod",
+      "owner": "861acdb9-392f-45ad-96a5-4178b09cb926",
+      "bounds": {
+        "x": -149.5,
+        "y": -199.5,
+        "width": 229,
+        "height": 30
+      }
+    },
+    "5a37800a-d199-4c45-8425-ab3af2aeb914": {
+      "id": "5a37800a-d199-4c45-8425-ab3af2aeb914",
+      "name": "Utente",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": -360,
+        "y": -100,
+        "width": 160,
+        "height": 160
+      },
+      "attributes": [
+        "d010bac7-4e1c-4fb2-9761-28704920155b",
+        "6e4fb415-cb7f-4794-ade8-97055e103bf6",
+        "f95d8d9d-ceb0-424d-849d-5f5137158627"
+      ],
+      "methods": [
+        "4073fbde-eef8-45b6-95a1-44c280031458"
+      ]
+    },
+    "d010bac7-4e1c-4fb2-9761-28704920155b": {
+      "id": "d010bac7-4e1c-4fb2-9761-28704920155b",
+      "name": "email: Text",
+      "type": "ClassAttribute",
+      "owner": "5a37800a-d199-4c45-8425-ab3af2aeb914",
+      "bounds": {
+        "x": -359.5,
+        "y": -59.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "6e4fb415-cb7f-4794-ade8-97055e103bf6": {
+      "id": "6e4fb415-cb7f-4794-ade8-97055e103bf6",
+      "name": "nome:Text",
+      "type": "ClassAttribute",
+      "owner": "5a37800a-d199-4c45-8425-ab3af2aeb914",
+      "bounds": {
+        "x": -359.5,
+        "y": -29.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "f95d8d9d-ceb0-424d-849d-5f5137158627": {
+      "id": "f95d8d9d-ceb0-424d-849d-5f5137158627",
+      "name": "cognome:Text",
+      "type": "ClassAttribute",
+      "owner": "5a37800a-d199-4c45-8425-ab3af2aeb914",
+      "bounds": {
+        "x": -359.5,
+        "y": 0.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "4073fbde-eef8-45b6-95a1-44c280031458": {
+      "id": "4073fbde-eef8-45b6-95a1-44c280031458",
+      "name": "",
+      "type": "ClassMethod",
+      "owner": "5a37800a-d199-4c45-8425-ab3af2aeb914",
+      "bounds": {
+        "x": -359.5,
+        "y": 30.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "2fb3f761-48b7-4a46-9e80-3ab46dee0792": {
+      "id": "2fb3f761-48b7-4a46-9e80-3ab46dee0792",
+      "name": "Appuntamento",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 90,
+        "y": -100,
+        "width": 230,
+        "height": 190
+      },
+      "attributes": [
+        "564bc4d1-6eae-418d-aec6-e54159b10f6b",
+        "b0b00b44-0e81-46d4-b40f-d82831b55fec",
+        "ff916275-c026-4f57-88d0-d9bac36eceea",
+        "b24948b3-3819-44d0-8515-fbf425e48b4f"
+      ],
+      "methods": [
+        "f1b29ca3-795b-452b-83ec-26ee15d60cdb"
+      ]
+    },
+    "564bc4d1-6eae-418d-aec6-e54159b10f6b": {
+      "id": "564bc4d1-6eae-418d-aec6-e54159b10f6b",
+      "name": "nomeAppuntamento: Text",
+      "type": "ClassAttribute",
+      "owner": "2fb3f761-48b7-4a46-9e80-3ab46dee0792",
+      "bounds": {
+        "x": 90.5,
+        "y": -59.5,
+        "width": 229,
+        "height": 30
+      }
+    },
+    "b0b00b44-0e81-46d4-b40f-d82831b55fec": {
+      "id": "b0b00b44-0e81-46d4-b40f-d82831b55fec",
+      "name": "tipologia: Text",
+      "type": "ClassAttribute",
+      "owner": "2fb3f761-48b7-4a46-9e80-3ab46dee0792",
+      "bounds": {
+        "x": 90.5,
+        "y": -29.5,
+        "width": 229,
+        "height": 30
+      }
+    },
+    "ff916275-c026-4f57-88d0-d9bac36eceea": {
+      "id": "ff916275-c026-4f57-88d0-d9bac36eceea",
+      "name": "statoAppuntamento: Boolean",
+      "type": "ClassAttribute",
+      "owner": "2fb3f761-48b7-4a46-9e80-3ab46dee0792",
+      "bounds": {
+        "x": 90.5,
+        "y": 0.5,
+        "width": 229,
+        "height": 30
+      }
+    },
+    "b24948b3-3819-44d0-8515-fbf425e48b4f": {
+      "id": "b24948b3-3819-44d0-8515-fbf425e48b4f",
+      "name": "eventoRicorrente: Boolean",
+      "type": "ClassAttribute",
+      "owner": "2fb3f761-48b7-4a46-9e80-3ab46dee0792",
+      "bounds": {
+        "x": 90.5,
+        "y": 30.5,
+        "width": 229,
+        "height": 30
+      }
+    },
+    "f1b29ca3-795b-452b-83ec-26ee15d60cdb": {
+      "id": "f1b29ca3-795b-452b-83ec-26ee15d60cdb",
+      "name": "",
+      "type": "ClassMethod",
+      "owner": "2fb3f761-48b7-4a46-9e80-3ab46dee0792",
+      "bounds": {
+        "x": 90.5,
+        "y": 60.5,
+        "width": 229,
+        "height": 30
+      }
+    },
+    "ae2ab883-65d3-4574-a0c4-64b9de4c7e96": {
+      "id": "ae2ab883-65d3-4574-a0c4-64b9de4c7e96",
+      "name": "Un utente può avere più calendari, ed un calendario può essere condiviso tra più utenti",
+      "type": "ColorLegend",
+      "owner": null,
+      "bounds": {
+        "x": -830,
+        "y": -360,
+        "width": 800,
+        "height": 50
+      }
+    },
+    "88ede456-758c-42ed-a73a-7acaa938277e": {
+      "id": "88ede456-758c-42ed-a73a-7acaa938277e",
+      "name": "Durata",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 130,
+        "y": 250,
+        "width": 160,
+        "height": 190
+      },
+      "attributes": [
+        "7938e453-cd39-4a7a-89d7-890340f899a7",
+        "09346c31-410d-4ff2-b0ba-16cb9099e20d",
+        "d4261f74-f67b-45f2-b775-d12b7119cdc1",
+        "c25a03c5-8731-452e-9536-9ec1c105a03a"
+      ],
+      "methods": [
+        "a340ba3e-a8e3-4181-b355-15cc40ca221d"
+      ]
+    },
+    "7938e453-cd39-4a7a-89d7-890340f899a7": {
+      "id": "7938e453-cd39-4a7a-89d7-890340f899a7",
+      "name": "oraInizio: Date",
+      "type": "ClassAttribute",
+      "owner": "88ede456-758c-42ed-a73a-7acaa938277e",
+      "bounds": {
+        "x": 130.5,
+        "y": 290.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "09346c31-410d-4ff2-b0ba-16cb9099e20d": {
+      "id": "09346c31-410d-4ff2-b0ba-16cb9099e20d",
+      "name": "oraFine: Date",
+      "type": "ClassAttribute",
+      "owner": "88ede456-758c-42ed-a73a-7acaa938277e",
+      "bounds": {
+        "x": 130.5,
+        "y": 320.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "d4261f74-f67b-45f2-b775-d12b7119cdc1": {
+      "id": "d4261f74-f67b-45f2-b775-d12b7119cdc1",
+      "name": "dataInizio: Date",
+      "type": "ClassAttribute",
+      "owner": "88ede456-758c-42ed-a73a-7acaa938277e",
+      "bounds": {
+        "x": 130.5,
+        "y": 350.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "c25a03c5-8731-452e-9536-9ec1c105a03a": {
+      "id": "c25a03c5-8731-452e-9536-9ec1c105a03a",
+      "name": "dataFine: Date",
+      "type": "ClassAttribute",
+      "owner": "88ede456-758c-42ed-a73a-7acaa938277e",
+      "bounds": {
+        "x": 130.5,
+        "y": 380.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "a340ba3e-a8e3-4181-b355-15cc40ca221d": {
+      "id": "a340ba3e-a8e3-4181-b355-15cc40ca221d",
+      "name": "",
+      "type": "ClassMethod",
+      "owner": "88ede456-758c-42ed-a73a-7acaa938277e",
+      "bounds": {
+        "x": 130.5,
+        "y": 410.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "637fa10d-7b27-4282-b947-7e1f0dc24ba8": {
+      "id": "637fa10d-7b27-4282-b947-7e1f0dc24ba8",
+      "name": "La durata può essere associata a più appuntamenti mentre un appuntamento ne ha una sola",
+      "type": "ColorLegend",
+      "owner": null,
+      "bounds": {
+        "x": 260,
+        "y": 160,
+        "width": 720,
+        "height": 50
+      }
+    },
+    "06552c3c-fb1a-4177-a725-bf8c32ce5fd3": {
+      "id": "06552c3c-fb1a-4177-a725-bf8c32ce5fd3",
+      "name": "statoAppuntamento permette di sapere se quel appuntamento è valido o è stato cancellato",
+      "type": "ColorLegend",
+      "owner": null,
+      "bounds": {
+        "x": 350,
+        "y": -30,
+        "width": 710,
+        "height": 50
+      }
+    }
+  },
+  "relationships": {
+    "edbbf049-3bbe-41a4-8a05-6d86ce3f8411": {
+      "id": "edbbf049-3bbe-41a4-8a05-6d86ce3f8411",
+      "name": "ha",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": -285,
+        "y": -245,
+        "width": 135,
+        "height": 155.125
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 145
+        },
+        {
+          "x": 5,
+          "y": 10
+        },
+        {
+          "x": 135,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Up",
+        "element": "5a37800a-d199-4c45-8425-ab3af2aeb914",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Left",
+        "element": "861acdb9-392f-45ad-96a5-4178b09cb926",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    "fc8ebc8d-2b34-44f9-90e7-e10e3bb09e6e": {
+      "id": "fc8ebc8d-2b34-44f9-90e7-e10e3bb09e6e",
+      "name": "contiene",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 80,
+        "y": -245,
+        "width": 130,
+        "height": 145
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 10
+        },
+        {
+          "x": 125,
+          "y": 10
+        },
+        {
+          "x": 125,
+          "y": 145
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "861acdb9-392f-45ad-96a5-4178b09cb926",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Up",
+        "element": "2fb3f761-48b7-4a46-9e80-3ab46dee0792",
+        "multiplicity": "",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    "dede08f8-8018-4e64-b3fb-1ef5bf0fd20c": {
+      "id": "dede08f8-8018-4e64-b3fb-1ef5bf0fd20c",
+      "name": "ha",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 205,
+        "y": 90,
+        "width": 18.896484375,
+        "height": 170.125
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 0
+        },
+        {
+          "x": 5,
+          "y": 160
+        }
+      ],
+      "source": {
+        "direction": "Down",
+        "element": "2fb3f761-48b7-4a46-9e80-3ab46dee0792",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Up",
+        "element": "88ede456-758c-42ed-a73a-7acaa938277e",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    }
+  },
+  "assessments": {}
+}

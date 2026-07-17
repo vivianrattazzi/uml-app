@@ -1,0 +1,274 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "partitaIva",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "indizirizzoAzienda",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "iban",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Concerto",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "data"
+        },
+        {
+          "name": "luogo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "name",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "categoriaAppartente",
+          "visibility": "+",
+          "type": "Enum[parente, amico, collega..]"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Laurea",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Matrimonio",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Metodo di pagameto",
+      "attributes": [
+        {
+          "name": "metodo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "codiceInvito",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "name",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "codiceFiscale",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "number"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Azienda",
+      "target": "Fornitore",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "",
+      "sourceRole": "possiede",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": "ha"
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "Notifica",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "",
+      "sourceRole": "ha",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Metodo di pagameto",
+      "target": "Azienda",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "",
+      "sourceRole": "accetta",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "",
+      "sourceRole": "organizzato",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizio",
+      "target": "Evento",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "",
+      "sourceRole": "ha",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Servizio",
+      "target": "Fornitore",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "",
+      "sourceRole": "offre",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Concerto",
+      "parent": "Evento"
+    },
+    {
+      "child": "Laurea",
+      "parent": "Evento"
+    },
+    {
+      "child": "Matrimonio",
+      "parent": "Evento"
+    }
+  ]
+}

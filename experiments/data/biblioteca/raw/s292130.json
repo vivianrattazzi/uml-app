@@ -1,0 +1,114 @@
+{
+  "version": "2.0.0",
+  "type": "ClassDiagram",
+  "size": {
+    "width": 1040,
+    "height": 700
+  },
+  "interactive": {
+    "elements": [],
+    "relationships": []
+  },
+  "elements": [
+    {
+      "id": "b89f1d19-250f-4d7d-8570-8d9e5c977c31",
+      "name": "Utente",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 430,
+        "y": 0,
+        "width": 160,
+        "height": 120
+      },
+      "stereotype": null,
+      "attributes": [
+        "a9bf9b7a-30e9-433b-9a64-0d59e9dc9475",
+        "9f71af48-8f2a-484e-908d-c25ea168aad0",
+        "69cc1d80-ef8e-4d21-b3c0-c3a79a6d876a"
+      ],
+      "methods": []
+    },
+    {
+      "id": "a9bf9b7a-30e9-433b-9a64-0d59e9dc9475",
+      "name": "+ id",
+      "type": "ClassAttribute",
+      "owner": "b89f1d19-250f-4d7d-8570-8d9e5c977c31",
+      "bounds": {
+        "x": 430.5,
+        "y": 30.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "9f71af48-8f2a-484e-908d-c25ea168aad0",
+      "name": "+ username",
+      "type": "ClassAttribute",
+      "owner": "b89f1d19-250f-4d7d-8570-8d9e5c977c31",
+      "bounds": {
+        "x": 430.5,
+        "y": 60.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "69cc1d80-ef8e-4d21-b3c0-c3a79a6d876a",
+      "name": "+ password",
+      "type": "ClassAttribute",
+      "owner": "b89f1d19-250f-4d7d-8570-8d9e5c977c31",
+      "bounds": {
+        "x": 430.5,
+        "y": 90.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "02add8fa-4cd0-4ca3-8f54-f23685ba37cf",
+      "name": "Catalogo",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 0,
+        "y": 170,
+        "width": 160,
+        "height": 90
+      },
+      "stereotype": null,
+      "attributes": [
+        "6f23b38f-1cf3-44a0-b74d-e8831284b542"
+      ],
+      "methods": [
+        "f7486c82-b329-4784-93b5-65bf8d44bd0a"
+      ]
+    },
+    {
+      "id": "6f23b38f-1cf3-44a0-b74d-e8831284b542",
+      "name": "",
+      "type": "ClassAttribute",
+      "owner": "02add8fa-4cd0-4ca3-8f54-f23685ba37cf",
+      "bounds": {
+        "x": 0.5,
+        "y": 200.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "f7486c82-b329-4784-93b5-65bf8d44bd0a",
+      "name": "",
+      "type": "ClassMethod",
+      "owner": "02add8fa-4cd0-4ca3-8f54-f23685ba37cf",
+      "bounds": {
+        "x": 0.5,
+        "y": 230.5,
+        "width": 159,
+        "height": 30
+      }
+    }
+  ],
+  "relationships": [],
+  "assessments": []
+}

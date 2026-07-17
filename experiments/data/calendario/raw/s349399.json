@@ -1,0 +1,165 @@
+{
+  "version": "3.0.0",
+  "type": "ClassDiagram",
+  "size": {
+    "width": 1180,
+    "height": 600
+  },
+  "interactive": {
+    "elements": {},
+    "relationships": {}
+  },
+  "elements": {
+    "68f2e8e1-03bc-46ba-972e-ada3f25d79f4": {
+      "id": "68f2e8e1-03bc-46ba-972e-ada3f25d79f4",
+      "name": "appuntamento",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": -570,
+        "y": -280,
+        "width": 160,
+        "height": 190
+      },
+      "attributes": [
+        "5ac43c74-87fd-4063-87fb-5a7bd4962ad8",
+        "4264b26b-a243-40e7-9a0e-925afd6dbcf7",
+        "86d959e6-4c10-4290-9820-ebc3f36e5f5b",
+        "0f786c45-ca60-4bb1-a732-ab209ea2c101"
+      ],
+      "methods": [
+        "494c2154-8110-439b-95d0-83a6508af5aa"
+      ]
+    },
+    "5ac43c74-87fd-4063-87fb-5a7bd4962ad8": {
+      "id": "5ac43c74-87fd-4063-87fb-5a7bd4962ad8",
+      "name": "+ nome",
+      "type": "ClassAttribute",
+      "owner": "68f2e8e1-03bc-46ba-972e-ada3f25d79f4",
+      "bounds": {
+        "x": -569.5,
+        "y": -239.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "4264b26b-a243-40e7-9a0e-925afd6dbcf7": {
+      "id": "4264b26b-a243-40e7-9a0e-925afd6dbcf7",
+      "name": "+ datainizio",
+      "type": "ClassAttribute",
+      "owner": "68f2e8e1-03bc-46ba-972e-ada3f25d79f4",
+      "bounds": {
+        "x": -569.5,
+        "y": -209.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "86d959e6-4c10-4290-9820-ebc3f36e5f5b": {
+      "id": "86d959e6-4c10-4290-9820-ebc3f36e5f5b",
+      "name": "+ datafine",
+      "type": "ClassAttribute",
+      "owner": "68f2e8e1-03bc-46ba-972e-ada3f25d79f4",
+      "bounds": {
+        "x": -569.5,
+        "y": -179.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "0f786c45-ca60-4bb1-a732-ab209ea2c101": {
+      "id": "0f786c45-ca60-4bb1-a732-ab209ea2c101",
+      "name": "+ tipologia",
+      "type": "ClassAttribute",
+      "owner": "68f2e8e1-03bc-46ba-972e-ada3f25d79f4",
+      "bounds": {
+        "x": -569.5,
+        "y": -149.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "494c2154-8110-439b-95d0-83a6508af5aa": {
+      "id": "494c2154-8110-439b-95d0-83a6508af5aa",
+      "name": "+ method()",
+      "type": "ClassMethod",
+      "owner": "68f2e8e1-03bc-46ba-972e-ada3f25d79f4",
+      "bounds": {
+        "x": -569.5,
+        "y": -119.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "47efa883-482f-48a0-a83e-69ccf636b8b8": {
+      "id": "47efa883-482f-48a0-a83e-69ccf636b8b8",
+      "name": "utente",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": -270,
+        "y": -240,
+        "width": 160,
+        "height": 160
+      },
+      "attributes": [
+        "284b01d3-dcfc-4da0-8344-343f4a87526e",
+        "ebf1e95e-f260-435c-a390-26245fb89c87",
+        "a41bdfc5-a077-4128-82f2-4a1a5272beb8"
+      ],
+      "methods": [
+        "61759f30-e82e-4609-9f3c-e11c58d31eee"
+      ]
+    },
+    "284b01d3-dcfc-4da0-8344-343f4a87526e": {
+      "id": "284b01d3-dcfc-4da0-8344-343f4a87526e",
+      "name": "+ ID",
+      "type": "ClassAttribute",
+      "owner": "47efa883-482f-48a0-a83e-69ccf636b8b8",
+      "bounds": {
+        "x": -269.5,
+        "y": -199.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "ebf1e95e-f260-435c-a390-26245fb89c87": {
+      "id": "ebf1e95e-f260-435c-a390-26245fb89c87",
+      "name": "+ nomeutente",
+      "type": "ClassAttribute",
+      "owner": "47efa883-482f-48a0-a83e-69ccf636b8b8",
+      "bounds": {
+        "x": -269.5,
+        "y": -169.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "a41bdfc5-a077-4128-82f2-4a1a5272beb8": {
+      "id": "a41bdfc5-a077-4128-82f2-4a1a5272beb8",
+      "name": "+ password",
+      "type": "ClassAttribute",
+      "owner": "47efa883-482f-48a0-a83e-69ccf636b8b8",
+      "bounds": {
+        "x": -269.5,
+        "y": -139.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "61759f30-e82e-4609-9f3c-e11c58d31eee": {
+      "id": "61759f30-e82e-4609-9f3c-e11c58d31eee",
+      "name": "+ method()",
+      "type": "ClassMethod",
+      "owner": "47efa883-482f-48a0-a83e-69ccf636b8b8",
+      "bounds": {
+        "x": -269.5,
+        "y": -109.5,
+        "width": 159,
+        "height": 30
+      }
+    }
+  },
+  "relationships": {},
+  "assessments": {}
+}

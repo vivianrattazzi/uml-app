@@ -1,0 +1,144 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": "Int"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": "Int"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Cadenza",
+      "attributes": [
+        {
+          "name": "ricorrente",
+          "visibility": "+",
+          "type": "Boolean"
+        },
+        {
+          "name": "dataInizio",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "dataFine",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": "Int"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": "Int"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario Giornaliero",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Calendario Mensile",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Calendario Settimanale",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "EMail",
+      "attributes": [
+        {
+          "name": "nomeAppuntamento",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "dataInizio",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "dataFine",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": "Int"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": "Int"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Riceve ->",
+      "source": "EMail",
+      "target": "Utente",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "<- Registra",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

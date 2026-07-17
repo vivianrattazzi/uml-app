@@ -1,0 +1,92 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Ora_Inizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Ora_Fine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "str"
+        },
+        {
+          "name": "avviso",
+          "visibility": "+",
+          "type": "bool"
+        }
+      ],
+      "methods": [
+        "+ notifica()"
+      ]
+    },
+    {
+      "name": "Appuntamento_Esteso",
+      "attributes": [
+        {
+          "name": "giorni",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "giornoIniziale",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "giornoFinale",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "tipoVista",
+          "visibility": "+",
+          "type": "Vista"
+        }
+      ],
+      "methods": [
+        "+ modifica()",
+        "+ annulla()",
+        "+ crea()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Appuntamento_Esteso",
+      "parent": "Appuntamento"
+    }
+  ]
+}

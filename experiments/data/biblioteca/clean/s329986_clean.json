@@ -1,0 +1,225 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Biblioteca",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Catalogo",
+      "attributes": [
+        {
+          "name": "NomeBiblioteca",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "FinePrestito",
+      "attributes": [
+        {
+          "name": "DataFinePrestito",
+          "visibility": "+",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "InizioPrestito",
+      "attributes": [
+        {
+          "name": "DataFinePrestito",
+          "visibility": "+",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "Titolo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Autore",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "MatricolaBiblioteca",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DataNotificaStabilita",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Messaggio",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "MatricolaBiblioteca",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "NomeLibro",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DurataPrestito",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Digitale",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utenti",
+      "attributes": [
+        {
+          "name": "MatricolaBiblioteca",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "possiede",
+      "source": "Biblioteca",
+      "target": "Catalogo",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Crea",
+      "source": "FinePrestito",
+      "target": "Notifica",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Composto da",
+      "source": "Libro",
+      "target": "Catalogo",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Riceve Avviso",
+      "source": "Notifica",
+      "target": "Utenti",
+      "sourceMultiplicity": "0...*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Se Cartaceo Aggiorna",
+      "source": "Prestito",
+      "target": "Catalogo",
+      "sourceMultiplicity": "1...*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Fine",
+      "source": "Prestito",
+      "target": "FinePrestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "inizia",
+      "source": "Prestito",
+      "target": "InizioPrestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Consulta",
+      "source": "Utenti",
+      "target": "Catalogo",
+      "sourceMultiplicity": "0...*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Effettua",
+      "source": "Utenti",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

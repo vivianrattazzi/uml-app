@@ -1,0 +1,179 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "data_ora_inizio",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "data_ora_fine",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "giorni_ricorrenti",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ modifica()",
+        "+ crea()",
+        "+ annulla()",
+        "+ crea_avviso()"
+      ]
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "data_ora_avviso()",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "descrizione",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ invio_per_email(indirizzo)"
+      ]
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ visualizza_per_settimana(week)",
+        "+ visualizza_per_giorno(day)",
+        "+ visualizza_per_mese(month)"
+      ]
+    },
+    {
+      "name": "Luogo",
+      "attributes": [
+        {
+          "name": "via",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "città",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "CAP",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "provincia",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "nazione",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "ID",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "Email",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "imposta",
+      "source": "Appuntamento",
+      "target": "Avviso",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "traccia",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Calendario",
+      "target": "Utente",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Luogo",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

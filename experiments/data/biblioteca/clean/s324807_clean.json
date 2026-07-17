@@ -1,0 +1,147 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "codice",
+          "visibility": "+",
+          "type": "Int"
+        },
+        {
+          "name": "stato",
+          "visibility": "+",
+          "type": "enum [In Prestito , Disponibile]"
+        },
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "enum [digitale , fisico]"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Libro Descriptior",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "Titolo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Genere",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Autore",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "Data di publicazion",
+          "visibility": "+",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "numer"
+        },
+        {
+          "name": "dataInizioPrestito",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "dataFinePrestito",
+          "visibility": "+",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "in debito",
+          "visibility": "+",
+          "type": "Bool"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "si riferisce",
+      "source": "Libro",
+      "target": "Libro Descriptior",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "richiesto in",
+      "source": "Libro",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Cerca",
+      "source": "Utente",
+      "target": "Libro Descriptior",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "richiede",
+      "source": "Utente",
+      "target": "Prestito",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

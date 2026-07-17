@@ -1,0 +1,75 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "ora inizio",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "ora fine",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "giorno",
+      "attributes": [
+        {
+          "name": "giorno",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "mese",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "anno",
+          "visibility": "+",
+          "type": "int"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "giorno",
+      "sourceMultiplicity": "0..N",
+      "targetMultiplicity": "1..N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "giorno",
+      "target": "Calendario",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

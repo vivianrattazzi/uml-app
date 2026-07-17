@@ -1,0 +1,86 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "IDlibro",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "type",
+          "visibility": "+",
+          "type": "ENUM={cartaceo,digitale}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "Data_prestito",
+          "visibility": "+",
+          "type": "datatype"
+        },
+        {
+          "name": "Data_restituzione",
+          "visibility": "+",
+          "type": "datatype"
+        },
+        {
+          "name": "IDutente",
+          "visibility": "+",
+          "type": "number"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "IDutente",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "data_registrazione",
+          "visibility": "+",
+          "type": "datatype"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Libro",
+      "target": "Prestito",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestito",
+      "target": "Utente",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

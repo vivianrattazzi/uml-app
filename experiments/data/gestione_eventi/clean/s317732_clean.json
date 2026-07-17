@@ -1,0 +1,327 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "App Evento",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "PIVA",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "EMailService",
+      "attributes": [
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipoEvento",
+          "visibility": "+",
+          "type": "enum"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "longitudine",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "latitudine",
+          "visibility": "+",
+          "type": "number"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "currency"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "nomeCognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "città",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "CAP",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "nomeCognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "dataNascita",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "enum"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "MetodoPagamentoAccettato",
+      "attributes": [
+        {
+          "name": "tipoPagamento{Bonifico,PagamentoDigitale}",
+          "visibility": "+",
+          "type": "enum"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codiceFiscale",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "città",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "CAP",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "dataNascita",
+          "visibility": "+",
+          "type": "date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prezzo",
+      "attributes": [
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "currency"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ServizioOfferto",
+      "attributes": [
+        {
+          "name": "categoriaServizio",
+          "visibility": "+",
+          "type": "enum"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "gestisce >",
+      "source": "App Evento",
+      "target": "Fornitore",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce >",
+      "source": "App Evento",
+      "target": "Organizzatore",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "< accetta",
+      "source": "Azienda",
+      "target": "MetodoPagamentoAccettato",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "manda invitati >",
+      "source": "EMailService",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "manda inviti >",
+      "source": "EMailService",
+      "target": "Invitato",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea >",
+      "source": "Evento",
+      "target": "Organizzatore",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "< include",
+      "source": "Evento",
+      "target": "ServizioOfferto",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "< gestisce",
+      "source": "Fornitore",
+      "target": "Azienda",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "invita >",
+      "source": "Invitato",
+      "target": "Evento",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "costa >",
+      "source": "Prezzo",
+      "target": "ServizioOfferto",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offre >",
+      "source": "ServizioOfferto",
+      "target": "Azienda",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "< pagato tramite",
+      "source": "ServizioOfferto",
+      "target": "MetodoPagamentoAccettato",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

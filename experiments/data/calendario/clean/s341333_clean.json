@@ -1,0 +1,55 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "oraInizio",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "oraFine",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "tipoloiga",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "ricorrente",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Giorno di calendario",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "",
+          "type": ""
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "in",
+      "source": "Giorno di calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "0..*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

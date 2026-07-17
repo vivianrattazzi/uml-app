@@ -1,0 +1,198 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "oraInizio",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "oraFine",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "isAnnulato",
+          "visibility": "+",
+          "type": "bool"
+        },
+        {
+          "name": "riccorenza",
+          "visibility": "+",
+          "type": "Appuntamento"
+        },
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "uuid"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "mailPersona",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "appuntamento",
+          "visibility": "+",
+          "type": "Appuntamento"
+        },
+        {
+          "name": "testo",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ sendMail()"
+      ]
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "vistaGiornaliera",
+          "visibility": "+",
+          "type": "bool"
+        },
+        {
+          "name": "vistaMensile",
+          "visibility": "+",
+          "type": "bool"
+        },
+        {
+          "name": "vistaSettimanale",
+          "visibility": "+",
+          "type": "bool"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Conflitto",
+      "attributes": [
+        {
+          "name": "appuntamento",
+          "visibility": "+",
+          "type": "Appuntamento"
+        },
+        {
+          "name": "appuntamenti",
+          "visibility": "+",
+          "type": "Vec<Appuntamento>"
+        },
+        {
+          "name": "calendario",
+          "visibility": "+",
+          "type": "Calendario"
+        }
+      ],
+      "methods": [
+        "+ checkConflitti()",
+        "+ gestioneConflitto()"
+      ]
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Genera",
+      "source": "Appuntamento",
+      "target": "Avviso",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "controllo",
+      "source": "Appuntamento",
+      "target": "Conflitto",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Riceve",
+      "source": "Avviso",
+      "target": "Persona",
+      "sourceMultiplicity": "N",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Gestisce",
+      "source": "Conflitto",
+      "target": "Calendario",
+      "sourceMultiplicity": "N",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "controlla",
+      "source": "Persona",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Interagisce",
+      "source": "Persona",
+      "target": "Calendario",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

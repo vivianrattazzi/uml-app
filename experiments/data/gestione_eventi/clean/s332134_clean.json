@@ -1,0 +1,265 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Codice Invito",
+      "attributes": [
+        {
+          "name": "codice",
+          "visibility": "+",
+          "type": "testo"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Costo",
+      "attributes": [
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "numero"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": "testo"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipo",
+          "visibility": "+",
+          "type": "testo"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "time"
+        },
+        {
+          "name": "nome luogo",
+          "visibility": "+",
+          "type": "testo"
+        },
+        {
+          "name": "indirizzo luogo",
+          "visibility": "+",
+          "type": "testo"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "numero"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "partita iva",
+          "visibility": "+",
+          "type": "testo"
+        },
+        {
+          "name": "nome azienda",
+          "visibility": "+",
+          "type": "testo"
+        },
+        {
+          "name": "indirizzo azienda",
+          "visibility": "+",
+          "type": "testo"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "invitato",
+      "attributes": [
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "testo"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "testo"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Modalità pagamento",
+      "attributes": [
+        {
+          "name": "nome metodo",
+          "visibility": "+",
+          "type": "testo"
+        },
+        {
+          "name": "descrizione",
+          "visibility": "+",
+          "type": "testo"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codice fiscale",
+          "visibility": "+",
+          "type": "testo"
+        },
+        {
+          "name": "residenza",
+          "visibility": "+",
+          "type": "testo"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Partecipante",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "testo"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "testo"
+        },
+        {
+          "name": "data di nascita",
+          "visibility": "+",
+          "type": "testo"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Tipo Servizio",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "testo"
+        },
+        {
+          "name": "descrizione",
+          "visibility": "+",
+          "type": "testo"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Codice Invito",
+      "target": "Evento",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Codice Invito",
+      "target": "invitato",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Costo",
+      "target": "Tipo Servizio",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "richiede",
+      "source": "Evento",
+      "target": "Tipo Servizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1..*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Fornitore",
+      "target": "Costo",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fornisce",
+      "source": "Fornitore",
+      "target": "Evento",
+      "sourceMultiplicity": "0..*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "accetta",
+      "source": "Modalità pagamento",
+      "target": "Fornitore",
+      "sourceMultiplicity": "1..*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "organizza",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Fornitore",
+      "parent": "Partecipante"
+    },
+    {
+      "child": "invitato",
+      "parent": "Partecipante"
+    },
+    {
+      "child": "Organizzatore",
+      "parent": "Partecipante"
+    }
+  ]
+}

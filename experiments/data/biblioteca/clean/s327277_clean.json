@@ -1,0 +1,172 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Biblioteca",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "cartaceo",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Catalogo",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "digitale",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "disponibile",
+          "visibility": "+",
+          "type": "bool"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Prestito",
+      "attributes": [
+        {
+          "name": "dataInizio (date)",
+          "visibility": "+",
+          "type": ""
+        },
+        {
+          "name": "dataFine(date)",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "SistemaBiblioteca",
+      "attributes": [
+        {
+          "name": "attribute",
+          "visibility": "+",
+          "type": "Type"
+        }
+      ],
+      "methods": [
+        "+ notificaUserRestituzione(libro, utente)",
+        "+ cercaLibro(libro, utente)",
+        "+ prendiInPrestito(Libro, utente)",
+        "+ restituisci(libro, utente)"
+      ]
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+registrati(info)",
+        "+ autenticati(info)",
+        "+gestisciInfo(info)",
+        "+ visualizzaLibroDigitale()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "appartiene a >",
+      "source": "Catalogo",
+      "target": "Biblioteca",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "appartiene a >",
+      "source": "Libro",
+      "target": "Catalogo",
+      "sourceMultiplicity": "1..n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "SistemaBiblioteca",
+      "target": "Catalogo",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ha in prestito ^",
+      "source": "Utente",
+      "target": "Libro",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "0..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "registratoIn >",
+      "source": "Utente",
+      "target": "SistemaBiblioteca",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..n",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Libro",
+      "parent": "cartaceo"
+    },
+    {
+      "child": "Libro",
+      "parent": "digitale"
+    }
+  ]
+}

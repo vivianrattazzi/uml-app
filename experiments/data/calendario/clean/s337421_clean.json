@@ -1,0 +1,65 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "ora_inizio",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "ora_fine",
+          "visibility": "+",
+          "type": "date"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "numero_giorni",
+          "visibility": "+",
+          "type": "int"
+        },
+        {
+          "name": "ricorrente",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [],
+      "methods": [
+        "+ creaAppuntamento(nome, ora_in, ora_fin, tipo, numg, ricorr)",
+        "+ annullaAppuntamento(nome)",
+        "+ cambiaVisualizzazione(tipo)",
+        "+ modificaAppuntamento()",
+        "+ inviaNotifica()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "contiene",
+      "source": "Calendario",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

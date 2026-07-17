@@ -1,0 +1,132 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "autore",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "titolo",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "visibility": "",
+          "type": "Integer"
+        },
+        {
+          "name": "digitale",
+          "visibility": "",
+          "type": "Boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestiti attuali",
+      "attributes": [
+        {
+          "name": "data1",
+          "visibility": "",
+          "type": "Date"
+        },
+        {
+          "name": "scadenza",
+          "visibility": "",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Prestiti Log",
+      "attributes": [
+        {
+          "name": "data1",
+          "visibility": "",
+          "type": "Date"
+        },
+        {
+          "name": "data2",
+          "visibility": "",
+          "type": "Date"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "telefono",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestiti attuali",
+      "target": "Libro",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestiti attuali",
+      "target": "Utente",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Prestiti Log",
+      "target": "Libro",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "0..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Utente",
+      "target": "Prestiti Log",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

@@ -1,0 +1,202 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ora_inizio",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ora_fine",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "concluso",
+          "visibility": "+",
+          "type": "boolean"
+        },
+        {
+          "name": "annullato",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Avviso",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "corpo_messaggio",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Utente",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "psw",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Vista giornaliera",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Vista mensile",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Vista settimanale",
+      "attributes": [],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "contenuto",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "1...n",
+      "targetMultiplicity": "1...1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "ricorda",
+      "source": "Avviso",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1..1",
+      "targetMultiplicity": "1..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "riceve",
+      "source": "Avviso",
+      "target": "Utente",
+      "sourceMultiplicity": "1...n",
+      "targetMultiplicity": "1...1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "imposta",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1...1",
+      "targetMultiplicity": "1...n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "annulla",
+      "source": "Utente",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1..1",
+      "targetMultiplicity": "1..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Vista giornaliera",
+      "target": "Calendario",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Vista mensile",
+      "target": "Calendario",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Vista settimanale",
+      "target": "Calendario",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

@@ -1,0 +1,215 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Codice invito",
+      "attributes": [
+        {
+          "name": "codice",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "data",
+          "visibility": "",
+          "type": "date"
+        },
+        {
+          "name": "luogo",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "budget",
+          "visibility": "",
+          "type": "number"
+        },
+        {
+          "name": "tipo",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "credenziale",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "anagrafica",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "PT_IVA",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "iban",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "account_digitale",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "mail",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codice_fiscale",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "residenza",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "credenziali",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "anagrafica",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "prezzo",
+          "visibility": "",
+          "type": "number"
+        },
+        {
+          "name": "tipo",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "< viene assegnato",
+      "source": "Codice invito",
+      "target": "Evento",
+      "sourceMultiplicity": "1...*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "assegnato >",
+      "source": "Codice invito",
+      "target": "Invitato",
+      "sourceMultiplicity": "1...*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "è disponibile >",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1...*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Invitato",
+      "target": "Persona",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "< organizza",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Organizzatore",
+      "target": "Persona",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fornisce >",
+      "source": "Servizio",
+      "target": "Fornitore",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

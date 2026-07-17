@@ -1,0 +1,186 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "biblioteca",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "catalogo",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Notifica",
+      "attributes": [
+        {
+          "name": "id",
+          "visibility": "",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "prestito libro",
+      "attributes": [
+        {
+          "name": "DataInizio",
+          "visibility": "",
+          "type": "Date"
+        },
+        {
+          "name": "DataFine",
+          "visibility": "",
+          "type": "Date"
+        },
+        {
+          "name": "online_cartaceo",
+          "visibility": "",
+          "type": "bool"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "utente",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "CodiceFiscale",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "",
+          "type": "String"
+        },
+        {
+          "name": "prestitoInCorso",
+          "visibility": "",
+          "type": "bool"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "ha",
+      "source": "biblioteca",
+      "target": "catalogo",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "fatto di <-",
+      "source": "catalogo",
+      "target": "Libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "di ->",
+      "source": "Libro",
+      "target": "prestito libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "relativa a <-",
+      "source": "Notifica",
+      "target": "utente",
+      "sourceMultiplicity": "0..n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "scatena",
+      "source": "prestito libro",
+      "target": "Notifica",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "effettua ->",
+      "source": "utente",
+      "target": "prestito libro",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..N",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

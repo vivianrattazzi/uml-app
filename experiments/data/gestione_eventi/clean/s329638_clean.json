@@ -1,0 +1,355 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "IVA",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "ModalitaPagamento",
+          "visibility": "+",
+          "type": "boolean"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "Tipo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DataEvento",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "LuogoEvento",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Budget",
+          "visibility": "+",
+          "type": "Float"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DataDiNascita",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "LuogoDiNascita",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "PaeseDiNascita",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "NazioneDiNascita",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "IndirizzoAzienda",
+      "attributes": [
+        {
+          "name": "Nazione",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Città",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Provincia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Via",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "CAP",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "IndirizzoResidenza",
+      "attributes": [
+        {
+          "name": "Via",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "NumeroCivico",
+          "visibility": "+",
+          "type": "Int"
+        },
+        {
+          "name": "Comune",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Provincia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Citta",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Nazione",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "CAP",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DataNascita",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "Categoria",
+          "visibility": "+",
+          "type": "Enum"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "CodiceFiscale",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "DataNascita",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "LuogoNascita",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "PaeseNascita",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "NazioneNascita",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "ServizioAzienda",
+      "attributes": [
+        {
+          "name": "Categoria",
+          "visibility": "+",
+          "type": "Enum"
+        },
+        {
+          "name": "Prezzo",
+          "visibility": "+",
+          "type": "Float"
+        },
+        {
+          "name": "IBAN",
+          "visibility": "+",
+          "type": ""
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    },
+    {
+      "name": "ServizioEvento",
+      "attributes": [
+        {
+          "name": "NomeServizio",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "gestisce",
+      "source": "Azienda",
+      "target": "Fornitore",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Evento",
+      "target": "Fornitore",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Offre",
+      "source": "Evento",
+      "target": "ServizioEvento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "IndirizzoAzienda",
+      "target": "Azienda",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Crea",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "risiede",
+      "source": "Organizzatore",
+      "target": "IndirizzoResidenza",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Invita",
+      "source": "Organizzatore",
+      "target": "Invitato",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Offre",
+      "source": "ServizioAzienda",
+      "target": "Azienda",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

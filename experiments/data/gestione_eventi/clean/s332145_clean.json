@@ -1,0 +1,193 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "budget",
+          "visibility": "",
+          "type": "numeric"
+        },
+        {
+          "name": "tipo_evento enum{matrimonio, laurea, concerto...}",
+          "visibility": "",
+          "type": ""
+        },
+        {
+          "name": "data_evento",
+          "visibility": "",
+          "type": "date"
+        },
+        {
+          "name": "luogo_evento",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitori",
+      "attributes": [
+        {
+          "name": "partita_iva",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "indirizzo_azienda",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "modalita_pagamento",
+          "visibility": "",
+          "type": "enum{paypal, carta...}"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitati",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "tipo_invitato",
+          "visibility": "",
+          "type": "enum {parente, amico...}"
+        },
+        {
+          "name": "codice_invito",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codice_fiscale",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "nome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "residenza",
+          "visibility": "",
+          "type": "string"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "prezzo",
+          "visibility": "",
+          "type": "numeric"
+        },
+        {
+          "name": "iban",
+          "visibility": "",
+          "type": "string"
+        },
+        {
+          "name": "categoria",
+          "visibility": "",
+          "type": "enum{fioraio, catering, taxi}"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "comprende^",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "0..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "offre >",
+      "source": "Fornitori",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "partecipano >",
+      "source": "Invitati",
+      "target": "Evento",
+      "sourceMultiplicity": "n",
+      "targetMultiplicity": "1..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "crea ^",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "sceglie ^",
+      "source": "Organizzatore",
+      "target": "Invitati",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "sceglie^",
+      "source": "Organizzatore",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "n",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

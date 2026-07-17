@@ -1,0 +1,1653 @@
+{
+    "classes": [
+        {
+            "name": "Catalogo",
+            "synonyms": [
+                "Inventario",
+                "Elenco",
+                "Lista",
+                "CatalogoLibri",
+                "ElencoLibri",
+                "ListaLibro"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [
+                "titolo",
+                "autore",
+                "genere",
+                "disponibile"
+            ],
+            "attributes": [
+                {
+                    "name": "idCatalogo",
+                    "synonyms": [
+                        "id",
+                        "codice",
+                        "codiceCatalogo",
+                        "id_catalogo",
+                        "codice_catalogo"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                }
+            ],
+            "type": "Class",
+            "elementId": "a03b1260-7108-412e-8a40-162483cb0aa9"
+        },
+        {
+            "name": "DescrittoreLibro",
+            "synonyms": [
+                "SchedaLibro",
+                "Scheda",
+                "InfoLibro",
+                "InformazioniLibro",
+                "Metadati",
+                "MetadatiLibro",
+                "Descrittore"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [
+                "descrittore",
+                "url",
+                "formato",
+                "posizione"
+            ],
+            "attributes": [
+                {
+                    "name": "idDescrittore",
+                    "synonyms": [
+                        "id",
+                        "codiceDescrittore",
+                        "codice",
+                        "id_descrittore",
+                        "codice_descrittore"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "titolo",
+                    "synonyms": [
+                        "nome"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "autore",
+                    "synonyms": [
+                        "scrittore"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "genere",
+                    "synonyms": [
+                        "categoria",
+                        "tipo"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                }
+            ],
+            "type": "Class",
+            "elementId": "52c22ccd-6f45-4b80-baef-354f05b918b6"
+        },
+        {
+            "name": "Libro",
+            "synonyms": [
+                "Volume"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [
+                "titolo",
+                "autore",
+                "genere",
+                "url",
+                "formato",
+                "posizione",
+                "dataPrestito"
+            ],
+            "attributes": [
+                {
+                    "name": "idLibro",
+                    "synonyms": [
+                        "id",
+                        "codice",
+                        "id_libro",
+                        "codiceLibro",
+                        "codice_libro"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "disponibile",
+                    "synonyms": [],
+                    "types": [
+                        "Boolean"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                }
+            ],
+            "type": "Class",
+            "elementId": "6f28dec4-24d4-421b-bb12-45917d90017e"
+        },
+        {
+            "name": "Digitale",
+            "synonyms": [
+                "LibroDigitale",
+                "EBook"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [
+                "posizione",
+                "titolo",
+                "autore",
+                "genere",
+                "dataPrestito"
+            ],
+            "attributes": [
+                {
+                    "name": "url",
+                    "synonyms": [
+                        "link",
+                        "indirizzo"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "formato",
+                    "synonyms": [
+                        "estensione"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                }
+            ],
+            "type": "Class",
+            "elementId": "7ddf90cb-28d5-4e86-be76-573db4916115"
+        },
+        {
+            "name": "Fisico",
+            "synonyms": [
+                "Cartaceo",
+                "CopiaFisica"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [
+                "url",
+                "formato",
+                "dataPrestito"
+            ],
+            "attributes": [
+                {
+                    "name": "posizione",
+                    "synonyms": [
+                        "collocazione",
+                        "scaffale",
+                        "ubicazione"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                }
+            ],
+            "type": "Class",
+            "elementId": "13d8201d-2938-44c3-b75a-535f99f15144"
+        },
+        {
+            "name": "Prestito",
+            "synonyms": [
+                "Noleggio"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+                {
+                    "name": "idPrestito",
+                    "synonyms": [
+                        "id",
+                        "codice",
+                        "codicePrestito",
+                        "id_prestito",
+                        "codice_prestito"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "dataPrestito",
+                    "synonyms": [
+                        "dataInizio",
+                        "dataNoleggio",
+                        "data_inizio",
+                        "inizio",
+                        "data_prestito",
+                        "data_noleggio"
+                    ],
+                    "types": [
+                        "Date"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "dataRestituzione",
+                    "synonyms": [
+                        "dataFine",
+                        "data_fine",
+                        "fine",
+                        "restituzione",
+                        "data_restituzione",
+                        "reso",
+                        "data_reso",
+                        "scadenza",
+                        "data_scadenza",
+                        "dataScadenza"
+                    ],
+                    "types": [
+                        "Date"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                }
+            ],
+            "type": "Class",
+            "elementId": "c25e9d09-b170-4abe-a8b0-7823254d1c16"
+        },
+        {
+            "name": "Notifica",
+            "synonyms": [
+                "Avviso",
+                "Promemoria",
+                "Comunicazione"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [
+                "email",
+                "titolo",
+                "autore",
+                "dataPrestito",
+                "dataRestituzione"
+            ],
+            "attributes": [
+                {
+                    "name": "idNotifica",
+                    "synonyms": [
+                        "id",
+                        "codice",
+                        "id_notifica",
+                        "codiceNotifica",
+                        "codice_notifica"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "messaggio",
+                    "synonyms": [
+                        "testo",
+                        "contenuto"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "dataInvio",
+                    "synonyms": [],
+                    "types": [
+                        "Date"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                }
+            ],
+            "type": "Class",
+            "elementId": "5df35ce1-fd85-46e6-902c-081a7fad1678"
+        },
+        {
+            "name": "Utente",
+            "synonyms": [
+                "Lettore",
+                "Cliente",
+                "Iscritto",
+                "Membro"
+            ],
+            "weight": "STRONG",
+            "message": "",
+            "forbiddenAttributes": [],
+            "attributes": [
+                {
+                    "name": "idUtente",
+                    "synonyms": [
+                        "id",
+                        "codice",
+                        "id_utente",
+                        "codiceUtente",
+                        "codice_utente"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "nome",
+                    "synonyms": [],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "cognome",
+                    "synonyms": [],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "dataNascita",
+                    "synonyms": [
+                        "nascita",
+                        "dataDiNascita"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "indirizzo",
+                    "synonyms": [
+                        "domicilio",
+                        "residenza"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "citt\u00e0",
+                    "synonyms": [
+                        "comune"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "email",
+                    "synonyms": [
+                        "mail",
+                        "indirizzoEmail"
+                    ],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                },
+                {
+                    "name": "password",
+                    "synonyms": [],
+                    "types": [
+                        "string"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "allowsForeignKeyName": false
+                }
+            ],
+            "type": "Class",
+            "elementId": "8388d0c0-8e03-4cbc-a051-198cd40fb92a"
+        }
+    ],
+    "associations": [
+        {
+            "message": "",
+            "name": "",
+            "synonyms": [],
+            "weight": "STRONG",
+            "type": "ClassBidirectional",
+            "source": {
+                "role": "",
+                "multiplicities": [
+                    "1"
+                ],
+                "referenceClass": {
+                    "name": "Catalogo",
+                    "synonyms": [
+                        "Inventario",
+                        "Elenco",
+                        "Lista",
+                        "CatalogoLibri",
+                        "ElencoLibri",
+                        "ListaLibro"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [
+                        "titolo",
+                        "autore",
+                        "genere",
+                        "disponibile"
+                    ],
+                    "attributes": [
+                        {
+                            "name": "idCatalogo",
+                            "synonyms": [
+                                "id",
+                                "codice",
+                                "codiceCatalogo",
+                                "id_catalogo",
+                                "codice_catalogo"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "a03b1260-7108-412e-8a40-162483cb0aa9"
+                }
+            },
+            "target": {
+                "role": "",
+                "multiplicities": [
+                    "*"
+                ],
+                "referenceClass": {
+                    "name": "DescrittoreLibro",
+                    "synonyms": [
+                        "SchedaLibro",
+                        "Scheda",
+                        "InfoLibro",
+                        "InformazioniLibro",
+                        "Metadati",
+                        "MetadatiLibro",
+                        "Descrittore"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [
+                        "descrittore",
+                        "url",
+                        "formato",
+                        "posizione"
+                    ],
+                    "attributes": [
+                        {
+                            "name": "idDescrittore",
+                            "synonyms": [
+                                "id",
+                                "codiceDescrittore",
+                                "codice",
+                                "id_descrittore",
+                                "codice_descrittore"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "titolo",
+                            "synonyms": [
+                                "nome"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "autore",
+                            "synonyms": [
+                                "scrittore"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "genere",
+                            "synonyms": [
+                                "categoria",
+                                "tipo"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "52c22ccd-6f45-4b80-baef-354f05b918b6"
+                }
+            },
+            "elementId": "assoc_Catalogo_DescrittoreLibro"
+        },
+        {
+            "message": "",
+            "name": "",
+            "synonyms": [],
+            "weight": "STRONG",
+            "type": "ClassBidirectional",
+            "source": {
+                "role": "",
+                "multiplicities": [
+                    "1"
+                ],
+                "referenceClass": {
+                    "name": "Libro",
+                    "synonyms": [
+                        "Volume"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [
+                        "titolo",
+                        "autore",
+                        "genere",
+                        "url",
+                        "formato",
+                        "posizione",
+                        "dataPrestito"
+                    ],
+                    "attributes": [
+                        {
+                            "name": "idLibro",
+                            "synonyms": [
+                                "id",
+                                "codice",
+                                "id_libro",
+                                "codiceLibro",
+                                "codice_libro"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "disponibile",
+                            "synonyms": [],
+                            "types": [
+                                "Boolean"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "6f28dec4-24d4-421b-bb12-45917d90017e"
+                }
+            },
+            "target": {
+                "role": "",
+                "multiplicities": [
+                    "*"
+                ],
+                "referenceClass": {
+                    "name": "DescrittoreLibro",
+                    "synonyms": [
+                        "SchedaLibro",
+                        "Scheda",
+                        "InfoLibro",
+                        "InformazioniLibro",
+                        "Metadati",
+                        "MetadatiLibro",
+                        "Descrittore"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [
+                        "descrittore",
+                        "url",
+                        "formato",
+                        "posizione"
+                    ],
+                    "attributes": [
+                        {
+                            "name": "idDescrittore",
+                            "synonyms": [
+                                "id",
+                                "codiceDescrittore",
+                                "codice",
+                                "id_descrittore",
+                                "codice_descrittore"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "titolo",
+                            "synonyms": [
+                                "nome"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "autore",
+                            "synonyms": [
+                                "scrittore"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "genere",
+                            "synonyms": [
+                                "categoria",
+                                "tipo"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "52c22ccd-6f45-4b80-baef-354f05b918b6"
+                }
+            },
+            "elementId": "assoc_Libro_DescrittoreLibro"
+        },
+        {
+            "message": "",
+            "name": "",
+            "synonyms": [],
+            "weight": "STRONG",
+            "type": "ClassInheritance",
+            "source": {
+                "role": "",
+                "multiplicities": [
+                    ""
+                ],
+                "referenceClass": {
+                    "name": "Digitale",
+                    "synonyms": [
+                        "LibroDigitale",
+                        "EBook"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [
+                        "posizione",
+                        "titolo",
+                        "autore",
+                        "genere",
+                        "dataPrestito"
+                    ],
+                    "attributes": [
+                        {
+                            "name": "url",
+                            "synonyms": [
+                                "link",
+                                "indirizzo"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "formato",
+                            "synonyms": [
+                                "estensione"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "7ddf90cb-28d5-4e86-be76-573db4916115"
+                }
+            },
+            "target": {
+                "role": "",
+                "multiplicities": [
+                    ""
+                ],
+                "referenceClass": {
+                    "name": "Libro",
+                    "synonyms": [
+                        "Volume"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [
+                        "titolo",
+                        "autore",
+                        "genere",
+                        "url",
+                        "formato",
+                        "posizione",
+                        "dataPrestito"
+                    ],
+                    "attributes": [
+                        {
+                            "name": "idLibro",
+                            "synonyms": [
+                                "id",
+                                "codice",
+                                "id_libro",
+                                "codiceLibro",
+                                "codice_libro"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "disponibile",
+                            "synonyms": [],
+                            "types": [
+                                "Boolean"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "6f28dec4-24d4-421b-bb12-45917d90017e"
+                }
+            },
+            "elementId": "assoc_Digitale_Libro"
+        },
+        {
+            "message": "",
+            "name": "",
+            "synonyms": [],
+            "weight": "STRONG",
+            "type": "ClassInheritance",
+            "source": {
+                "role": "",
+                "multiplicities": [
+                    ""
+                ],
+                "referenceClass": {
+                    "name": "Fisico",
+                    "synonyms": [
+                        "Cartaceo",
+                        "CopiaFisica"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [
+                        "url",
+                        "formato",
+                        "dataPrestito"
+                    ],
+                    "attributes": [
+                        {
+                            "name": "posizione",
+                            "synonyms": [
+                                "collocazione",
+                                "scaffale",
+                                "ubicazione"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "13d8201d-2938-44c3-b75a-535f99f15144"
+                }
+            },
+            "target": {
+                "role": "",
+                "multiplicities": [
+                    ""
+                ],
+                "referenceClass": {
+                    "name": "Libro",
+                    "synonyms": [
+                        "Volume"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [
+                        "titolo",
+                        "autore",
+                        "genere",
+                        "url",
+                        "formato",
+                        "posizione",
+                        "dataPrestito"
+                    ],
+                    "attributes": [
+                        {
+                            "name": "idLibro",
+                            "synonyms": [
+                                "id",
+                                "codice",
+                                "id_libro",
+                                "codiceLibro",
+                                "codice_libro"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "disponibile",
+                            "synonyms": [],
+                            "types": [
+                                "Boolean"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "6f28dec4-24d4-421b-bb12-45917d90017e"
+                }
+            },
+            "elementId": "assoc_Fisico_Libro"
+        },
+        {
+            "message": "",
+            "name": "",
+            "synonyms": [],
+            "weight": "STRONG",
+            "type": "ClassBidirectional",
+            "source": {
+                "role": "",
+                "multiplicities": [
+                    "*"
+                ],
+                "referenceClass": {
+                    "name": "Prestito",
+                    "synonyms": [
+                        "Noleggio"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [],
+                    "attributes": [
+                        {
+                            "name": "idPrestito",
+                            "synonyms": [
+                                "id",
+                                "codice",
+                                "codicePrestito",
+                                "id_prestito",
+                                "codice_prestito"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "dataPrestito",
+                            "synonyms": [
+                                "dataInizio",
+                                "dataNoleggio",
+                                "data_inizio",
+                                "inizio",
+                                "data_prestito",
+                                "data_noleggio"
+                            ],
+                            "types": [
+                                "Date"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "dataRestituzione",
+                            "synonyms": [
+                                "dataFine",
+                                "data_fine",
+                                "fine",
+                                "restituzione",
+                                "data_restituzione",
+                                "reso",
+                                "data_reso",
+                                "scadenza",
+                                "data_scadenza",
+                                "dataScadenza"
+                            ],
+                            "types": [
+                                "Date"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "c25e9d09-b170-4abe-a8b0-7823254d1c16"
+                }
+            },
+            "target": {
+                "role": "",
+                "multiplicities": [
+                    "1"
+                ],
+                "referenceClass": {
+                    "name": "Libro",
+                    "synonyms": [
+                        "Volume"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [
+                        "titolo",
+                        "autore",
+                        "genere",
+                        "url",
+                        "formato",
+                        "posizione",
+                        "dataPrestito"
+                    ],
+                    "attributes": [
+                        {
+                            "name": "idLibro",
+                            "synonyms": [
+                                "id",
+                                "codice",
+                                "id_libro",
+                                "codiceLibro",
+                                "codice_libro"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "disponibile",
+                            "synonyms": [],
+                            "types": [
+                                "Boolean"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "6f28dec4-24d4-421b-bb12-45917d90017e"
+                }
+            },
+            "elementId": "assoc_Prestito_Libro"
+        },
+        {
+            "message": "",
+            "name": "",
+            "synonyms": [],
+            "weight": "STRONG",
+            "type": "ClassBidirectional",
+            "source": {
+                "role": "",
+                "multiplicities": [
+                    "*"
+                ],
+                "referenceClass": {
+                    "name": "Notifica",
+                    "synonyms": [
+                        "Avviso",
+                        "Promemoria",
+                        "Comunicazione"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [
+                        "email",
+                        "titolo",
+                        "autore",
+                        "dataPrestito",
+                        "dataRestituzione"
+                    ],
+                    "attributes": [
+                        {
+                            "name": "idNotifica",
+                            "synonyms": [
+                                "id",
+                                "codice",
+                                "id_notifica",
+                                "codiceNotifica",
+                                "codice_notifica"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "messaggio",
+                            "synonyms": [
+                                "testo",
+                                "contenuto"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "dataInvio",
+                            "synonyms": [],
+                            "types": [
+                                "Date"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "5df35ce1-fd85-46e6-902c-081a7fad1678"
+                }
+            },
+            "target": {
+                "role": "",
+                "multiplicities": [
+                    "1"
+                ],
+                "referenceClass": {
+                    "name": "Prestito",
+                    "synonyms": [
+                        "Noleggio"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [],
+                    "attributes": [
+                        {
+                            "name": "idPrestito",
+                            "synonyms": [
+                                "id",
+                                "codice",
+                                "codicePrestito",
+                                "id_prestito",
+                                "codice_prestito"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "dataPrestito",
+                            "synonyms": [
+                                "dataInizio",
+                                "dataNoleggio",
+                                "data_inizio",
+                                "inizio",
+                                "data_prestito",
+                                "data_noleggio"
+                            ],
+                            "types": [
+                                "Date"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "dataRestituzione",
+                            "synonyms": [
+                                "dataFine",
+                                "data_fine",
+                                "fine",
+                                "restituzione",
+                                "data_restituzione",
+                                "reso",
+                                "data_reso",
+                                "scadenza",
+                                "data_scadenza",
+                                "dataScadenza"
+                            ],
+                            "types": [
+                                "Date"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "c25e9d09-b170-4abe-a8b0-7823254d1c16"
+                }
+            },
+            "elementId": "assoc_Notifica_Prestito"
+        },
+        {
+            "message": "",
+            "name": "",
+            "synonyms": [],
+            "weight": "STRONG",
+            "type": "ClassBidirectional",
+            "source": {
+                "role": "",
+                "multiplicities": [
+                    "1"
+                ],
+                "referenceClass": {
+                    "name": "Utente",
+                    "synonyms": [
+                        "Lettore",
+                        "Cliente",
+                        "Iscritto",
+                        "Membro"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [],
+                    "attributes": [
+                        {
+                            "name": "idUtente",
+                            "synonyms": [
+                                "id",
+                                "codice",
+                                "id_utente",
+                                "codiceUtente",
+                                "codice_utente"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "nome",
+                            "synonyms": [],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "cognome",
+                            "synonyms": [],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "dataNascita",
+                            "synonyms": [
+                                "nascita",
+                                "dataDiNascita"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "indirizzo",
+                            "synonyms": [
+                                "domicilio",
+                                "residenza"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "citt\u00e0",
+                            "synonyms": [
+                                "comune"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "email",
+                            "synonyms": [
+                                "mail",
+                                "indirizzoEmail"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "password",
+                            "synonyms": [],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "8388d0c0-8e03-4cbc-a051-198cd40fb92a"
+                }
+            },
+            "target": {
+                "role": "",
+                "multiplicities": [
+                    "*"
+                ],
+                "referenceClass": {
+                    "name": "Prestito",
+                    "synonyms": [
+                        "Noleggio"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [],
+                    "attributes": [
+                        {
+                            "name": "idPrestito",
+                            "synonyms": [
+                                "id",
+                                "codice",
+                                "codicePrestito",
+                                "id_prestito",
+                                "codice_prestito"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "dataPrestito",
+                            "synonyms": [
+                                "dataInizio",
+                                "dataNoleggio",
+                                "data_inizio",
+                                "inizio",
+                                "data_prestito",
+                                "data_noleggio"
+                            ],
+                            "types": [
+                                "Date"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "dataRestituzione",
+                            "synonyms": [
+                                "dataFine",
+                                "data_fine",
+                                "fine",
+                                "restituzione",
+                                "data_restituzione",
+                                "reso",
+                                "data_reso",
+                                "scadenza",
+                                "data_scadenza",
+                                "dataScadenza"
+                            ],
+                            "types": [
+                                "Date"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "c25e9d09-b170-4abe-a8b0-7823254d1c16"
+                }
+            },
+            "elementId": "assoc_Utente_Prestito"
+        },
+        {
+            "message": "",
+            "name": "",
+            "synonyms": [],
+            "weight": "STRONG",
+            "type": "ClassBidirectional",
+            "source": {
+                "role": "",
+                "multiplicities": [
+                    "1"
+                ],
+                "referenceClass": {
+                    "name": "Utente",
+                    "synonyms": [
+                        "Lettore",
+                        "Cliente",
+                        "Iscritto",
+                        "Membro"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [],
+                    "attributes": [
+                        {
+                            "name": "idUtente",
+                            "synonyms": [
+                                "id",
+                                "codice",
+                                "id_utente",
+                                "codiceUtente",
+                                "codice_utente"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "nome",
+                            "synonyms": [],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "cognome",
+                            "synonyms": [],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "dataNascita",
+                            "synonyms": [
+                                "nascita",
+                                "dataDiNascita"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "indirizzo",
+                            "synonyms": [
+                                "domicilio",
+                                "residenza"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "citt\u00e0",
+                            "synonyms": [
+                                "comune"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "email",
+                            "synonyms": [
+                                "mail",
+                                "indirizzoEmail"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "password",
+                            "synonyms": [],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "8388d0c0-8e03-4cbc-a051-198cd40fb92a"
+                }
+            },
+            "target": {
+                "role": "",
+                "multiplicities": [
+                    "*"
+                ],
+                "referenceClass": {
+                    "name": "Notifica",
+                    "synonyms": [
+                        "Avviso",
+                        "Promemoria",
+                        "Comunicazione"
+                    ],
+                    "weight": "STRONG",
+                    "message": "",
+                    "forbiddenAttributes": [
+                        "email",
+                        "titolo",
+                        "autore",
+                        "dataPrestito",
+                        "dataRestituzione"
+                    ],
+                    "attributes": [
+                        {
+                            "name": "idNotifica",
+                            "synonyms": [
+                                "id",
+                                "codice",
+                                "id_notifica",
+                                "codiceNotifica",
+                                "codice_notifica"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "messaggio",
+                            "synonyms": [
+                                "testo",
+                                "contenuto"
+                            ],
+                            "types": [
+                                "string"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        },
+                        {
+                            "name": "dataInvio",
+                            "synonyms": [],
+                            "types": [
+                                "Date"
+                            ],
+                            "weight": "STRONG",
+                            "message": "",
+                            "allowsForeignKeyName": false
+                        }
+                    ],
+                    "type": "Class",
+                    "elementId": "5df35ce1-fd85-46e6-902c-081a7fad1678"
+                }
+            },
+            "elementId": "assoc_Utente_Notifica"
+        }
+    ],
+    "forbiddenClasses": [],
+    "forbiddenAssociations": []
+}

@@ -1,0 +1,194 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Azienda",
+      "attributes": [
+        {
+          "name": "Nome",
+          "visibility": "+",
+          "type": "Stringa"
+        },
+        {
+          "name": "Partita iva",
+          "visibility": "+",
+          "type": "Stringa"
+        },
+        {
+          "name": "Indirizzo",
+          "visibility": "+",
+          "type": "Stringa"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "tipo di evento",
+          "visibility": "+",
+          "type": "[Matrimonio, Laura, Concerto, etc]"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "Data"
+        },
+        {
+          "name": "Luogo",
+          "visibility": "+",
+          "type": "Stringa"
+        },
+        {
+          "name": "Budget",
+          "visibility": "+",
+          "type": "Float"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore della registrazione",
+      "attributes": [
+        {
+          "name": "Data di nascita",
+          "visibility": "+",
+          "type": "Data"
+        },
+        {
+          "name": "Nome utente",
+          "visibility": "+",
+          "type": "Stringa"
+        },
+        {
+          "name": "Password",
+          "visibility": "+",
+          "type": "Stringa"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "e-mail",
+          "visibility": "+",
+          "type": "Stringa"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "[Parente, Amico, Collega, etc]"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore di eventi",
+      "attributes": [
+        {
+          "name": "Data di nascita",
+          "visibility": "+",
+          "type": "Data"
+        },
+        {
+          "name": "Indirizzo",
+          "visibility": "+",
+          "type": "Stringa"
+        },
+        {
+          "name": "Codice fiscale",
+          "visibility": "+",
+          "type": "Stringa"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "Categoria",
+          "visibility": "+",
+          "type": "[Catering, Parruchiere, Fioraio, etc...]"
+        },
+        {
+          "name": "Prezzo",
+          "visibility": "+",
+          "type": "Float"
+        },
+        {
+          "name": "codice IBAN",
+          "visibility": "+",
+          "type": "stringa"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Fornisce",
+      "source": "Azienda",
+      "target": "Servizio",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Partecipa",
+      "source": "Evento",
+      "target": "Invitato",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Prevede",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "*",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Gestisce",
+      "source": "Fornitore della registrazione",
+      "target": "Azienda",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Crea",
+      "source": "Organizzatore di eventi",
+      "target": "Evento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Registra",
+      "source": "Organizzatore di eventi",
+      "target": "Invitato",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "*",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

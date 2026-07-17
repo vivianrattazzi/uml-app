@@ -1,0 +1,300 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Bonifico",
+      "attributes": [
+        {
+          "name": "iban",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Evento",
+      "attributes": [
+        {
+          "name": "idEvento",
+          "visibility": "+",
+          "type": "Int"
+        },
+        {
+          "name": "tipologia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "budget",
+          "visibility": "+",
+          "type": "Float"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Fornitore",
+      "attributes": [
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "partitaIVA",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Invitato",
+      "attributes": [
+        {
+          "name": "idInvitato",
+          "visibility": "+",
+          "type": "Int"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "mail",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "codiceInvito",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Luogo",
+      "attributes": [
+        {
+          "name": "idLuogo",
+          "visibility": "+",
+          "type": "Int"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "lat",
+          "visibility": "+",
+          "type": "Double"
+        },
+        {
+          "name": "long",
+          "visibility": "+",
+          "type": "Double"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ModalitàPagamento",
+      "attributes": [
+        {
+          "name": "idModalità",
+          "visibility": "+",
+          "type": "Int"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Organizzatore",
+      "attributes": [
+        {
+          "name": "codiceFiscale",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "username",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "dataNascita",
+          "visibility": "+",
+          "type": "Date"
+        },
+        {
+          "name": "indirizzo",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "città",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "provincia",
+          "visibility": "+",
+          "type": "String"
+        },
+        {
+          "name": "cap",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Satispay",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        {
+          "name": "idServizio",
+          "visibility": "+",
+          "type": "Int"
+        },
+        {
+          "name": "prezzo",
+          "visibility": "+",
+          "type": "Float"
+        },
+        {
+          "name": "categoria",
+          "visibility": "+",
+          "type": "String"
+        }
+      ],
+      "methods": []
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "Partecipa ad un",
+      "source": "Evento",
+      "target": "Invitato",
+      "sourceMultiplicity": "0..N",
+      "targetMultiplicity": "0..N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Organizzato in un",
+      "source": "Evento",
+      "target": "Luogo",
+      "sourceMultiplicity": "0..N",
+      "targetMultiplicity": "0..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Necessita di un",
+      "source": "Evento",
+      "target": "Servizio",
+      "sourceMultiplicity": "0..N",
+      "targetMultiplicity": "0..N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Pagato con",
+      "source": "Fornitore",
+      "target": "ModalitàPagamento",
+      "sourceMultiplicity": "0..N",
+      "targetMultiplicity": "0..1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Organizza un",
+      "source": "Organizzatore",
+      "target": "Evento",
+      "sourceMultiplicity": "0..1",
+      "targetMultiplicity": "0..N",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "Offre un",
+      "source": "Servizio",
+      "target": "Fornitore",
+      "sourceMultiplicity": "0..N",
+      "targetMultiplicity": "0..1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": [
+    {
+      "child": "Bonifico",
+      "parent": "ModalitàPagamento"
+    },
+    {
+      "child": "Satispay",
+      "parent": "ModalitàPagamento"
+    }
+  ]
+}

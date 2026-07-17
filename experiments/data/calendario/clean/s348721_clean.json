@@ -1,0 +1,151 @@
+{
+  "diagramType": "ClassDiagram",
+  "classes": [
+    {
+      "name": "Appuntamento",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "ora inizio",
+          "visibility": "+",
+          "type": "time"
+        },
+        {
+          "name": "ora fine",
+          "visibility": "+",
+          "type": "time"
+        }
+      ],
+      "methods": [
+        "nuovo appuntamento()",
+        "cancella appuntamento()",
+        "modifica appuntamento()",
+        "Crea appuntamento ricorrente()"
+      ]
+    },
+    {
+      "name": "Avviso",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Calendario",
+      "attributes": [],
+      "methods": [
+        "+ visualizzaCalendarioGiorno()",
+        "+ visualizzaCalendarioMese()",
+        "+ visualizzaCalendarioAnno()"
+      ]
+    },
+    {
+      "name": "Gestione Conflitti",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "mail",
+      "attributes": [],
+      "methods": []
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        {
+          "name": "nome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "cognome",
+          "visibility": "+",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "visibility": "+",
+          "type": "string"
+        }
+      ],
+      "methods": [
+        "+ method()"
+      ]
+    }
+  ],
+  "associations": [
+    {
+      "type": "Association",
+      "name": "manda",
+      "source": "Appuntamento",
+      "target": "Avviso",
+      "sourceMultiplicity": "1/n",
+      "targetMultiplicity": "1/n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Appuntamento",
+      "target": "Calendario",
+      "sourceMultiplicity": "0/n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Avviso",
+      "target": "mail",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "Gestione Conflitti",
+      "target": "Avviso",
+      "sourceMultiplicity": "",
+      "targetMultiplicity": "",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "",
+      "source": "mail",
+      "target": "Persona",
+      "sourceMultiplicity": "0/n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "imposta",
+      "source": "Persona",
+      "target": "Appuntamento",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "n",
+      "sourceRole": "",
+      "targetRole": ""
+    },
+    {
+      "type": "Association",
+      "name": "consulta",
+      "source": "Persona",
+      "target": "Calendario",
+      "sourceMultiplicity": "1/n",
+      "targetMultiplicity": "1",
+      "sourceRole": "",
+      "targetRole": ""
+    }
+  ],
+  "inheritance": []
+}

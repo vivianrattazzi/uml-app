@@ -1,0 +1,707 @@
+{
+  "version": "3.0.0",
+  "type": "ClassDiagram",
+  "size": {
+    "width": 1500,
+    "height": 820
+  },
+  "interactive": {
+    "elements": {},
+    "relationships": {}
+  },
+  "elements": {
+    "0c770a76-248b-4327-87fa-f898ad326257": {
+      "id": "0c770a76-248b-4327-87fa-f898ad326257",
+      "name": "Appuntamento",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 340,
+        "y": -50,
+        "width": 170,
+        "height": 160
+      },
+      "attributes": [
+        "2430c3ff-d5a3-4b0a-b0ae-23c8eb092a6a",
+        "936096e7-183a-4b68-9250-f10e0ef016b8",
+        "f4fbc2c0-af0b-407d-bd97-1635503ea39b",
+        "f9ee8205-8013-4291-95ef-a89ece3f5eda"
+      ],
+      "methods": []
+    },
+    "2430c3ff-d5a3-4b0a-b0ae-23c8eb092a6a": {
+      "id": "2430c3ff-d5a3-4b0a-b0ae-23c8eb092a6a",
+      "name": "+nome : String",
+      "type": "ClassAttribute",
+      "owner": "0c770a76-248b-4327-87fa-f898ad326257",
+      "bounds": {
+        "x": 340.5,
+        "y": -9.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    "936096e7-183a-4b68-9250-f10e0ef016b8": {
+      "id": "936096e7-183a-4b68-9250-f10e0ef016b8",
+      "name": "+OraInizio: Date",
+      "type": "ClassAttribute",
+      "owner": "0c770a76-248b-4327-87fa-f898ad326257",
+      "bounds": {
+        "x": 340.5,
+        "y": 20.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    "f4fbc2c0-af0b-407d-bd97-1635503ea39b": {
+      "id": "f4fbc2c0-af0b-407d-bd97-1635503ea39b",
+      "name": "+OraFine: Date",
+      "type": "ClassAttribute",
+      "owner": "0c770a76-248b-4327-87fa-f898ad326257",
+      "bounds": {
+        "x": 340.5,
+        "y": 50.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    "f9ee8205-8013-4291-95ef-a89ece3f5eda": {
+      "id": "f9ee8205-8013-4291-95ef-a89ece3f5eda",
+      "name": "+Tipologia : string",
+      "type": "ClassAttribute",
+      "owner": "0c770a76-248b-4327-87fa-f898ad326257",
+      "bounds": {
+        "x": 340.5,
+        "y": 80.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    "b8b1bef8-facc-4125-8b92-5014ac307f6c": {
+      "id": "b8b1bef8-facc-4125-8b92-5014ac307f6c",
+      "name": "Utente",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": -560,
+        "y": -80,
+        "width": 160,
+        "height": 160
+      },
+      "attributes": [
+        "24ddebae-f30f-4c5a-9dae-4623b6a793ad",
+        "59d3ecd9-c0cf-473b-925b-cca5035ff338",
+        "f05938dc-b751-487a-a179-bbcdc50223a8",
+        "a1d8e945-0969-4616-9dee-976c4ff69182"
+      ],
+      "methods": []
+    },
+    "24ddebae-f30f-4c5a-9dae-4623b6a793ad": {
+      "id": "24ddebae-f30f-4c5a-9dae-4623b6a793ad",
+      "name": "+nome : String",
+      "type": "ClassAttribute",
+      "owner": "b8b1bef8-facc-4125-8b92-5014ac307f6c",
+      "bounds": {
+        "x": -559.5,
+        "y": -39.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "59d3ecd9-c0cf-473b-925b-cca5035ff338": {
+      "id": "59d3ecd9-c0cf-473b-925b-cca5035ff338",
+      "name": "+cognome : String",
+      "type": "ClassAttribute",
+      "owner": "b8b1bef8-facc-4125-8b92-5014ac307f6c",
+      "bounds": {
+        "x": -559.5,
+        "y": -9.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "f05938dc-b751-487a-a179-bbcdc50223a8": {
+      "id": "f05938dc-b751-487a-a179-bbcdc50223a8",
+      "name": "+email : String",
+      "type": "ClassAttribute",
+      "owner": "b8b1bef8-facc-4125-8b92-5014ac307f6c",
+      "bounds": {
+        "x": -559.5,
+        "y": 20.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "a1d8e945-0969-4616-9dee-976c4ff69182": {
+      "id": "a1d8e945-0969-4616-9dee-976c4ff69182",
+      "name": "+password : String",
+      "type": "ClassAttribute",
+      "owner": "b8b1bef8-facc-4125-8b92-5014ac307f6c",
+      "bounds": {
+        "x": -559.5,
+        "y": 50.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "b854d405-9b41-4333-b0b1-cef32c5ec3fa": {
+      "id": "b854d405-9b41-4333-b0b1-cef32c5ec3fa",
+      "name": "AppuntamentoRicorrente",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 480,
+        "y": 250,
+        "width": 210,
+        "height": 70
+      },
+      "attributes": [
+        "859db4f4-49c1-426e-a871-41d5bf4c3a61"
+      ],
+      "methods": []
+    },
+    "859db4f4-49c1-426e-a871-41d5bf4c3a61": {
+      "id": "859db4f4-49c1-426e-a871-41d5bf4c3a61",
+      "name": "+giornoSettimana : string",
+      "type": "ClassAttribute",
+      "owner": "b854d405-9b41-4333-b0b1-cef32c5ec3fa",
+      "bounds": {
+        "x": 480.5,
+        "y": 290.5,
+        "width": 209,
+        "height": 30
+      }
+    },
+    "7e51b55e-b398-4984-8bf0-0f92445c574a": {
+      "id": "7e51b55e-b398-4984-8bf0-0f92445c574a",
+      "name": "AvvisoAppuntamento",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": -80,
+        "y": 260,
+        "width": 230,
+        "height": 130
+      },
+      "attributes": [
+        "fd4816af-924b-4a4f-bb96-83891588f08f",
+        "8dd2ff99-10af-468d-a490-63e0486ed8ba",
+        "e11b520f-d54e-4aa5-9e72-d81f2a403c8c"
+      ],
+      "methods": []
+    },
+    "fd4816af-924b-4a4f-bb96-83891588f08f": {
+      "id": "fd4816af-924b-4a4f-bb96-83891588f08f",
+      "name": "+NomeAppuntamento: String",
+      "type": "ClassAttribute",
+      "owner": "7e51b55e-b398-4984-8bf0-0f92445c574a",
+      "bounds": {
+        "x": -79.5,
+        "y": 300.5,
+        "width": 229,
+        "height": 30
+      }
+    },
+    "8dd2ff99-10af-468d-a490-63e0486ed8ba": {
+      "id": "8dd2ff99-10af-468d-a490-63e0486ed8ba",
+      "name": "+OraInizio: Date",
+      "type": "ClassAttribute",
+      "owner": "7e51b55e-b398-4984-8bf0-0f92445c574a",
+      "bounds": {
+        "x": -79.5,
+        "y": 330.5,
+        "width": 229,
+        "height": 30
+      }
+    },
+    "e11b520f-d54e-4aa5-9e72-d81f2a403c8c": {
+      "id": "e11b520f-d54e-4aa5-9e72-d81f2a403c8c",
+      "name": "+OraFine: Date",
+      "type": "ClassAttribute",
+      "owner": "7e51b55e-b398-4984-8bf0-0f92445c574a",
+      "bounds": {
+        "x": -79.5,
+        "y": 360.5,
+        "width": 229,
+        "height": 30
+      }
+    },
+    "2f765cb3-a421-4cc1-aa06-3c7f7f34d13f": {
+      "id": "2f765cb3-a421-4cc1-aa06-3c7f7f34d13f",
+      "name": "VistaCalendario",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": -220,
+        "y": -330,
+        "width": 160,
+        "height": 130
+      },
+      "attributes": [
+        "23aed213-e288-4be3-9338-660452b0e627",
+        "cc89ba85-31e5-4ead-a448-c9aeda45b115",
+        "c65ef02c-f0d6-4253-9360-a8f01639f366"
+      ],
+      "methods": []
+    },
+    "23aed213-e288-4be3-9338-660452b0e627": {
+      "id": "23aed213-e288-4be3-9338-660452b0e627",
+      "name": "+Tipo: String",
+      "type": "ClassAttribute",
+      "owner": "2f765cb3-a421-4cc1-aa06-3c7f7f34d13f",
+      "bounds": {
+        "x": -219.5,
+        "y": -289.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "cc89ba85-31e5-4ead-a448-c9aeda45b115": {
+      "id": "cc89ba85-31e5-4ead-a448-c9aeda45b115",
+      "name": "+PrimaData: Date",
+      "type": "ClassAttribute",
+      "owner": "2f765cb3-a421-4cc1-aa06-3c7f7f34d13f",
+      "bounds": {
+        "x": -219.5,
+        "y": -259.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "c65ef02c-f0d6-4253-9360-a8f01639f366": {
+      "id": "c65ef02c-f0d6-4253-9360-a8f01639f366",
+      "name": "+UltimaData: Date",
+      "type": "ClassAttribute",
+      "owner": "2f765cb3-a421-4cc1-aa06-3c7f7f34d13f",
+      "bounds": {
+        "x": -219.5,
+        "y": -229.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    "12920e8f-e633-4da8-ba47-6e385643836b": {
+      "id": "12920e8f-e633-4da8-ba47-6e385643836b",
+      "name": "Calendario",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 350,
+        "y": -320,
+        "width": 160,
+        "height": 40
+      },
+      "attributes": [],
+      "methods": []
+    }
+  },
+  "relationships": {
+    "519b5677-fe46-4ed5-9711-9f57d45d74f9": {
+      "id": "519b5677-fe46-4ed5-9711-9f57d45d74f9",
+      "name": "Annulla",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": -400,
+        "y": 5,
+        "width": 740,
+        "height": 48
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 10
+        },
+        {
+          "x": 740,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "b8b1bef8-facc-4125-8b92-5014ac307f6c",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Left",
+        "element": "0c770a76-248b-4327-87fa-f898ad326257",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    "3f94510b-1f1e-4d1f-a83b-26c784aed2af": {
+      "id": "3f94510b-1f1e-4d1f-a83b-26c784aed2af",
+      "name": "Fissa",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": -485,
+        "y": -120,
+        "width": 922,
+        "height": 79
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 40
+        },
+        {
+          "x": 5,
+          "y": 0
+        },
+        {
+          "x": 910,
+          "y": 0
+        },
+        {
+          "x": 910,
+          "y": 70
+        }
+      ],
+      "source": {
+        "direction": "Up",
+        "element": "b8b1bef8-facc-4125-8b92-5014ac307f6c",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Up",
+        "element": "0c770a76-248b-4327-87fa-f898ad326257",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    "00fd34df-ec72-4648-a901-60a92e69f4c2": {
+      "id": "00fd34df-ec72-4648-a901-60a92e69f4c2",
+      "name": "",
+      "type": "ClassInheritance",
+      "owner": null,
+      "bounds": {
+        "x": 510,
+        "y": 20,
+        "width": 220,
+        "height": 286
+      },
+      "path": [
+        {
+          "x": 180,
+          "y": 265
+        },
+        {
+          "x": 220,
+          "y": 265
+        },
+        {
+          "x": 220,
+          "y": 10
+        },
+        {
+          "x": 0,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "b854d405-9b41-4333-b0b1-cef32c5ec3fa",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Right",
+        "element": "0c770a76-248b-4327-87fa-f898ad326257",
+        "multiplicity": "",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    "f6a4c675-7d66-4613-b851-ac6f3a894cff": {
+      "id": "f6a4c675-7d66-4613-b851-ac6f3a894cff",
+      "name": "",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": -400,
+        "y": 5,
+        "width": 740,
+        "height": 31
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 10
+        },
+        {
+          "x": 740,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "b8b1bef8-facc-4125-8b92-5014ac307f6c",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Left",
+        "element": "0c770a76-248b-4327-87fa-f898ad326257",
+        "multiplicity": "",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    "f9b23a00-076e-44e8-925c-ca5643978487": {
+      "id": "f9b23a00-076e-44e8-925c-ca5643978487",
+      "name": "Modifica",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": -400,
+        "y": -10,
+        "width": 837,
+        "height": 160
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 10
+        },
+        {
+          "x": 40,
+          "y": 10
+        },
+        {
+          "x": 40,
+          "y": 160
+        },
+        {
+          "x": 825,
+          "y": 160
+        },
+        {
+          "x": 825,
+          "y": 120
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "b8b1bef8-facc-4125-8b92-5014ac307f6c",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Down",
+        "element": "0c770a76-248b-4327-87fa-f898ad326257",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    "99363183-215b-40fd-995d-268f30440a7d": {
+      "id": "99363183-215b-40fd-995d-268f30440a7d",
+      "name": "riceve",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": -485,
+        "y": 80,
+        "width": 405,
+        "height": 283
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 0
+        },
+        {
+          "x": 5,
+          "y": 245
+        },
+        {
+          "x": 405,
+          "y": 245
+        }
+      ],
+      "source": {
+        "direction": "Down",
+        "element": "b8b1bef8-facc-4125-8b92-5014ac307f6c",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Left",
+        "element": "7e51b55e-b398-4984-8bf0-0f92445c574a",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    "e2ec60d1-2b79-4009-809a-bd71aa675b3d": {
+      "id": "e2ec60d1-2b79-4009-809a-bd71aa675b3d",
+      "name": "genera",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 150,
+        "y": 110,
+        "width": 280,
+        "height": 253
+      },
+      "path": [
+        {
+          "x": 275,
+          "y": 0
+        },
+        {
+          "x": 275,
+          "y": 215
+        },
+        {
+          "x": 0,
+          "y": 215
+        }
+      ],
+      "source": {
+        "direction": "Down",
+        "element": "0c770a76-248b-4327-87fa-f898ad326257",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Right",
+        "element": "7e51b55e-b398-4984-8bf0-0f92445c574a",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    "30d95b61-e545-43be-8e5a-f03b0dc3d34b": {
+      "id": "30d95b61-e545-43be-8e5a-f03b0dc3d34b",
+      "name": "Contiene",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 420,
+        "y": -310,
+        "width": 130,
+        "height": 269
+      },
+      "path": [
+        {
+          "x": 90,
+          "y": 10
+        },
+        {
+          "x": 130,
+          "y": 10
+        },
+        {
+          "x": 130,
+          "y": 145
+        },
+        {
+          "x": 5,
+          "y": 145
+        },
+        {
+          "x": 5,
+          "y": 260
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "12920e8f-e633-4da8-ba47-6e385643836b",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Up",
+        "element": "0c770a76-248b-4327-87fa-f898ad326257",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    "634ea88b-db02-4956-ba2b-2b8f9a461636": {
+      "id": "634ea88b-db02-4956-ba2b-2b8f9a461636",
+      "name": "",
+      "type": "ClassInheritance",
+      "owner": null,
+      "bounds": {
+        "x": -60,
+        "y": -310,
+        "width": 410,
+        "height": 31
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 10
+        },
+        {
+          "x": 410,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "2f765cb3-a421-4cc1-aa06-3c7f7f34d13f",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Left",
+        "element": "12920e8f-e633-4da8-ba47-6e385643836b",
+        "multiplicity": "",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    "eca7c516-dd30-4a3a-a62c-a332ef95e857": {
+      "id": "eca7c516-dd30-4a3a-a62c-a332ef95e857",
+      "name": "Visualizza",
+      "type": "ClassBidirectional",
+      "owner": null,
+      "bounds": {
+        "x": -600,
+        "y": -275,
+        "width": 380,
+        "height": 296
+      },
+      "path": [
+        {
+          "x": 40,
+          "y": 275
+        },
+        {
+          "x": 0,
+          "y": 275
+        },
+        {
+          "x": 0,
+          "y": 10
+        },
+        {
+          "x": 380,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Left",
+        "element": "b8b1bef8-facc-4125-8b92-5014ac307f6c",
+        "multiplicity": "",
+        "role": ""
+      },
+      "target": {
+        "direction": "Left",
+        "element": "2f765cb3-a421-4cc1-aa06-3c7f7f34d13f",
+        "multiplicity": "",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    }
+  },
+  "assessments": {}
+}

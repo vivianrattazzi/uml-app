@@ -1,0 +1,358 @@
+{
+  "version": "2.0.0",
+  "type": "ClassDiagram",
+  "size": {
+    "width": 1240,
+    "height": 480
+  },
+  "interactive": {
+    "elements": [],
+    "relationships": []
+  },
+  "elements": [
+    {
+      "id": "89919357-8780-43aa-a672-9fdfc059868a",
+      "name": "Utente",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 0,
+        "y": 180,
+        "width": 160,
+        "height": 120
+      },
+      "stereotype": null,
+      "attributes": [
+        "cc96719c-432b-45bb-84d7-8f28dfb48542",
+        "31c8e202-5cbc-4085-b52d-1d96836105a4",
+        "1f3490d7-fad4-447c-97ca-52c1f7b03403"
+      ],
+      "methods": []
+    },
+    {
+      "id": "cc96719c-432b-45bb-84d7-8f28dfb48542",
+      "name": "+ Nome : String",
+      "type": "ClassAttribute",
+      "owner": "89919357-8780-43aa-a672-9fdfc059868a",
+      "bounds": {
+        "x": 0.5,
+        "y": 210.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "31c8e202-5cbc-4085-b52d-1d96836105a4",
+      "name": "+ Cognome : String",
+      "type": "ClassAttribute",
+      "owner": "89919357-8780-43aa-a672-9fdfc059868a",
+      "bounds": {
+        "x": 0.5,
+        "y": 240.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "1f3490d7-fad4-447c-97ca-52c1f7b03403",
+      "name": "+ email : String",
+      "type": "ClassAttribute",
+      "owner": "89919357-8780-43aa-a672-9fdfc059868a",
+      "bounds": {
+        "x": 0.5,
+        "y": 270.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "81133ee3-3cde-4d4c-945b-a83150af97e8",
+      "name": "Libro",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 710,
+        "y": 180,
+        "width": 330,
+        "height": 120
+      },
+      "stereotype": null,
+      "attributes": [
+        "6c0fdcf0-3da1-48c3-bd4b-258f5eaaec09",
+        "98ad7d72-3239-400b-baf1-cec0198035cf",
+        "1466a933-6813-45f3-b64b-fdcf6e254f1a"
+      ],
+      "methods": []
+    },
+    {
+      "id": "6c0fdcf0-3da1-48c3-bd4b-258f5eaaec09",
+      "name": "+ CodiceLibro : String",
+      "type": "ClassAttribute",
+      "owner": "81133ee3-3cde-4d4c-945b-a83150af97e8",
+      "bounds": {
+        "x": 710.5,
+        "y": 210.5,
+        "width": 329,
+        "height": 30
+      }
+    },
+    {
+      "id": "98ad7d72-3239-400b-baf1-cec0198035cf",
+      "name": "+ TipoLibro: enum( CARTACEO,DIGITALE)",
+      "type": "ClassAttribute",
+      "owner": "81133ee3-3cde-4d4c-945b-a83150af97e8",
+      "bounds": {
+        "x": 710.5,
+        "y": 240.5,
+        "width": 329,
+        "height": 30
+      }
+    },
+    {
+      "id": "1466a933-6813-45f3-b64b-fdcf6e254f1a",
+      "name": "+ Stato: enum( PRESENTE, INPRESTITO, DIGITALE)",
+      "type": "ClassAttribute",
+      "owner": "81133ee3-3cde-4d4c-945b-a83150af97e8",
+      "bounds": {
+        "x": 710.5,
+        "y": 270.5,
+        "width": 329,
+        "height": 30
+      }
+    },
+    {
+      "id": "cc9fbd48-264b-49f2-a003-06a120de0eae",
+      "name": "Catalogo",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 380,
+        "y": 210,
+        "width": 160,
+        "height": 60
+      },
+      "stereotype": null,
+      "attributes": [
+        "96bc621f-2703-4ad6-92c6-cba10e0b4f4d"
+      ],
+      "methods": []
+    },
+    {
+      "id": "96bc621f-2703-4ad6-92c6-cba10e0b4f4d",
+      "name": "+ Nome : String",
+      "type": "ClassAttribute",
+      "owner": "cc9fbd48-264b-49f2-a003-06a120de0eae",
+      "bounds": {
+        "x": 380.5,
+        "y": 240.5,
+        "width": 159,
+        "height": 30
+      }
+    },
+    {
+      "id": "730b716f-7028-4a49-869d-1a1261fc787b",
+      "name": "Prestito",
+      "type": "Class",
+      "owner": null,
+      "bounds": {
+        "x": 400,
+        "y": 0,
+        "width": 170,
+        "height": 90
+      },
+      "stereotype": null,
+      "attributes": [
+        "a79470d8-e2dc-4030-b805-09307cfef962",
+        "6b093827-1bcc-4367-83da-23eb9b757234"
+      ],
+      "methods": []
+    },
+    {
+      "id": "a79470d8-e2dc-4030-b805-09307cfef962",
+      "name": "+ DataInizio :String",
+      "type": "ClassAttribute",
+      "owner": "730b716f-7028-4a49-869d-1a1261fc787b",
+      "bounds": {
+        "x": 400.5,
+        "y": 30.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    {
+      "id": "6b093827-1bcc-4367-83da-23eb9b757234",
+      "name": "+ DataRestituzione : String",
+      "type": "ClassAttribute",
+      "owner": "730b716f-7028-4a49-869d-1a1261fc787b",
+      "bounds": {
+        "x": 400.5,
+        "y": 60.5,
+        "width": 169,
+        "height": 30
+      }
+    },
+    {
+      "id": "efa93695-4cbc-4850-823c-39d0ae189055",
+      "name": "Un libro può essere preso in prestito da più persone solo se digitale",
+      "type": "ColorLegend",
+      "owner": null,
+      "bounds": {
+        "x": 660,
+        "y": 310,
+        "width": 430,
+        "height": 60
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "be931791-43ad-4351-ae33-6c1d9172cd92",
+      "name": "presenta",
+      "type": "ClassUnidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 540,
+        "y": 230,
+        "width": 170,
+        "height": 44.60000038146973
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 10
+        },
+        {
+          "x": 170,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "cc9fbd48-264b-49f2-a003-06a120de0eae",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "target": {
+        "direction": "Left",
+        "element": "81133ee3-3cde-4d4c-945b-a83150af97e8",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "3024f77a-4b66-4645-bcb1-0266ac504656",
+      "name": "cercanoDa",
+      "type": "ClassUnidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 160,
+        "y": 230,
+        "width": 220,
+        "height": 44.60000038146973
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 10
+        },
+        {
+          "x": 220,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "89919357-8780-43aa-a672-9fdfc059868a",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Left",
+        "element": "cc9fbd48-264b-49f2-a003-06a120de0eae",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "31201dfa-496d-4caa-af43-51252bbd68ca",
+      "name": "effettua",
+      "type": "ClassUnidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 75,
+        "y": 35,
+        "width": 325,
+        "height": 150.60000038146973
+      },
+      "path": [
+        {
+          "x": 5,
+          "y": 145
+        },
+        {
+          "x": 5,
+          "y": 10
+        },
+        {
+          "x": 325,
+          "y": 10
+        }
+      ],
+      "source": {
+        "direction": "Up",
+        "element": "89919357-8780-43aa-a672-9fdfc059868a",
+        "multiplicity": "*",
+        "role": ""
+      },
+      "target": {
+        "direction": "Left",
+        "element": "730b716f-7028-4a49-869d-1a1261fc787b",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    },
+    {
+      "id": "743fa8fe-dc3e-428c-ae74-00f9ff488a33",
+      "name": "siRiferisceA",
+      "type": "ClassUnidirectional",
+      "owner": null,
+      "bounds": {
+        "x": 570,
+        "y": 35,
+        "width": 317.125,
+        "height": 145
+      },
+      "path": [
+        {
+          "x": 0,
+          "y": 10
+        },
+        {
+          "x": 305,
+          "y": 10
+        },
+        {
+          "x": 305,
+          "y": 145
+        }
+      ],
+      "source": {
+        "direction": "Right",
+        "element": "730b716f-7028-4a49-869d-1a1261fc787b",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "target": {
+        "direction": "Up",
+        "element": "81133ee3-3cde-4d4c-945b-a83150af97e8",
+        "multiplicity": "1",
+        "role": ""
+      },
+      "isManuallyLayouted": false
+    }
+  ],
+  "assessments": []
+}
