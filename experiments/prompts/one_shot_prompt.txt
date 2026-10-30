@@ -1041,3 +1041,15 @@ La soluzione rappresenta correttamente buona parte delle classi principali del d
 Sono inoltre presenti numerosi attributi corretti, sebbene alcune classi risultino incomplete e manchi la classe Invito, fondamentale per la modellazione del sistema. 
 Le principali criticità riguardano le relazioni tra le classi, in quanto diverse associazioni essenziali sono assenti mentre ne vengono introdotte altre non previste dalla soluzione ufficiale. 
 Nel complesso la prova dimostra una discreta comprensione del dominio, ma presenta imprecisioni nella modellazione strutturale che ne riducono la qualità complessiva, rendendola complessivamente sufficiente ma non pienamente accurata.
+
+
+
+############################################################
+SOLUZIONE UFFICIALE
+############################################################
+{solution_json}
+
+############################################################
+ELABORATO STUDENTE
+############################################################
+{student_json}
