@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 llm_env/
 experiments/data/
+backend/database/app.db
